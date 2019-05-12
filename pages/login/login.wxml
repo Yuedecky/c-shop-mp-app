@@ -1,0 +1,7 @@
+<view class="container">
+        <image class="logo-image" src="{{logoUrl}}"></image>
+        <view class="logo-name">
+          {{logoName}}
+        </view>
+         <button class="login-btn"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登录</button>
+</view>

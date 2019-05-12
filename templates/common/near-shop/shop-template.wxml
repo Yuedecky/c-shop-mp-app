@@ -1,0 +1,11 @@
+<template name='shop'>
+<view class="near-shop flex-row" catchtap='onNearShopOpen'>
+  <view class="shop-desc flex-column">
+    <view class='shop-name'>{{shopName}}</view>
+    <view class="shop-location">{{shopLocation}}</view>
+  </view>
+      <image src="{{shopUrl}}" class="shop-url"></image>
+      <view  class="icon-circle-right btn-detail">
+      </view>
+  </view>
+</template>>

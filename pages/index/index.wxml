@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<import src="/templates/index/hot-phone/hot-phone.wxml"></import>
+<import src="/templates/index/sale-phone/sale-phone.wxml"></import>
+<import src="/templates/common/footer/footer.wxml"></import>
+<import src="/templates/index/brand/brand.wxml"></import>
+<import src="/templates/common/swipper/swipper.wxml"></import>
+<import src="/templates/common/near-shop/shop-template.wxml"></import>
+<view class="index-container">
+<view catchtap='onSearchOpen'>
+  <van-search value="{{value}}" disabled placeholder='请输入商品名称' />
+</view>
+  <template is='swipper-template' data="{{...adv}}"/>
+  <view class='adv-text'>{{advText}}</view>
+  <view class='title flex-row bottom-20'>
+     <view class="right-20">附近门店</view><view class='km'>路程{{nearByKm}}km</view>
+  </view>
+  <template is='shop' data="{{...shop}}"/>
+  <view class="title flex-row">
+    <view class="hot-type">热门机型</view>
+    <view class='more'>更多</view>
+  </view>
+  <view class='hot flex-row'>
+  <block wx:for="{{hotPhones}}" wx:key="item.id" wx:for-item="item">
+      <view catchtap='onHotPhoneTap' data-phoneId = "{{item.id}}">
+            <template is="hot-phone"  data="{{...item}}"/>
+      </view>
+    </block>
+  </view>
+
+  <view class='title'>
+  品牌分类
+  </view>
+    <view class="brand-list flex-row bottom-20">
+      <block wx:for='{{brands}}' wx:key='brand.id' wx:for-item="item" >
+      <view class='brand-item' bindtap='onBrandTap' data-brandId="{{item.id}}" data-brandName="{{item.name}}">
+        <template is="brand-template" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+  <view class="title flex-row">
+    <view>今日特价</view>
+    <view class='more'>更多</view>
+  </view>
+  <view class="today-sale">
+  <block wx:for="{{todaySales}}" wx:key="item" wx:for-index="idx">
+  <view catchtap='onPhoneTap' data-productId="{{item.productId}}">
+    <template is="sale-phone" data="{{...item}}"/>
+  </view>
+  </block>
+  </view>
+  <template is='footer' data="{{text: '已经到底了'}}"/>
+</view>

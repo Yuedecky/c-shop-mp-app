@@ -1,0 +1,27 @@
+.shop-desc{
+  justify-content: center;
+  width: 65%;
+  padding-top: 20rpx;
+}
+.near-shop{
+  font-size: 36rpx;
+  width: 90%;
+  padding: 20rpx;
+  font-weight: 500;
+  height: 180rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  background: #ccc;
+}
+.shop-url{
+  width: 30%;
+  height:180rpx;
+}
+.btn-detail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  margin-left: 14rpx;
+  height: 100%;
+}

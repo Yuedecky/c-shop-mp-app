@@ -1,0 +1,12 @@
+<template name='gift'>
+<view class='gift-container flex-row'>
+<block wx:for="{{giftItem}}" wx:key="gid" wx:for-item="item">
+  <view class='gift-block'>
+    <image src="{{item.image}}" class='gift-image'></image>
+    <view class='gift-desc'>
+    {{item.desc}}
+    </view>
+  </view>
+</block>
+</view>
+</template>

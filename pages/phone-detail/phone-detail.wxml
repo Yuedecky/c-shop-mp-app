@@ -1,0 +1,65 @@
+<import src="/templates/common/swipper/swipper.wxml"></import>
+<import src="/templates/common/near-shop/shop-template.wxml"></import>
+<import src="/templates/common/slide/slide.wxml"></import>
+<import src="/templates/common/gift/gift.wxml"></import>
+<import src="/templates/common/footer/footer.wxml"></import>
+<import src="/templates/common/remark/remark.wxml"></import>
+
+<view class="phone-detail-container flex-column">
+  <view class="top-swipper-image">
+    <template is="swipper-template" data="{{...adv}}"/>
+  </view>
+  <view class="phone-detail-desc">
+    <view class="name">
+    {{curPhone.name}}
+    </view>
+    <view class="price">
+    {{curPhone.officalPrice}}/预约价<text class='reservation-price'>{{curPhone.reservationPrice}}</text>/好评{{curPhone.goodRating}}
+    </view>
+  </view>
+  <view class="shop-around ">
+  <view class="flex-row title bottom-20">
+    <view class='right-20'>提货门店</view><view class="km">路程{{shop.km}}</view>
+    </view>
+   <template is="shop" data="{{...shop}}"/>
+  </view>
+  <view class='title bottom-20'>
+    颜色
+  </view>
+  <view class="phone-detail-color bottom-20">
+  <template is='slide' data="{{...colorItem}}"/>
+  </view>
+  <view class='title bottom-20'>
+    内存
+  </view>
+  <view class='phone-detail-memory bottom-20'>
+  <template is='slide' data="{{...memoryItem}}"/>
+  </view>
+  <view class='title bottom-20'>
+    版本
+  </view>
+  <view class='phone-detail-version bottom-20'>
+  <template is='slide' data="{{...versionItem}}"/>
+  </view>
+  <view class='title bottom-20'>
+    免费大礼包
+  </view>
+  <view class='phone-detail-version bottom-20'>
+  <template is='gift' data="{{giftItem}}"/>
+  </view>
+
+  <view>
+  <template is='footer' data='{{text: "评价"}}'/>
+  </view>
+  <view>
+  <block wx:for="{{ratings.remark}}" wx:key="rid" wx:for-item="item">
+    <template is='remark' data="{{...item}}"/>
+  </block>
+  </view>
+  <view class='remark-load-more'>
+  <button loading="{{loading}}" disabled="{{disabled}}" catchtap="setRemarkLoading" data-curOffset='{{}}'>加载更多</button>
+  </view>
+  <view class="reservation">
+    
+  </view>
+</view>

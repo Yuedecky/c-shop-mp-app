@@ -1,0 +1,38 @@
+@import '/assets/css/common.wxss';
+
+.hot-item{
+  padding-top: 20rpx;
+  width: 332rpx;
+  height: 280rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.phone-desc{
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.phone-name{
+  margin-bottom: 16rpx;
+}
+.hot-item image{
+  width: 180rpx;
+  height: 240rpx;
+}
+.hot-tags{
+  height: 40rpx;
+  font-size: 26rpx;
+}
+.tag-name{
+  padding: 2rpx 4rpx 2rpx 4rpx;
+  border-radius: 4rpx;
+  background: #ccc;
+  line-height: 36rpx;
+  align-items: center;
+  margin-right: 10rpx;
+  flex-wrap: nowrap;
+}
+.hot-price{
+  color: red;
+}

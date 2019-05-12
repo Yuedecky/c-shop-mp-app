@@ -1,0 +1,16 @@
+.color-container{
+  padding-left: 20rpx;
+}
+.color-text{
+  background: #ccc;
+  font-size: 38rpx;
+  padding: 6rpx 10rpx 6rpx 6rpx;
+  border-radius: 4rpx;
+  line-height: 50rpx;
+  height:50rpx;
+  margin-right: 20rpx;
+}
+.color-selected{
+  color: white;
+  background: red;
+}

@@ -1,0 +1,20 @@
+<import src='/templates/common/star/star.wxml'></import>
+<template name='remark'>
+<view class='remark-container flex-column'>
+  <view class='remark-title flex-row'>
+    <view class='view-image'>
+      <image src='{{image}}' class='avatar-image'></image>
+    </view>
+    <view class='avatar-name-rating flex-column'>
+      <text class='avatar-name'>{{name}}</text>
+      <template is='star' data="{{score}}"></template>
+    </view>
+    <view class='rating-date'>
+      {{ratingDate}}
+    </view>
+  </view>
+  <view class='remark-content'>
+  {{remark}}
+  </view>
+</view>
+</template>

@@ -1,0 +1,40 @@
+<!--pages/movies/movies.wxml-->
+<import src='/templates/common/earn-message/earn-message.wxml'></import>
+<import src="/templates/common/tap/tap.wxml"></import>
+<import src="/templates/common/footer/footer.wxml"></import>
+<view class='earn-container'>
+<view class='earn-header flex-column bottom-20'>
+  <view class='code-view'>
+    <image class='qr-code bottom-20' src="{{qrCode}}"/>
+  </view>
+  <view  class='code-text bottom-40'>{{codeText}}</view>
+  <view class='earn-share-save flex-row bottom-20'>
+  <view class='earn-share flex-row right-100'>
+    <image src='/assets/images/share.png' class='share-image'></image>
+    <text class="share-desc">分享</text>
+  </view>
+  <view class='earn-share flex-row'>
+    <image src='/assets/images/save.png' class='share-image'></image>
+    <text class="share-desc">保存</text>
+  </view>
+  </view>
+  <view class='earn-raider bottom-20' catchtap='onNewTabForRaider'>
+  赚钱攻略
+  </view>
+  </view>
+
+  <view class='earn-messages bottom-40'>
+  <template is='earn-message' data="{{msgList}}"/>
+  </view>
+  <view class='friends bottom-20'>
+  <template is='footer' data="{{text: '好友'}}"/>
+  </view>
+  <view class='friends-earn-list'>
+    <block wx:for="{{friends}}" wx:key='fid' wx:for-item='item'>
+      <template is='tap' data="{{...item}}"/>
+    </block>
+  </view>
+  <view>
+  <template is='footer' data="{{text:'没有更多了'}}"/>
+  </view>
+</view>

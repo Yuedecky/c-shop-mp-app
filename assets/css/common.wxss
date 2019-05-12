@@ -1,0 +1,79 @@
+/** icon-font-right */
+@font-face {
+  font-family: 'sell-icon-font';
+  src:  url('/assets/fonts/sell-icon-font.eot?a1refk');
+  src:  url('/assets/fonts/sell-icon-font.eot?a1refk#iefix') format('embedded-opentype'),
+    url('/assets/fonts/sell-icon-font.ttf?a1refk') format('truetype'),
+    url('/assets/fonts/sell-icon-font.woff?a1refk') format('woff'),
+    url('/assets/fonts/sell-icon-font.svg?a1refk#sell-icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sell-icon-font' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  color: #666;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height:44rpx;
+  height: 44rpx;
+  font-weight: bold;
+}
+.bottom-240{
+  margin-bottom: 240rpx;
+}
+
+.right-20{
+  margin-right: 20rpx;
+}
+.pading-right-20{
+  padding-right: 20rpx;
+}
+.bottom-20{
+  margin-bottom: 20rpx;
+}
+.bottom-40{
+  margin-bottom: 40rpx;
+}
+.right-100{
+  margin-right: 100rpx;
+}
+.right-20{
+  margin-right: 20rpx;
+}
+
+.km{
+  font-size: 32rpx;
+  font-weight: 500;
+  text-align: center;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}

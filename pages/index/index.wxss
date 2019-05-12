@@ -1,0 +1,45 @@
+/**index.wxss**/
+@import "/assets/css/common.wxss";
+@import "/templates/index/hot-phone/hot-phone.wxss";
+@import "/templates/index/sale-phone/sale-phone.wxss";
+@import "/templates/common/footer/footer.wxss";
+@import "/templates/index/brand/brand.wxss";
+@import "/templates/common/swipper/swipper.wxss";
+@import "/templates/common/near-shop/shop-template.wxss";
+
+.adv-text{
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.brand-list{
+  height:240rpx;
+  width:100%;
+}
+
+.cross{
+  display: flex;
+  flex-direction: column;
+}
+
+.hot{
+  padding: 0rpx 20rpx;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+.today-sale{
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+}
+.more {
+  margin-left: 460rpx;
+}
+
+
+
+
+

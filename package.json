@@ -1,0 +1,17 @@
+{
+  "name": "wqyp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wqyp"
+  ],
+  "author": "broad",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^0.5.12"
+  }
+}

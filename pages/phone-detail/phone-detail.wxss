@@ -1,0 +1,33 @@
+@import "/assets/css/common.wxss";
+@import "/templates/common/swipper/swipper.wxss";
+@import "/templates/common/near-shop/shop-template.wxss";
+@import "/templates/common/slide/slide.wxss";
+@import "/templates/common/gift/gift.wxss";
+@import "/templates/common/footer/footer.wxss";
+@import"/templates/common/remark/remark.wxss";
+
+.phone-detail-container{
+  width:100%;
+}
+.top-swipper-image{
+  margin-bottom: 20rpx;
+}
+
+.phone-detail-desc{
+  padding-left: 20rpx;
+  width: 100%;
+  height:120rpx;
+}
+
+.phone-detail-desc .name{
+  color: #345;
+  font-size: 46rpx;
+  display: block;
+}
+
+.phone-detail-desc .price{
+  font-size: 34rpx;
+}
+.reservation-price{
+  color: red;
+}

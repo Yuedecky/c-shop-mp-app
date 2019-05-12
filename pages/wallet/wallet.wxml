@@ -1,0 +1,20 @@
+<view class='wallet-container flex-column bottom-40'>
+<view class='wallet-top flex-column'>
+<image src='{{iconImage}}' class='wallet-icon-image'></image>
+<view class='wallet-desc'>钱包金额</view>
+</view>
+<view class='wallet-count'><text class='yuan'>￥</text>{{walletMoneyCount}}</view>
+<view class='wallet-to-activation flex-row bottom-240'>
+  <view class='activation-count'>￥{{activationCount}}待激活，</view>
+  <view class='view-activation-method'>查看激活方法</view>
+</view>
+
+<view class='share-qrcode bottom-20'>
+  分享二维码,赚更多钱<van-icon name='arrow'/>
+</view>
+
+<view class='view-withdraw flex-column'>
+  <van-button type='primary' size="large" custom-class='wallet-btn-class' block bind:click='viewDetail'>明细</van-button>
+  <van-button type='primary' size="large"  block custom-class='wallet-btn-class' bind:click='withdraw'>提现</van-button>
+</view>
+</view>

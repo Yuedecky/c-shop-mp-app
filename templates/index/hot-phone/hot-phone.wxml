@@ -1,0 +1,16 @@
+<template name="hot-phone">
+<view class="hot-item flex-row">
+        <image src="{{image}}"></image>
+        <view class="phone-desc">
+            <view class="phone-name">{{name}}</view>
+            <view class="flex-row bottom-20 hot-tags">
+              <block wx:for='{{tags}}' wx:for-item="tag" wx:key='tag' >
+                <view class="tag-name">{{tag}}</view>
+              </block>
+            </view>
+            <view class='hot-price'>
+               {{price}}
+              </view>
+        </view>
+</view>
+</template>

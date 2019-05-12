@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/brand/brand",
+    "pages/phone-detail/phone-detail",
+    "pages/earn/earn",
+    "pages/shop/shop",
+    "pages/me/me",
+    "pages/wallet/wallet",
+    "pages/wallet/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微券优品",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/images/reading-black.png",
+        "selectedIconPath": "assets/images/reading.png"
+      },
+      {
+        "pagePath": "pages/earn/earn",
+        "text": "赚钱",
+        "iconPath": "/assets/images/movies-black.png",
+        "selectedIconPath": "/assets/images/movies.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/assets/images/reading-black.png",
+        "selectedIconPath": "assets/images/reading.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于微券优品为你匹配到附近的店铺"
+    }
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

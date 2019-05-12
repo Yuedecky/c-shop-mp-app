@@ -1,0 +1,16 @@
+<template name='tap'>
+<view class='tap-template-container flex-row'>
+<view class='flex-row'>
+  <view><image src='{{tapImage}}' class='tap-image right-20 tap-image-center'></image></view>
+  <view class='tap-name'>{{tapName}}</view>
+  </view>
+  <view class='flex-row pading-right-20'>
+  <view wx:if="{{tapDesc !== ''}}">
+    <view class='tap-desc'>{{tapDesc}}</view>
+  </view>
+  <view wx:if="{{showDetail}}">
+   <image src="/assets/images/more-gray.png" class="more-grey"/>
+  </view>
+  </view>
+</view>
+</template>

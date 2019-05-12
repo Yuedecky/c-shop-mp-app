@@ -1,0 +1,43 @@
+.map-container{
+    height: 440px;
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+.shop-info {
+  font-size: 30rpx;
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopName{
+  font-size: 42rpx;
+}
+
+.shopLeft{
+  flex-direction: row;
+}
+.shopLeft text{
+  width: 500rpx;
+  display: block;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  margin-bottom: 20rpx;
+}
+
+.shopRight{
+ width: 160rpx;
+ height: 100%;
+ background: #333;
+}

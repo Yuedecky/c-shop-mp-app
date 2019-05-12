@@ -1,0 +1,37 @@
+@import '/assets/css/common.wxss';
+.tap-template-container{
+  width:100%;
+  background: #fff;
+  height: 120rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+.more-grey{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 40rpx;
+}
+.tap-image-center{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.tap-image{
+  height:60rpx;
+  width: 60rpx;
+  border-radius: 30rpx;
+}
+.tap-name{
+  width: 160rpx;
+  color: blue;
+  line-height: 120rpx;
+  height: 120rpx;
+}
+.tap-desc{
+  color:burlywood;
+  font-size: 36rpx;
+  line-height: 120rpx;
+  height: 120rpx;
+  align-content: center;
+  align-items: center;
+}

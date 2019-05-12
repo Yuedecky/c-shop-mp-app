@@ -1,0 +1,4 @@
+<template name='brand-template'>
+  <image src="{{logo}}" class="brand-logo"></image>
+  <view class="brand-name">{{name}}</view>
+</template>

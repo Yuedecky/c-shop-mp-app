@@ -1,0 +1,35 @@
+@import '/templates/common/star/star.wxss';
+@import "/assets/css/common.wxss";
+.avatar-container{
+  width:100%;
+}
+.avatar-image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: 1px solid green;
+}
+.remark-title{
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  width:100%;
+  height: 120rpx;
+}
+.rating-date{
+  margin-left: 300rpx;
+  font-size: 34rpx;
+  color: #888;
+}
+.remark-content{
+  font-size: 36rpx;
+  color: #666;
+  padding: 20rpx 20rpx;
+}
+
+.avatar-name-rating{
+  padding: 10rpx 10rpx;
+}
+.avatar-name{
+  font-size: 32rpx;
+  color: #333;
+}
