@@ -1,7 +1,8 @@
-<view class="container">
-        <image class="logo-image" src="{{logoUrl}}"></image>
+<view class="login-container flex-column">
+        <view class='bottom-20'><image class="logo-image" src="{{logoUrl}}"></image></view>
         <view class="logo-name">
           {{logoName}}
         </view>
-         <button class="login-btn"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登录</button>
+        <button type='primary' class="login-btn"  disabled='{{disabled}}'  open-type="getPhoneNumber" hover-class='none'
+         bindgetphonenumber="getPhoneNumber">微信一键登录</button>
 </view>

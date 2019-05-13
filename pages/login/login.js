@@ -7,6 +7,7 @@ Page({
   data: {
     logoName: '',
     logoUrl: '',
+    disabled: false
   },
 
 
@@ -42,7 +43,8 @@ Page({
  * 获取用户的手机号
  */
   getPhoneNumber:function(e){
-    console.log(e.detail.errMsg);
+    let that = this;
+    that.setData({disabled:true});
     if (e.detail.errMsg == 'getPhoneNumber: fail user deny'){
       wx.showModal({
         title: '提示',
@@ -50,7 +52,10 @@ Page({
         content: '未授权',  
         success:function(res){
           //todo
-        }  
+        }
+      });
+      that.setData({
+        disabled:false
       })
     }else{
       //todo -- 请求后端接口

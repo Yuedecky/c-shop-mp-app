@@ -32,9 +32,17 @@
   content: "\ea44";
 }
 
+.middle-center{
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-column{
   display: flex;
   flex-direction: column;
+}
+.left-20{
+  margin-left: 20rpx;
 }
 
 .title{

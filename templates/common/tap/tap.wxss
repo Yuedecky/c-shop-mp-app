@@ -12,10 +12,7 @@
   height: 40rpx;
   margin-top: 40rpx;
 }
-.tap-image-center{
-  margin-top: 20rpx;
-  margin-left: 20rpx;
-}
+
 .tap-image{
   height:60rpx;
   width: 60rpx;

@@ -49,7 +49,10 @@
   color: rgb(230, 230, 185);
 }
 .wallet-btn-class{
-  font-size: 56rpx;
+  font-size: 46rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 500;
   background: green;
-  padding: 10rpx 20rpx 10rpx 20rpx;
+  width: 480rpx;
 }

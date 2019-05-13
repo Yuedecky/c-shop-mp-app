@@ -1,7 +1,7 @@
 <template name='tap'>
 <view class='tap-template-container flex-row'>
-<view class='flex-row'>
-  <view><image src='{{tapImage}}' class='tap-image right-20 tap-image-center'></image></view>
+<view class='flex-row middle-center left-20'>
+  <view><image src='{{tapImage}}' class='tap-image right-20'></image></view>
   <view class='tap-name'>{{tapName}}</view>
   </view>
   <view class='flex-row pading-right-20'>
@@ -9,7 +9,7 @@
     <view class='tap-desc'>{{tapDesc}}</view>
   </view>
   <view wx:if="{{showDetail}}">
-   <image src="/assets/images/more-gray.png" class="more-grey"/>
+   <image src="{{customerImage}}" class="more-grey"/>
   </view>
   </view>
 </view>

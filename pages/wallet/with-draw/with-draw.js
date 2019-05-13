@@ -4,39 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tapDesc:'',
-    tapName: '',
-    tapImage: '',
-    date:'',
-    showDetail:false,
-    cutomerImage: '',
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
-    that.setData({
-      tapName: options.tapName,
-      tapImage: options.tapImage,
-      showDetail: options.showDetail
-    })
-    if(options.date){
-      that.setData({
-        date:options.date
-      })
-    }
-    if(options.tapDesc){
-      that.setData({
-        tapDesc: options.tapDesc
-      })
-    }
-    if(options.cutomerImage){
-      that.setData({
-        customerImage: options.customerImage
-      })
-    }
+    
   },
 
   /**

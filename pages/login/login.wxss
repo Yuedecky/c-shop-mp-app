@@ -1,11 +1,9 @@
-.container{
+@import '/assets/css/common.wxss';
+.login-container{
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 0rpx 20rpx 0rpx 20rpx;
-
+  align-items: center;
 }
 
 
@@ -13,20 +11,16 @@
   margin:70rpx 0rpx 0rpx 0rpx;
   width: 240rpx;
   height: 240rpx;
-  border: 1px solid #ccc;
   border-radius: 50%;
+  border:1px solid #cec;
 }
 
 .logo-name{
   width: 200rpx;
   height: 60rpx;
   font-size: 40rpx;  
-  margin-top: 20rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   color:#333;
+  text-align: center;
 }
 
 .login-btn{
@@ -38,4 +32,7 @@
     background-color: #57A948;
     color: white;
     font-weight: 600;
+}
+.login-btn::after{
+  border: none;
 }
