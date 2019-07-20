@@ -1,5 +1,4 @@
 .bang-container{
-    background-color: #efefef;
     padding-left: 20rpx;
     padding-right: 20rpx;
 }

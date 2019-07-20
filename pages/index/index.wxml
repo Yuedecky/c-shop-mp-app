@@ -3,29 +3,37 @@
   <van-search value="{{value}}" disabled placeholder='请输入商品名称' catch:tap='onSearchOpen'></van-search>
   <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}"></wq-swipper>
   <view class='adv-text'>{{advText}}</view>
-  <wq-bang title='0元购排行' rankData="{{bang}}"></wq-bang>
-  <van-tabs active="{{ active }}" bind:change="onChange">
-    <van-tab title="上门体验">
-      <van-steps steps="{{ doorSteps }}" active="{{ doorActive }}" direction="vertical" active-color="#f44" />
-    </van-tab>
-    <van-tab title="到店体验">
-      <van-steps steps="{{ shopSteps }}" active="{{ shopActive }}" direction="vertical" active-color="#f44" />
-    </van-tab>
-  </van-tabs>
-  <van-cell value="更多门店" icon="shop-o" title-class='header-info' border>
-    <view slot="title">
-      <view class="van-cell-text">
-        <text class='near-desc'>附近门店</text>
-        <van-tag type="danger" class='shop-distance'>路程{{nearByKm}}km</van-tag>
+  <view class='card-view'>
+    <wq-bang title='0元购排行' rankData="{{bang}}"></wq-bang>
+  </view>
+  <view class='card-view'>
+    <van-tabs active="{{ active }}" bind:change="onChange" animated custome-class='tab-class'>
+      <van-tab title="上门体验">
+        <van-steps steps="{{ doorSteps }}" active="{{ doorActive }}" direction="vertical" active-color="#f44" />
+      </van-tab>
+      <van-tab title="到店体验">
+        <van-steps steps="{{ shopSteps }}" active="{{ shopActive }}" direction="vertical" active-color="#f44" />
+      </van-tab>
+    </van-tabs>
+  </view>
+  <view class='card-view'>
+    <van-cell value="更多门店" icon="shop-o" title-class='header-info' border>
+      <view slot="title">
+        <view class="van-cell-text">
+          <text class='near-desc'>附近门店</text>
+          <van-tag type="danger" class='shop-distance'>路程{{nearByKm}}km</van-tag>
+        </view>
       </view>
+    </van-cell>
+    <wq-near-shop shopName="{{shop.shopName}}" shopTimes='{{shop.times}}' shopLocation="{{shop.shopLocation}}" shopPhoto="{{shop.shopPhoto}}"></wq-near-shop>
+  </view>
+  <view class='card-view'>
+    <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border></van-cell>
+    <view class='brand-list'>
+      <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
+        <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
+      </block>
     </view>
-  </van-cell>
-  <wq-near-shop shopName="{{shop.shopName}}" shopTimes='{{shop.times}}' shopLocation="{{shop.shopLocation}}" shopPhoto="{{shop.shopPhoto}}"></wq-near-shop>
-  <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border></van-cell>
-  <view class='brand-list'>
-    <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
-      <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
-    </block>
   </view>
   <van-cell title="0元购好货" value='更多' icon='thumb-circle-o' title-class='header-info' border></van-cell>
   <view class="zero-sale">
