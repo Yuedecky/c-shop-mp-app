@@ -1,12 +1,11 @@
 <import src="/templates/index/sale-phone/sale-phone.wxml"></import>
-<import src="/templates/common/footer/footer.wxml"></import>
 <view class="brand-container">
-<block wx:for="{{brandPhones}}" wx:key="item" wx:for-index="idx">
-  <view catchtap="onPhoneTab" data-productId="{{item.productId}}">
-    <template is="sale-phone" data="{{...item}}"/>
-  </view>
+  <block wx:for="{{brandPhones}}" wx:key="item" wx:for-index="idx">
+    <view catchtap="onPhoneTab" data-productId="{{item.productId}}">
+      <template is="sale-phone" data="{{...item}}" />
+    </view>
   </block>
   <view>
-  <template is='footer' data="{{text: '没有更多了'}}"></template>
+    <wq-footer text="没有更多了"></wq-footer>
   </view>
 </view>

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-badge": "/miniprogram_npm/vant-weapp/badge/index",
+    "van-badge-group": "miniprogram_npm/vant-weapp/badge-group/index"
+  }
 }

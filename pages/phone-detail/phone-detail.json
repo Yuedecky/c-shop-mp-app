@@ -2,5 +2,12 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "商品详情 ",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "wq-footer": "/components/common/footer/index",
+    "wq-near-shop": "/components/common/near-shop/index",
+    "wq-gift": "/components/common/gift/index",
+    "wq-remark": "/components/common/remark/index",
+    "wq-silde":"/components/common/silde/index"
+  }
 }

@@ -1,0 +1,13 @@
+<view class='remark-container flex-column'>
+  <view class='remark-title flex-row'>
+    <view class='view-image'>
+      <image src='{{avatar}}' class='avatar-image'></image>
+    </view>
+    <view class='avatar-name-rating flex-column'>
+      <text class='avatar-name'>{{name}}</text>
+      <van-rate value="{{ star }}" icon="like" void-icon="like-o"/>
+    </view>
+    <view class='rating-date'>{{ratingDate}}</view>
+  </view>
+  <view class='remark-content'>{{remark}}</view>
+</view>

@@ -1,27 +1,18 @@
-<!--pages/me/me.wxml-->
-<import src='/templates/common/tap/tap.wxml'></import>
+<!-- pages/me/me.wxml -->
 <view class='me-container'>
-<view class='me-title bottom-20 flex-column'>
-  <view><image src="{{meAvatar}}" class='me-avatar'></image></view>
-  <view class='me-name'>Hi,{{meName}}</view>
-</view>
-
-<view class='me-content' catchtap='onMyWalletOpen' data-uid='{{uid}}'>
-<template is='tap' data='{{...wallet}}'></template>
-</view>
-
-<view class='me-content bottom-40' >
-<template is='tap' data='{{...reservation}}'></template>
-</view>
-
-<view class='contact-us'>
-  <template is='tap' data="{{...contactUs}}"/>
-</view>
-<view class='cooperation'>
-  <template is='tap' data="{{...cooperation}}"/>
-</view>
-
-<view class='about-us'>
-  <template is='tap' data="{{...aboutUs}}"/>
-</view>
+  <view class='me-title bottom-20 flex-column'>
+    <view>
+      <image src="{{meAvatar}}" class='me-avatar'></image>
+    </view>
+    <view class='me-name'>Hi,{{meName}}</view>
+  </view>
+  <view>
+    <van-badge-group active="true">
+      <van-badge title="钱包"></van-badge>
+      <van-badge title="订单"></van-badge>
+      <van-badge title="联系客服"></van-badge>
+      <van-badge title="商务合作"></van-badge>
+      <van-badge title="关于我们"></van-badge>
+    </van-badge-group>
+  </view>
 </view>

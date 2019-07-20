@@ -1,0 +1,5 @@
+<view class="color-container">
+  <block wx:for='{{text}}' wx:key="key" wx:for-item="item" wx:for-index='idx'>
+    <text class="color-text {{selectIndex==idx?'color-selected':''}}">{{item}}</text>
+  </block>
+</view>

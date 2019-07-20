@@ -1,0 +1,9 @@
+.slide-image{
+  width: 100%;
+  height: 300rpx;
+}
+
+.sp-container{
+  width:100%;
+  height:300rpx;
+}

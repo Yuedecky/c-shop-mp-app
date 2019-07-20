@@ -1,6 +1,4 @@
 /* pages/me/me.wxss */
-@import '/templates/common/tap/tap.wxss';
-@import '/assets/css/common.wxss';
 .me-title{
   background: #57A948;
   width: 100%;

@@ -1,5 +1,4 @@
 <!--pages/movies/movies.wxml-->
-<import src='/templates/common/earn-message/earn-message.wxml'></import>
 <import src="/templates/common/tap/tap.wxml"></import>
 <import src="/templates/common/footer/footer.wxml"></import>
 <view class='earn-container'>

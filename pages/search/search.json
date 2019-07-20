@@ -2,5 +2,5 @@
   "usingComponents": {
     "van-search": "/miniprogram_npm/vant-weapp/search/index"
   },
-  "navigationBarTitleText": "搜索 "
+  "navigationBarTitleText": "搜索"
 }

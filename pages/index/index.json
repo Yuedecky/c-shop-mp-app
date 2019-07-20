@@ -1,6 +1,20 @@
 {
   "usingComponents": {
-    "van-search": "/miniprogram_npm/vant-weapp/search/index"
+    "van-search": "/miniprogram_npm/vant-weapp/search/index",
+    "van-panel": "/miniprogram_npm/vant-weapp/panel/index",
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-steps": "/miniprogram_npm/vant-weapp/steps/index",
+    "wq-bang": "/components/index/bang/index",
+    "wq-swipper": "/components/common/swipper/index",
+    "wq-near-shop": "/components/common/near-shop/index",
+    "wq-footer": "/components/common/footer/index",
+    "wq-brand": "/components/index/brand/index",
+    "wq-service": "/components/index/service/index"
   },
-  "navigationBarTitleText": "微券优品"
+  "navigationBarTitleText": "首页"
 }

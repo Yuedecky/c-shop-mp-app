@@ -1,9 +1,4 @@
 /* pages/movies/movies.wxss */
-@import "/assets/css/common.wxss";
-@import '/templates/common/earn-message/earn-message.wxss';
-@import '/templates/common/footer/footer.wxss';
-@import '/templates/common/tap/tap.wxss';
-
 page{
   background: #eee;
 }

@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "wq-footer": "/components/common/footer/index"
+    }
+}

@@ -1,0 +1,35 @@
+.bang-container{
+    background-color: #efefef;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.bang-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.bang-row{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.u-avatar-block{
+    width:14%;
+}
+
+.u-avatar{
+    width:80rpx;
+    height:80rpx;
+    border-radius: 50%;
+}
+
+.u-desc{
+    width:86%;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}

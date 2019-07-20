@@ -1,0 +1,23 @@
+.br-container{
+  margin-right: 10rpx;
+}
+
+.logo-view{
+  height:160rpx;
+  width:100%;
+}
+
+.brand-logo{
+  width: 160rpx;
+  height:160rpx;
+}
+
+
+.name-view{
+  height: 40rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #999;
+  line-height: 40rpx;
+  text-align: center;
+}

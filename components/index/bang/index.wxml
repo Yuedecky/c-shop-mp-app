@@ -1,0 +1,15 @@
+<view class='bang-container'>
+  <view class='header'>
+    <wq-footer text="{{title}}"></wq-footer>
+  </view>
+  <view class='bang-block'>
+    <block wx:for='{{rankData}}' wx:key='item.id'>
+      <view class='bang-row'>
+        <view class='u-avatar-block'>
+          <image class='u-avatar' src="{{item.avatar}}" />
+        </view>
+        <view class='u-desc'>{{item.desc}}</view>
+      </view>
+    </block>
+  </view>
+</view>

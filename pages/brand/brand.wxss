@@ -1,5 +1,3 @@
-@import '/templates/index/sale-phone/sale-phone.wxss';
-@import '/templates/common/footer/footer.wxss';
 .brand-container{
   height: 100%;
   width: 100%;

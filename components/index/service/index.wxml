@@ -1,0 +1,6 @@
+<view class='container'>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="上门体验">上门体验</van-tab>
+        <van-tab title="到店体验">到店体验</van-tab>
+    </van-tabs>
+</view>

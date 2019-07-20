@@ -1,52 +1,46 @@
-<!--index.wxml-->
-<import src="/templates/index/hot-phone/hot-phone.wxml"></import>
-<import src="/templates/index/sale-phone/sale-phone.wxml"></import>
-<import src="/templates/common/footer/footer.wxml"></import>
-<import src="/templates/index/brand/brand.wxml"></import>
-<import src="/templates/common/swipper/swipper.wxml"></import>
-<import src="/templates/common/near-shop/shop-template.wxml"></import>
+<!-- index.wxml -->
 <view class="index-container">
-<view catchtap='onSearchOpen'>
-  <van-search value="{{value}}" disabled placeholder='请输入商品名称' />
-</view>
-  <template is='swipper-template' data="{{...adv}}"/>
+  <van-search value="{{value}}" disabled placeholder='请输入商品名称' catch:tap='onSearchOpen'></van-search>
+  <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}"></wq-swipper>
   <view class='adv-text'>{{advText}}</view>
-  <view class='title flex-row bottom-20'>
-     <view class="right-20">附近门店</view><view class='km'>路程{{nearByKm}}km</view>
-  </view>
-  <template is='shop' data="{{...shop}}"/>
-  <view class="title flex-row">
-    <view class="hot-type">热门机型</view>
-    <view class='more'>更多</view>
-  </view>
-  <view class='hot flex-row'>
-  <block wx:for="{{hotPhones}}" wx:key="item.id" wx:for-item="item">
-      <view catchtap='onHotPhoneTap' data-phoneId = "{{item.id}}">
-            <template is="hot-phone"  data="{{...item}}"/>
+  <wq-bang title='0元购排行' rankData="{{bang}}"></wq-bang>
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="上门体验">
+      <van-steps steps="{{ doorSteps }}" active="{{ doorActive }}" direction="vertical" active-color="#f44" />
+    </van-tab>
+    <van-tab title="到店体验">
+      <van-steps steps="{{ shopSteps }}" active="{{ shopActive }}" direction="vertical" active-color="#f44" />
+    </van-tab>
+  </van-tabs>
+  <van-cell value="更多门店" icon="shop-o" title-class='header-info' border>
+    <view slot="title">
+      <view class="van-cell-text">
+        <text class='near-desc'>附近门店</text>
+        <van-tag type="danger" class='shop-distance'>路程{{nearByKm}}km</van-tag>
       </view>
+    </view>
+  </van-cell>
+  <wq-near-shop shopName="{{shop.shopName}}" shopTimes='{{shop.times}}' shopLocation="{{shop.shopLocation}}" shopPhoto="{{shop.shopPhoto}}"></wq-near-shop>
+  <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border></van-cell>
+  <view class='brand-list'>
+    <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
+      <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
     </block>
   </view>
-
-  <view class='title'>
-  品牌分类
-  </view>
-    <view class="brand-list flex-row bottom-20">
-      <block wx:for='{{brands}}' wx:key='brand.id' wx:for-item="item" >
-      <view class='brand-item' bindtap='onBrandTap' data-brandId="{{item.id}}" data-brandName="{{item.name}}">
-        <template is="brand-template" data="{{...item}}"/>
+  <van-cell title="0元购好货" value='更多' icon='thumb-circle-o' title-class='header-info' border></van-cell>
+  <view class="zero-sale">
+    <block wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx">
+      <van-card tag="{{item.tag}}" price-class='price-info' title-class='p-title' price="{{item.price}}" desc="好评率{{item.rating}}" title="{{item.name}}" thumb="{{ item.image }}">
+        <view slot="tags">
+          <block wx:for="{{item.tags}}" wx:key="**this" wx:for-item='tag'>
+            <van-tag plain type="primary" size='midium' custom-class='tag-class'>{{tag}}</van-tag>
+          </block>
         </view>
-      </block>
-    </view>
-  <view class="title flex-row">
-    <view>今日特价</view>
-    <view class='more'>更多</view>
+        <view slot="footer" class='btn-footer'>
+          <van-button plain size="mini" type='danger'>立即0元购</van-button>
+        </view>
+      </van-card>
+    </block>
   </view>
-  <view class="today-sale">
-  <block wx:for="{{todaySales}}" wx:key="item" wx:for-index="idx">
-  <view catchtap='onPhoneTap' data-productId="{{item.productId}}">
-    <template is="sale-phone" data="{{...item}}"/>
-  </view>
-  </block>
-  </view>
-  <template is='footer' data="{{text: '已经到底了'}}"/>
+  <wq-footer text="已经到底了" />
 </view>

@@ -1,0 +1,15 @@
+<view class="sale-container">
+  <image src="{{image}}" class="sale-image" />
+  <view class="sale-phone-desc">
+    <view class="sale-phone-name">{{name}}</view>
+    <view class="sale-phone-tags">
+      <block wx:for="{{tags}}" wx:key="**this" wx:for-item="sTag">
+        <van-tag round>{{sTag}}</van-tag>
+      </block>
+    </view>
+    <view class="sale-phone-price">
+      <view class="reservationPrice">官网价{{price}}</view>
+      <view class="goodRatings">{{rating}}好评</view>
+    </view>
+  </view>
+</view>
