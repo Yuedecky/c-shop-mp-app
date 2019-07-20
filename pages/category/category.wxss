@@ -1,0 +1,13 @@
+.category-container{
+    display: flex;
+    flex-direction: column;
+}
+.bar-section{
+    width:100%;
+    height: 200rpx;
+}
+
+.header-bar{
+    width: 100%;
+    height:100%;
+}

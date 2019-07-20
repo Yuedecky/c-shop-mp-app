@@ -1,7 +1,7 @@
 {
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "品牌",
   "navigationBarTextStyle": "black",
   "usingComponents": {
     "wq-brand": "/components/index/brand/index",

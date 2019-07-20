@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "首页",
+    "usingComponents": {
+        "van-search": "/miniprogram_npm/vant-weapp/search/index",
+        "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+        "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+        "van-tree-select": "/miniprogram_npm/vant-weapp/tree-select/index"
+    }
+}

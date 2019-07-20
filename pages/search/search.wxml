@@ -1,5 +1,3 @@
 <view class='search-container'>
-<van-search value="{{value}}" placeholder='请输入商品名称' 
-show-action bind:search="onSearch"
-  bind:cancel="onCancel"/>
+  <van-search value="{{value}}" placeholder='请输入商品名称' show-action bind:search="onSearch" bind:cancel="onCancel" />
 </view>

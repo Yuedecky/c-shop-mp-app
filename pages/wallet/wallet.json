@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "popup":"/components/popup/popup"
+    "popup": "/components/popup/popup"
   },
   "navigationBarTitleText": "我的钱包"
 }

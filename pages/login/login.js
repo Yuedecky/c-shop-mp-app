@@ -35,29 +35,29 @@ Page({
    */
   onShow: function () {
     wx.hideTabBar({
-      
+
     })
   },
 
-/**
- * 获取用户的手机号
- */
-  getPhoneNumber:function(e){
+  /**
+   * 获取用户的手机号
+   */
+  getPhoneNumber: function (e) {
     let that = this;
-    that.setData({disabled:true});
-    if (e.detail.errMsg == 'getPhoneNumber: fail user deny'){
+    that.setData({ disabled: true });
+    if (e.detail.errMsg == 'getPhoneNumber: fail user deny') {
       wx.showModal({
         title: '提示',
         showCancel: false,
-        content: '未授权',  
-        success:function(res){
+        content: '未授权',
+        success: function (res) {
           //todo
         }
       });
       that.setData({
-        disabled:false
+        disabled: false
       })
-    }else{
+    } else {
       //todo -- 请求后端接口
       // wx.request({
       //   url: 'http://localhost:8080/wx/registerPhone',
@@ -74,15 +74,15 @@ Page({
       // })
       wx.switchTab({
         url: '../index/index',
-        success:function(){
+        success: function () {
 
         },
-        fail:function(e){
+        fail: function (e) {
           console.log(e)
         }
       })
     }
-    
+
 
   },
 
@@ -90,34 +90,34 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })
