@@ -1,5 +1,5 @@
 <!-- index.wxml -->
-<view class="index-container">
+<view class="index-container page">
   <van-search value="{{value}}" disabled placeholder='请输入商品名称' catch:tap='onSearchOpen'></van-search>
   <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}"></wq-swipper>
   <view class='adv-text'>{{advText}}</view>

@@ -1,0 +1,42 @@
+.personal-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    justify-content: space-between;
+    padding-bottom: 40rpx;
+    position: relative;
+}
+.me-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.av-block{
+    margin-right: 20rpx;
+}
+
+.me-avatar{
+    width:120rpx;
+    height:120rpx;
+    border-radius: 50%;
+}
+
+.me-name{
+    text-align: center;
+    line-height: 120rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+
+
+.me-settings{
+    position: absolute;
+    top:90rpx;
+    right: 60rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

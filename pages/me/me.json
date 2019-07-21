@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-badge": "/miniprogram_npm/vant-weapp/badge/index",
-    "van-badge-group": "miniprogram_npm/vant-weapp/badge-group/index"
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+    "wq-personal": "/components/common/personal/index"
   }
 }

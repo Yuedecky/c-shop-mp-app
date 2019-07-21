@@ -1,6 +1,10 @@
 {
     "component": true,
     "usingComponents": {
-        "van-button":"/miniprogram_npm/vant-weapp/button/index"
+        "van-button": "/miniprogram_npm/vant-weapp/button/index",
+        "van-collapse": "/miniprogram_npm/vant-weapp/collapse/index",
+        "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+        "van-collapse-item": "/miniprogram_npm/vant-weapp/collapse-item/index",
+        "van-steps": "/miniprogram_npm/vant-weapp/steps/index"
     }
 }

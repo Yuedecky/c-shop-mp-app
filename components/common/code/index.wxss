@@ -1,6 +1,8 @@
-.ec-conatiner{
+.ec-container{
     display: flex;
     flex-direction: column;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
 }
   
   .code-view{

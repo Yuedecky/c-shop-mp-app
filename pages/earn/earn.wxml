@@ -10,18 +10,15 @@
   </view>
   <!-- 个人资金信息 -->
   <view class='com-block'>
-    <wq-badge pendingCash="{{pendingCash}}" withDraw="{{withDraw}}" bind:draw="onDraw"></wq-badge>
+    <wq-badge pendingCash="{{pendingCash}}" withDraw="{{withDraw}}" bind:draw="onDraw" bind:raider="onRaider"></wq-badge>
   </view>
   <view class="com-block">
     <wq-code qrCode="{{qrCode}}" codeText="{{codeText}}"></wq-code>
   </view>
-  <wq-footer text="助力好友" />
   <view class='com-block'>
+    <wq-footer text="助力好友" />
     <block wx:for="{{friends}}" wx:key='id' wx:for-item='item'>
       <wq-cross-over desc="{{item.tapDesc}}" date="{{item.date}}" name="{{item.tapName}}" avatar="{{item.tapImage}}" />
     </block>
-  </view>
-  <view>
-    <wq-footer text='没有更多了' />
   </view>
 </view>

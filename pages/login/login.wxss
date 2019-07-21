@@ -1,12 +1,11 @@
-@import '/assets/css/common.wxss';
-.login-container{
-  height: 100%;
-  width: 100%;
+
+.login-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
-
-
 .logo-image{
   margin:70rpx 0rpx 0rpx 0rpx;
   width: 240rpx;
@@ -16,7 +15,6 @@
 }
 
 .logo-name{
-  width: 200rpx;
   height: 60rpx;
   font-size: 40rpx;  
   color:#333;
@@ -33,6 +31,7 @@
     color: white;
     font-weight: 600;
 }
+
 .login-btn::after{
   border: none;
 }

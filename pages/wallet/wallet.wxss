@@ -1,4 +1,3 @@
-@import '/assets/css/common.wxss';
 .wallet-icon-image{
   width: 240rpx;
   height: 240rpx;

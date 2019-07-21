@@ -1,4 +1,3 @@
-@import '/assets/css/common.wxss';
 
 .hot-item{
   padding-top: 20rpx;

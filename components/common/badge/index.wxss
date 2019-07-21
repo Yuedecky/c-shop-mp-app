@@ -8,8 +8,9 @@
 }
 
 .bd-header{
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    font-size: 34rpx;
 }
 
 .bd-key{
@@ -31,6 +32,4 @@ flex-direction: row;
     text-align: center;
     line-height: 50rpx;
     font-size: 30rpx;
-    color: red;
-    text-decoration: underline;
 }

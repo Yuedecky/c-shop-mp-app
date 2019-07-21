@@ -1,0 +1,11 @@
+<view class='personal-container'>
+    <view class='me-info'>
+        <view class='av-block'>
+            <image src="{{avatar}}" class='me-avatar'></image>
+        </view>
+        <view class='me-name'>{{name}}</view>
+    </view>
+    <view class='me-settings'>
+        <van-icon name="setting-o" size="20px" />
+    </view>
+</view>

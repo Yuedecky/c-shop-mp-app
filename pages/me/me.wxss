@@ -1,20 +1,31 @@
 /* pages/me/me.wxss */
-.me-title{
-  background: #57A948;
-  width: 100%;
-  height: 360rpx;
+.me-container{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.badge-grp{
+  width: 100%;
+  border: 1px solid red;
 }
 
-.me-name{
-color: #777;
+.me-grp{
+  margin-bottom: 40rpx;
 }
 
-.me-avatar{
-  width:120rpx;
-  height: 120rpx;
-  border-radius: 60rpx;
-
+.c-icon-class{
+  margin-right: 20rpx;
 }
+
+.me-header{
+  margin-bottom: 480rpx;
+}
+
+.footer-info{
+  text-align: center;
+  color: #999;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+

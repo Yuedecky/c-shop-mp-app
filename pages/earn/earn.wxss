@@ -2,7 +2,6 @@
 .earn-container{
   display: flex;
   flex-direction: column;
-  background: #efefef;
 }
 
 .swipper-header{
@@ -17,12 +16,4 @@
 .com-block{
   background: white;
   margin-bottom: 20rpx;
-}
-
-
-
-
-
-.earn-messages{
-  background:white;
 }

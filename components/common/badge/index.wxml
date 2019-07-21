@@ -13,6 +13,16 @@
         </view>
     </view>
     <view class='draw-raider'>
-        <text>提现攻略</text>
+        <van-collapse bind:change="onChange">
+            <van-collapse-item name="1">
+                <view slot='title'>
+                    提现攻略
+                    <van-icon name="question-o" />
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+    </view>
+    <view wx:if="{{visible}}">
+        <van-steps direction="vertical" steps="{{ steps }}" />
     </view>
 </view>

@@ -17,9 +17,6 @@
   display: flex;
   flex-direction: row;
 }
-.index-container{
-  background-color: #efefef;
-}
 
 .card-view{
   margin-bottom: 20rpx;

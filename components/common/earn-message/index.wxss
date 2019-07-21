@@ -1,4 +1,3 @@
-@import '/assets/css/common.wxss';
 
 .message-swipper-container{
   width: 100%;
