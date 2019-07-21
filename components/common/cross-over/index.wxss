@@ -1,0 +1,45 @@
+.tap-template-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+  .tap-image{
+    height:60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    margin-right:20rpx;
+  }
+
+  .tap-name{
+    width: 160rpx;
+    font-size:28rpx;
+    color: #006699;
+    line-height: 120rpx;
+    height: 120rpx;
+  }
+
+
+  .avatar-block{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .date-block{
+      font-size:24rpx;
+      color:#999;
+      line-height:120rpx;
+      align-items: center;
+  }
+
+  .tap-desc{
+    color:burlywood;
+    font-size: 30rpx;
+    line-height: 120rpx;
+    height: 120rpx;
+    align-items: center;
+  }

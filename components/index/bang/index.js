@@ -3,10 +3,10 @@ Component({
         rankData: {
             type: Array,
             value: []
-        }, title: String
+        },
+        title: String
     },
-
     methods: {
-
+        
     }
 })

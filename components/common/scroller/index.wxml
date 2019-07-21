@@ -1,0 +1,9 @@
+<view class='sc-container'>
+    <view class='u-avatar-block'>
+        <image class='u-avatar' src="{{avatar}}" />
+    </view>
+    <view class='u-desc'>
+        <text class='u-desc-name'>{{name}}</text>
+        <text>{{desc}}</text>
+    </view>
+</view>

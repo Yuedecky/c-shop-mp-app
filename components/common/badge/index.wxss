@@ -1,0 +1,36 @@
+.bd-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40rpx;
+    padding-bottom: 10rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.bd-header{
+display: flex;
+flex-direction: row;
+}
+
+.bd-key{
+    color: #cccccc;
+    font-weight: bold;
+    margin-right: 20rpx;
+}
+
+.title-between{
+    justify-content: space-between;
+}
+
+.bd-value{
+    color:#000000;
+    font-weight: bold;
+}
+
+.draw-raider{
+    text-align: center;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    color: red;
+    text-decoration: underline;
+}

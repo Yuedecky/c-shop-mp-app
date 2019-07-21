@@ -1,39 +1,27 @@
-<!--pages/movies/movies.wxml-->
-<import src="/templates/common/tap/tap.wxml"></import>
-<import src="/templates/common/footer/footer.wxml"></import>
+<!-- pages/movies/movies.wxml -->
 <view class='earn-container'>
-<view class='earn-header flex-column bottom-20'>
-  <view class='code-view'>
-    <image class='qr-code bottom-20' src="{{qrCode}}"/>
+  <!-- 滚动区域 -->
+  <view class='swipper-header com-block'>
+    <swiper autoplay="true" vertical="true" circular="true" interval="3000" display-multiple-items="1">
+      <swiper-item wx:for="{{earnMessages}}" wx:key="id" class="swipper-item-block">
+        <wq-scroller avatar="{{item.avatar}}" name="{{item.name}}" desc="{{item.desc}}" code="{{item.id}}"></wq-scroller>
+      </swiper-item>
+    </swiper>
   </view>
-  <view  class='code-text bottom-40'>{{codeText}}</view>
-  <view class='earn-share-save flex-row bottom-20'>
-  <view class='earn-share flex-row right-100'>
-    <image src='/assets/images/share.png' class='share-image'></image>
-    <text class="share-desc">分享</text>
+  <!-- 个人资金信息 -->
+  <view class='com-block'>
+    <wq-badge pendingCash="{{pendingCash}}" withDraw="{{withDraw}}" bind:draw="onDraw"></wq-badge>
   </view>
-  <view class='earn-share flex-row'>
-    <image src='/assets/images/save.png' class='share-image'></image>
-    <text class="share-desc">保存</text>
+  <view class="com-block">
+    <wq-code qrCode="{{qrCode}}" codeText="{{codeText}}"></wq-code>
   </view>
-  </view>
-  <view class='earn-raider bottom-20' catchtap='onNewTabForRaider'>
-  赚钱攻略
-  </view>
-  </view>
-
-  <view class='earn-messages bottom-40'>
-  <template is='earn-message' data="{{msgList}}"/>
-  </view>
-  <view class='friends bottom-20'>
-  <template is='footer' data="{{text: '好友'}}"/>
-  </view>
-  <view class='friends-earn-list'>
-    <block wx:for="{{friends}}" wx:key='fid' wx:for-item='item'>
-      <template is='tap' data="{{...item}}"/>
+  <wq-footer text="助力好友" />
+  <view class='com-block'>
+    <block wx:for="{{friends}}" wx:key='id' wx:for-item='item'>
+      <wq-cross-over desc="{{item.tapDesc}}" date="{{item.date}}" name="{{item.tapName}}" avatar="{{item.tapImage}}" />
     </block>
   </view>
   <view>
-  <template is='footer' data="{{text:'没有更多了'}}"/>
+    <wq-footer text='没有更多了' />
   </view>
 </view>

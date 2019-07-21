@@ -1,50 +1,28 @@
 /* pages/movies/movies.wxss */
-page{
-  background: #eee;
-}
 .earn-container{
-  width:100%;
-}
-.earn-header{
-  padding-top: 40rpx;
-  background: white;
-}
-.code-view{
   display: flex;
-  height: 400rpx;
-  justify-content: center;
-  align-items: center;
-}
-.qr-code{
-  width: 480rpx;
-  height: 380rpx;
-}
-.code-text{
-  font-size: 30rpx;
-  color: #333;
-  text-align: center;
+  flex-direction: column;
+  background: #efefef;
 }
 
-.earn-share-save{
-  align-items: center;
-  justify-content: center;
-  height: 50rpx;
-  vertical-align: center;
+.swipper-header{
+  height: 100rpx;
+  overflow:hidden;
 }
-.share-image{
-  width:40rpx;
-  height: 40rpx;
-  margin-right: 10rpx;
+
+.swipper-item-block{
+  margin:10rpx 20rpx 20rpx 10rpx;
 }
-.share-desc{
-  font-size: 36rpx;
-  color:blue;
+
+.com-block{
+  background: white;
+  margin-bottom: 20rpx;
 }
-.earn-raider{
-  text-align: center;
-  font-size: 32rpx;
-  color: #555;
-}
+
+
+
+
+
 .earn-messages{
   background:white;
 }

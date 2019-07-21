@@ -1,0 +1,60 @@
+.ec-conatiner{
+    display: flex;
+    flex-direction: column;
+}
+  
+  .code-view{
+    display: flex;
+    height: 400rpx;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .qr-code{
+    width: 480rpx;
+    height: 380rpx;
+  }
+  .code-text{
+    font-size: 30rpx;
+    color: #333;
+    text-align: center;
+  }
+  
+  .earn-share-save{
+    margin-top: 20rpx;
+    justify-content: center;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .earn-share{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .right-100{
+    margin-right: 100rpx;
+  }
+  
+  
+  .share-image{
+    width:60rpx;
+    height: 60rpx;
+    margin-right: 10rpx;
+  }
+  
+  .share-desc{
+    font-size: 36rpx;
+    color:blue;
+    height: 60rpx;
+    line-height: 60rpx;
+  }
+  
+  .earn-raider{
+    margin-top: 20rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #555;
+  }

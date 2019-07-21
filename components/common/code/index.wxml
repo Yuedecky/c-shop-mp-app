@@ -1,0 +1,17 @@
+<view class='ec-container'>
+    <view class='code-view'>
+        <image class='qr-code' src="{{qrCode}}" />
+    </view>
+    <view class='code-text'>{{codeText}}</view>
+    <view class='earn-share-save'>
+        <view class='earn-share right-100' bind:tap='shareCode'>
+            <image src="{{shareCodeUrl}}" class='share-image'></image>
+            <text class="share-desc">分享</text>
+        </view>
+        <view class='earn-share' bind:tap='saveCode'>
+            <image src="{{saveCodeUrl}}" class='share-image'></image>
+            <text class="share-desc">保存</text>
+        </view>
+    </view>
+    <view class='earn-raider' bind:tap='onTapRaider'>赚钱攻略</view>
+</view>

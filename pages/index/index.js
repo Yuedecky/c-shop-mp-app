@@ -63,23 +63,32 @@ Page({
     bang: [
       {
         "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
-        "desc": "月×××与20分钟前完成0元购机￥2039",
+        "desc": "20分钟前完成0元购机￥2039",
+        "name": "88**23",
         "id": 1002
       },
       {
         "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
-        "desc": "158××××12341小时前下单购买了华为P30￥2039",
+        "desc": "1小时前下单购买了华为P30￥2039",
+        "name": "158****1234",
         "id": 1302
       },
       {
         "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
-        "desc": "名××的1小时前分享了二维码",
+        "desc": "1小时前分享了二维码",
+        "name": "名***的",
         "id": 1301,
+      },
+      {
+        "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
+        "desc": "1小时前分享了二维码",
+        "name": "名***的",
+        "id": 1304,
       }
     ],
     active: 0,
-    shopActive:-1,
-    doorActive:-1,
+    shopActive: -1,
+    doorActive: -1,
     doorSteps: [{
       text: '步骤一',
       desc: '选择任意1～3款机型'

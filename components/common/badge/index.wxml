@@ -1,0 +1,18 @@
+<view class='bd-container'>
+    <view class='bd-header'>
+        <text class='bd-key'>待提现</text>
+        <text class="bd-value">{{pendingCash}}</text>
+    </view>
+    <view class='bd-header title-between'>
+        <view>
+            <text class='bd-key'>可提现</text>
+            <text class="bd-value">{{withDraw}}</text>
+        </view>
+        <view>
+            <van-button type="default" bind:click='onApply' size="small">立即体现</van-button>
+        </view>
+    </view>
+    <view class='draw-raider'>
+        <text>提现攻略</text>
+    </view>
+</view>

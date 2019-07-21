@@ -1,0 +1,12 @@
+<view class='tap-template-container'>
+    <view class='avatar-block'>
+        <view>
+            <image src='{{avatar}}' class='tap-image'></image>
+        </view>
+        <view class='tap-name'>{{name}}</view>
+    </view>
+    <view class='date-block'>{{date}}</view>
+    <view>
+        <view class='tap-desc'>{{desc}}</view>
+    </view>
+</view>
