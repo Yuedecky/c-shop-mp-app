@@ -11,3 +11,17 @@
     width: 100%;
     height:100%;
 }
+
+
+
+.index-nav-left{
+    white-space: nowrap;
+    width : 26%;
+}
+
+.scroll-y{
+    position: fixed;
+    top:400rpx;
+    left:0rpx;
+}
+

@@ -1,0 +1,3 @@
+<view class="lf-container">
+    <text class='brand-text  {{checked?"checked-class":""}}' bind:tap='onTap'>{{text}}</text>
+</view>
