@@ -1,0 +1,14 @@
+<view class='p-container'>
+    <van-card custom-class='p-c-class' tag="{{product.tag}}" price-class='price-info' title-class='p-title' price="{{product.price}}" desc="好评率{{product.rating}}" title="{{product.name}}" thumb="{{ product.image }}">
+        <view slot="tags">
+            <block wx:for="{{product.tags}}" wx:key="**this" wx:for-item='tag'>
+                <van-tag plain type="primary" size='midium' custom-class='tag-class'>
+                    {{tag}}
+                </van-tag>
+            </block>
+        </view>
+        <view slot="footer" class='btn-footer' bind:tap="onTap">
+            <van-button plain size="mini" type='danger'>立即0元购</van-button>
+        </view>
+    </van-card>
+</view>

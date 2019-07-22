@@ -4,10 +4,13 @@
   "navigationBarTitleText": "商品详情 ",
   "navigationBarTextStyle": "black",
   "usingComponents": {
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
     "wq-footer": "/components/common/footer/index",
     "wq-near-shop": "/components/common/near-shop/index",
-    "wq-gift": "/components/common/gift/index",
     "wq-remark": "/components/common/remark/index",
-    "wq-silde":"/components/common/silde/index"
+    "wq-swipper": "/components/common/swipper/index",
+    "wq-product-header": "/components/common/product-header/index",
+    "wq-current-product": "/components/common/current-product/index"
   }
 }

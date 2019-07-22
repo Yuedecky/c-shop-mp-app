@@ -1,0 +1,42 @@
+.p-detail-h-wrapper{
+  height:400rpx;
+  background: #ffff;
+}
+
+
+
+.card-view{
+  background: #ffffff;
+  margin-bottom: 20rpx;
+}
+
+.load-btn-more{
+  color:#666;
+  font-size: 30rpx;
+}
+
+.send-to-order{
+  background: red;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  font-size: 30rpx;
+  bottom: 0;
+  left:0;
+}
+
+.sh-slot{
+  display: flex;
+  width:80%;
+  flex-direction: row;
+}
+
+.shop-near-desc{
+  margin-right: 10rpx;
+}

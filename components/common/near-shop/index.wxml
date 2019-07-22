@@ -1,15 +1,19 @@
-<view class="sh-container" bind:tap='tap'>
+<view class="sh-container">
   <view class='icon-location'>
-    <van-icon name='location-o'></van-icon>
+    <van-icon name='location-o' custom-class='location-class'></van-icon>
   </view>
-  <view class="shop-desc">
-    <view class='shop-name'>{{shopName}}</view>
-    <view class="shop-location">{{shopLocation}}</view>
-    <view class='shop-times'>有{{shopTimes}}人来过</view>
+  <view class="shop-desc" bind:tap='tapDetail'>
+    <view class='shop-name'>{{shop.name}}</view>
+    <view class="shop-location">{{shop.location}}</view>
+    <view>
+      有
+      <text class='shop-times'>{{shop.times}}</text>
+      人来过
+    </view>
   </view>
   <view class='photo-view'>
     <view>
-      <image src="{{shopPhoto}}" class="shop-url"></image>
+      <image src="{{shop.photo}}" class="shop-url"></image>
     </view>
     <view>
       <van-icon name='arrow' custom-class='icon-class' />

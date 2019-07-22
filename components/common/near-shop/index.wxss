@@ -1,11 +1,26 @@
 
+
+
+.sh-title{
+  font-weight: bold;
+  font-size:32rpx;
+}
+
+
+
+.sh-custom{
+  justify-content: space-between;
+}
+
+
+
 .sh-container{
-  padding: 20rpx;
-  margin-bottom: 20rpx;
-  height:120rpx;
   display: flex;
+  padding: 20rpx;
   flex-direction: row;
 }
+
+
 
 .icon-location{
   width: 5%;
@@ -13,10 +28,11 @@
   margin-right: 10rpx;
 }
 
-.icon-location > van-icon{
-  position: absolute;
-  top:40rpx;
+
+.shop-times{
+  color: red;
 }
+
 .shop-desc{
   display: flex;
   width:68%;
@@ -24,19 +40,27 @@
 }
 
 .shop-location{
-  font-size: 32rpx;
-  font-weight: bold;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color:#999;
 }
 
 .shop-times{
   font-size: 28rpx;
   line-height: 40rpx;
-  color: #666;
+  color: red;
+}
+
+.location-class{
+  position: absolute;
+  top:50rpx;
+  left: 10rpx;
 }
 
 .shop-name{
-  color:#999;
-  font-size:28rpx;
+  color:#333;
+  font-size:32rpx;
+  font-weight: bold;
   margin-bottom: 10rpx;
 }
 
@@ -58,6 +82,7 @@
 
 .icon-class{
   position: absolute;
-  top:40rpx;
+  top:50rpx;
+  right: 10rpx;
   color: #999;
 }

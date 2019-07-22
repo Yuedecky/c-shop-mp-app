@@ -1,33 +1,49 @@
-.avatar-container{
-  width:100%;
+
+.remark-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
 }
+.r-view-image{
+  margin-right: 20rpx;
+}
+
 .avatar-image{
   width: 80rpx;
   height: 80rpx;
   border-radius: 40rpx;
-  border: 1px solid green;
 }
-.remark-title{
+
+.av-name-star{
+  display: flex;
+  flex-direction: row;
+}
+
+.remark-title-wrapper{
   padding-top: 10rpx;
-  padding-left: 20rpx;
-  width:100%;
+  display: flex;
+  font-size:26rpx;
   height: 120rpx;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 .rating-date{
-  margin-left: 300rpx;
-  font-size: 34rpx;
+  font-size: 28rpx;
   color: #888;
 }
+
 .remark-content{
-  font-size: 36rpx;
+  font-size: 30rpx;
   color: #666;
-  padding: 20rpx 20rpx;
 }
 
 .avatar-name-rating{
-  padding: 10rpx 10rpx;
+  display: flex;
+  flex-direction: column;
 }
 .avatar-name{
-  font-size: 32rpx;
+  font-size: 26rpx;
   color: #333;
+  line-height:40rpx;
 }

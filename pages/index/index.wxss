@@ -24,11 +24,6 @@
 }
 
 
-.shop-header{
-  display: flex;
-  flex-direction: row;
-}
-
 .c-class{
   line-height:36rpx;
 }
@@ -55,16 +50,20 @@
 }
 
 
-.price-info{
-  margin-top: 10rpx;
-  font-weight: normal;
-  font-size: 32rpx;
-  line-height: 40rpx;
-}
 
 .zero-sale{
   display: flex;
   flex-direction: column;
+}
+
+
+.sh-slot{
+  display: flex;
+  width:80%;
+  flex-direction: row;
+}
+.shop-near-desc{
+  margin-right: 10rpx;
 }
 
 

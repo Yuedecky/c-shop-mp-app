@@ -1,14 +1,10 @@
 Component({
     properties: {
-        shopName: String,
-        shopDistance: String,
-        shopLocation: String,
-        shopPhoto: String,
-        shopTimes: Number
+        shop: Object
     },
     methods: {
-        tap: function (e) {
-            console.log('shop open:', e)
+        tapDetail: function (e) {
+            this.triggerEvent("detail", { id: this.properties.id }, {})
         }
     }
 })

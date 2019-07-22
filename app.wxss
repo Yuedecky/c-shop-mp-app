@@ -3,3 +3,13 @@ page{
     font-size: 30rpx;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif !important;
 }
+
+
+/**
+去掉滚动条
+*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }

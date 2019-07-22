@@ -1,0 +1,8 @@
+.cur-p-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+}
+.cur-p-value{
+    color: #f0f;
+}

@@ -1,13 +1,19 @@
-<view class='remark-container flex-column'>
-  <view class='remark-title flex-row'>
-    <view class='view-image'>
-      <image src='{{avatar}}' class='avatar-image'></image>
+<view class='remark-container'>
+  <view class='remark-title-wrapper'>
+    <view class='av-name-star'>
+      <view class='r-view-image'>
+        <image src='{{remark.avatar}}' class='avatar-image'></image>
+      </view>
+      <view class='avatar-name-rating'>
+        <view class='avatar-name'>
+          <text>{{remark.name}}</text>
+        </view>
+        <view class='av-star'>
+          <van-rate value="{{ remark.score }}" icon="like" size="12" void-icon="like-o" />
+        </view>
+      </view>
     </view>
-    <view class='avatar-name-rating flex-column'>
-      <text class='avatar-name'>{{name}}</text>
-      <van-rate value="{{ star }}" icon="like" void-icon="like-o"/>
-    </view>
-    <view class='rating-date'>{{ratingDate}}</view>
+    <view class='rating-date'>{{remark.date}}</view>
   </view>
-  <view class='remark-content'>{{remark}}</view>
+  <view class='remark-content'>{{remark.content}}</view>
 </view>

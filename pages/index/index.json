@@ -14,7 +14,8 @@
     "wq-near-shop": "/components/common/near-shop/index",
     "wq-footer": "/components/common/footer/index",
     "wq-brand": "/components/index/brand/index",
-    "wq-service": "/components/index/service/index"
+    "wq-service": "/components/index/service/index",
+    "wq-product": "/components/common/product/index"
   },
   "navigationBarTitleText": "首页"
 }

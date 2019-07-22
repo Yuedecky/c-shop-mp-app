@@ -1,3 +1,11 @@
 <view>
     <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
+    <view wx:if="{{products.length >0}}">
+        <block wx:for="{{products}}" wx:key="id">
+            <wq-product product="{{item}}"></wq-product>
+        </block>
+    </view>
+    <view wx:else>
+        <text>这什么都没有</text>
+    </view>
 </view>

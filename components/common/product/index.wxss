@@ -1,0 +1,14 @@
+
+.p-container{
+    background: white;
+}
+
+.p-c-class{
+    background-color: #ffffff;
+}
+.price-info{
+    margin-top: 10rpx;
+    font-weight: normal;
+    font-size: 32rpx;
+    line-height: 40rpx;
+  }

@@ -13,12 +13,12 @@ Page({
         'http://image.qfstatic.com/897/2019/201904/20190429/540F3242232C40C7A21C67E589375BF6.jpg']
     },
     userPosition: '',
-    nearByKm: 0.2,
     shop: {
-      shopLocation: '上海市浦东新区122号',
-      shopName: '聚客数码浦东新区店',
+      location: '上海市浦东新区122号',
+      name: '聚客数码浦东新区店',
       times: 3921,
-      shopPhoto: 'http://image.qfstatic.com/897/2019/201904/20190429/8D5C9103C78643A190513340FA3FA294.jpeg',
+      distance: 0.2,
+      photo: 'http://image.qfstatic.com/897/2019/201904/20190429/8D5C9103C78643A190513340FA3FA294.jpeg',
       latitude: 121.460231,
       longitude: 31.234129
     },
@@ -170,11 +170,32 @@ Page({
   onReady: function () {
 
   },
+
+  openMoreShops() {
+    console.log('open more shops...')
+  },
   onNearShopOpen: function (e) {
     var that = this;
     wx.navigateTo({
       url: '/pages/shop/shop?latitude=' + that.data.shop.latitude + '&longitude=' + that.data.shop.longitude,
     })
+  },
+
+  /**
+   * 点击查看更多商品
+   */
+  onMoreProducts() {
+    wx.navigateTo({
+      url: "/pages/product-list/product-list"
+    })
+  },
+
+  /**
+   * 查看附近门店详情
+   */
+  openShopDetail(e) {
+    const id = e.detail.id;
+    console.log(id)
   },
 
   /**
@@ -274,6 +295,14 @@ Page({
   },
   onUnload: function () {
     console.log("index is unload")
+  },
+
+
+  onProductClick(e) {
+    let id = e.detail.id
+    wx.navigateTo({
+      url: "/pages/product-detail/product-detail?id=" + id
+    })
   },
 
   onHide: function () {

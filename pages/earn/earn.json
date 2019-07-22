@@ -6,8 +6,8 @@
     "wq-footer": "/components/common/footer/index",
     "wq-cross-over": "/components/common/cross-over/index",
     "wq-code": "/components/common/code/index",
-    "wq-scroller":"/components/common/scroller/index",
-    "wq-badge":"/components/common/badge/index"
+    "wq-scroller": "/components/common/scroller/index",
+    "wq-badge": "/components/common/badge/index"
   },
   "navigationBarTitleText": "赚钱"
 }
