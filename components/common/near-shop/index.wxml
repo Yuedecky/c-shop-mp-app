@@ -1,4 +1,4 @@
-<view class="sh-container">
+<view class="sh-container" style="background: {{background}};">
   <view class='icon-location'>
     <van-icon name='location-o' custom-class='location-class'></van-icon>
   </view>

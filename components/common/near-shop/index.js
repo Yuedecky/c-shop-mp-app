@@ -1,6 +1,7 @@
 Component({
     properties: {
-        shop: Object
+        shop: Object,
+        background: String
     },
     methods: {
         tapDetail: function (e) {

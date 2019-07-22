@@ -1,18 +1,26 @@
-<view class="phone-detail-container flex-column">
-  <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px">
+<view class="phone-detail-container">
+  <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px" class="p-sc-container">
     <view class='p-detail-h-wrapper'>
-      <wq-swipper images="{{curPhone.images}}"></wq-swipper>
+      <wq-swipper images="{{curPhone.images}}" autoplay="{{false}}" indicator-dots="{{true}}"></wq-swipper>
     </view>
-    <view class='card-view'>
-      <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
-    </view>
+    <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
     <view class='card-view'>
       <wq-current-product product="{{curPhone}}"></wq-current-product>
     </view>
+    <!-- 对比机型 -->
     <view class='card-view'>
-      <van-cell value="更多门店" icon="shop-o" title-class='header-info' border>
+      <van-cell custom-class='cus-info' border>
         <view slot="title" class='sh-slot'>
-          <view class='shop-near-desc'>附近门店</view>
+          <view class='add-o-info'>对比机型</view>
+          <view class="add-o-desc">可继续选择1～2款机型对比下单</view>
+        </view>
+      </van-cell>
+      <van-cell icon='add-o' title-class='more-p-add' border title='添加更多机型'></van-cell>
+    </view>
+    <view class='card-view'>
+      <van-cell value="更多门店" icon="shop-o" custom-class='cus-info' border>
+        <view slot="title" class='sh-slot'>
+          <view class='sh-near'>附近门店</view>
           <view class="shop-distance">
             <van-tag type="danger">路程{{shop.distance}}km</van-tag>
           </view>
@@ -20,10 +28,10 @@
       </van-cell>
       <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
     </view>
-    <view>
+    <view class="user-remark-info">
       <wq-footer text="用户评价"></wq-footer>
     </view>
-    <view wx:if="{{ratings.remarks.length >0}}" class='card-view'>
+    <view wx:if="{{ratings.remarks.length >0}}" class='remak-view'>
       <block wx:for="{{ratings.remarks}}" wx:key="id" wx:for-item="item">
         <wq-remark remark="{{item}}"></wq-remark>
       </block>

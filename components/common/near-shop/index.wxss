@@ -1,17 +1,13 @@
 
-
-
 .sh-title{
   font-weight: bold;
   font-size:32rpx;
 }
 
 
-
 .sh-custom{
   justify-content: space-between;
 }
-
 
 
 .sh-container{
@@ -60,7 +56,6 @@
 .shop-name{
   color:#333;
   font-size:32rpx;
-  font-weight: bold;
   margin-bottom: 10rpx;
 }
 

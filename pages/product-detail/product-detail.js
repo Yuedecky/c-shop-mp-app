@@ -10,7 +10,7 @@ Page({
       rating: '好评率98%',
       name: '华为P30',
       price: "￥2345",
-      desc: "8GB 256GB 换野鹤 全网通",
+      desc: "8GB 256GB 赤红色 全网通",
       images: [
         "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
         "https://img14.360buyimg.com/n0/jfs/t1/32585/8/433/58112/5c3c042cEa2f28dad/d820f61c262556de.jpg"
@@ -98,6 +98,7 @@ Page({
       text: ['标准版', '尊享版', '高贵版'],
       selectIndex: 2
     },
+    background: "#cccccc",
     giftItem: [
       {
         image: 'https://img13.360buyimg.com/n1/jfs/t1/31125/35/13880/115774/5cbee16dE4dca3084/068b89d20a1ca753.jpg',

@@ -1,4 +1,4 @@
 <view class='cur-p-container'>
-    <van-cell title="当前机型" value-class='cur-p-value' border="{{true}}" value="{{product.price}}" />
+    <van-cell title="当前机型" title-class="tit-p-class" value-class='cur-p-value' border="{{true}}" value="{{product.price}}" />
     <van-cell title="{{product.desc}}" label="{{product.rating}}" border="{{false}}" is-link />
 </view>

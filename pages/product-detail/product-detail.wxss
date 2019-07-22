@@ -3,10 +3,26 @@
   background: #ffff;
 }
 
+.phone-detail-container{
+  background: #ffff;
+  
+}
+
 
 
 .card-view{
-  background: #ffffff;
+  border:1px solid #ccc;
+  border-radius: 8rpx;
+}
+
+.remak-view , .card-view{
+  background: #fefefe;
+  width:94%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
+.user-remark-info{
   margin-bottom: 20rpx;
 }
 
@@ -31,6 +47,9 @@
   left:0;
 }
 
+.sh-near{
+  font-weight:bold;
+}
 .sh-slot{
   display: flex;
   width:80%;
@@ -39,4 +58,20 @@
 
 .shop-near-desc{
   margin-right: 10rpx;
+}
+
+.add-o-info{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+.add-o-desc{
+  font-size:24rpx;
+  line-height: 40rpx;
+  color: red;
+}
+
+.more-p-add{
+  margin:0 auto;
+  text-align: center;
 }
