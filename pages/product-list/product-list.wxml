@@ -1,0 +1,3 @@
+<view>
+    <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
+</view>

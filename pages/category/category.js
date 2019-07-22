@@ -95,5 +95,8 @@ Page({
         this.setData({
             items: []
         })
+    },
+    onHeaderBarClick: function () {
+
     }
 })

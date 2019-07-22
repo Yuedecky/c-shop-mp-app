@@ -1,8 +1,6 @@
 <view class='category-container'>
     <van-search value="{{value}}" placeholder="搜索您想要的品牌、机型"></van-search>
-    <view class='bar-section'>
-        <image src="{{headerBar.image}}" class='header-bar' mode="aspectFill" />
-    </view>
+    <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
     <view>
         <van-tabs active="{{ active }}" bind:click='tabClick'>
             <block wx:for="{{tabs}}" wx:key="item.id">

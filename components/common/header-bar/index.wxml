@@ -1,0 +1,3 @@
+<view class='bar-container'>
+    <image src="{{image}}" class='header-bar' bind:tap="onTap" mode="aspectFill" />
+</view>

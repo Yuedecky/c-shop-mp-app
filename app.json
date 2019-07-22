@@ -9,7 +9,8 @@
         "pages/shop/shop",
         "pages/me/me",
         "pages/wallet/wallet",
-        "pages/wallet/detail/detail"
+        "pages/wallet/detail/detail",
+        "pages/product-list/product-list"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "wq-header-bar": "/components/common/header-bar/index"
+    }
+}
