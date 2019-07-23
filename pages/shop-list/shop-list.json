@@ -1,0 +1,9 @@
+{
+    "component": false,
+    "usingComponents": {
+        "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+        "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+        "wq-shop-item":"/components/common/shop-item/index"
+    },
+    "navigationBarTitleText": "门店列表"
+}

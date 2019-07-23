@@ -1,0 +1,24 @@
+<view class='shop-item-container'>
+    <view class="shop-item-header">
+        <view class='name-label'>
+            <view class='name'>{{shop.name}}</view>
+            <view wx:hidden="{{!shop.neareast}}">
+                <van-tag type='danger' plain>最近</van-tag>
+            </view>
+        </view>
+        <view class='distance'>{{shop.distance}}</view>
+    </view>
+    <view class='shop-item-content-wrapper'>
+        <view class='content-item'>{{shop.address}}</view>
+        <view>
+            <van-icon name='arrow'></van-icon>
+        </view>
+    </view>
+    <view class='shop-item-label-wrapper'>
+        <block wx:for="{{shop.labels}}" wx:key="id">
+            <view class='tag'>
+                <van-tag color="#4f8">{{item}}</van-tag>
+            </view>
+        </block>
+    </view>
+</view>

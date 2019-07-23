@@ -1,0 +1,14 @@
+<view class='shop-l-container'>
+    <view class='shop-l-header'>
+        <van-tabs active="{{ active }}" bind:click='tabClick'>
+            <block wx:for="{{tabs}}" wx:key="item.id">
+                <van-tab title="{{item.name}}"></van-tab>
+            </block>
+        </van-tabs>
+    </view>
+    <view class='shop-l-item-wrapper'>
+        <view wx:for="{{shops}}" wx:key="id" class='shop-l-item'>
+            <wq-shop-item shop="{{item}}"></wq-shop-item>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+.shop-l-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-l-item{
+    background: #ffffff;
+    width: 94%;
+    margin: 0 auto;
+    border:1px solid #fefefe;
+    border-radius: 8rpx;
+    box-shadow:2px 2px 3px #e3e3e3;
+}

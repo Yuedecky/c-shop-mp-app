@@ -198,6 +198,10 @@ Page({
     console.log(id)
   },
 
+  clickMoreShops() {
+    wx.navigateTo({ url: "/pages/shop-list/shop-list" })
+  },
+
   /**
    * 获取用户地理位置
    */

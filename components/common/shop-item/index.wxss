@@ -1,0 +1,62 @@
+.shop-item-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+
+
+.shop-item-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:40rpx;
+    margin-bottom: 20rpx;
+    line-height: 40rpx;
+
+}
+
+.shop-item-header .name-label{
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+}
+
+.shop-item-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-size:28rpx;
+
+}
+
+.shop-item-content-wrapper .content-item{
+    width:90%;
+    height:80rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.shop-item-header .name-label .name{
+    margin-right: 10rpx;
+}
+.shop-item-header .distance{
+    font-size:26rpx;
+    color: #999;
+}
+.shop-item-label-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.shop-item-label-wrapper .tag{
+    margin-right: 10rpx;
+}
+
+
+.shop-item-label-wrapper .tag{
+    margin-right: 10rpx;
+}
