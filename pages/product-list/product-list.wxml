@@ -1,11 +1,26 @@
-<view>
-    <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
-    <view wx:if="{{products.length >0}}">
-        <block wx:for="{{products}}" wx:key="id">
-            <wq-product product="{{item}}"></wq-product>
-        </block>
+<view class='p-list-container'>
+    <view class="p-list-header-wrapper">
+        <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
     </view>
-    <view wx:else>
-        <text>这什么都没有</text>
+
+    <view class='p-list-title'>
+        超级美颜
+    </view>
+    <view class='p-l-header-bar-wrapper'>
+        <wq-card-product-header product="{{headerProduct}}"></wq-card-product-header>
+    </view>
+    <view class='products-container'>
+        <view wx:if="{{products.length >0}}">
+            <view class='p-block-container'>
+                <block wx:for="{{products}}" wx:key="id" wx:for-item="item">
+                    <view class="p-card-view">
+                        <wq-card-product product="{{item}}"></wq-card-product>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view wx:else>
+            <text>这什么都没有</text>
+        </view>
     </view>
 </view>

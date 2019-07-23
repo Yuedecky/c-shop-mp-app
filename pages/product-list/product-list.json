@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "wq-header-bar": "/components/common/header-bar/index",
-        "wq-product": "/components/common/product/index"
+        "wq-card-product": "/components/common/card-product/index",
+        "wq-card-product-header": "/components/common/card-product-header/index"
     }
 }

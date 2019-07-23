@@ -11,6 +11,7 @@
     "wq-remark": "/components/common/remark/index",
     "wq-swipper": "/components/common/swipper/index",
     "wq-product-header": "/components/common/product-header/index",
-    "wq-current-product": "/components/common/current-product/index"
+    "wq-current-product": "/components/common/current-product/index",
+    "wq-add-product": "/components/common/add-product/index"
   }
 }

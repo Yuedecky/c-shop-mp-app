@@ -1,0 +1,41 @@
+.p-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.p-list-header-wrapper{
+    width:100%;
+    height:300rpx;
+}
+
+.p-l-header-bar-wrapper{
+    width:94%;
+}
+
+.products-container{
+    margin-top:20rpx;
+    width:94%;
+    margin-bottom: 40rpx;
+}
+
+.p-list-title{
+    font-weight: 600;
+    font-size: 50rpx;
+    color:#006699;
+    text-align: center;
+    line-height: 120rpx;
+    height: 120rpx;
+}
+
+.p-block-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.p-card-view{
+    margin-bottom: 30rpx;
+}

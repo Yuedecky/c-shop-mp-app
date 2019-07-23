@@ -1,0 +1,14 @@
+.add-p-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60rpx;
+    line-height: 60rpx;
+    color:#999;
+}
+.add-p-icon{
+    margin-right: 10rpx;
+}
+
+

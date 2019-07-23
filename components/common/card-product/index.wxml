@@ -1,0 +1,21 @@
+<view class='card-p-container'>
+    <view class='card-i-wrapper'>
+        <image src="{{product.photo}}" class='card-image' mode="aspectFill"></image>
+    </view>
+    <view class="card-info-wrapper">
+        <view class='card-i-w-header'>
+            <text class='card-info-name'>{{product.name}}</text>
+            <text class='card-info-version'>{{product.version}}</text>
+        </view>
+        <view class="card-i-w-desc">
+            <text class='card-info-desc'>{{product.desc}}</text>
+        </view>
+        <view class='card-i-w-price'>
+            <text class='card-info-price'>{{product.price}}</text>
+            <text class='card-info-price-o'>{{product.oldPrice}}</text>
+        </view>
+        <view class="p-buy-btn">
+            <van-button type="danger" size="small">立即购买</van-button>
+        </view>
+    </view>
+</view>

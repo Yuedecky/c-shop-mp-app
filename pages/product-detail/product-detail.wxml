@@ -15,7 +15,7 @@
           <view class="add-o-desc">可继续选择1～2款机型对比下单</view>
         </view>
       </van-cell>
-      <van-cell icon='add-o' title-class='more-p-add' border title='添加更多机型'></van-cell>
+      <wq-add-product></wq-add-product>
     </view>
     <view class='card-view'>
       <van-cell value="更多门店" icon="shop-o" custom-class='cus-info' border>

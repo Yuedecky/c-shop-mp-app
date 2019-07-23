@@ -1,4 +1,3 @@
-<import src="/templates/index/sale-phone/sale-phone.wxml"></import>
 <view class="brand-container">
   <block wx:for="{{brandPhones}}" wx:key="item" wx:for-index="idx">
     <view catchtap="onPhoneTab" data-productId="{{item.productId}}">

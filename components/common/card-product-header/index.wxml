@@ -1,0 +1,17 @@
+<view class='card-p-h-container'>
+    <view class='card-p-h-image-wrapper'>
+        <image src="{{product.photo}}" mode='aspectFill' class='card-p-h-image' />
+    </view>
+    <view class='card-p-h-content-wrapper'>
+        <view class='card-p-h-content-left'>
+            <view class='name'>{{product.name}}</view>
+            <view class='desc'>{{product.desc}}</view>
+        </view>
+        <view class='card-p-h-content-right'>
+            <view class='price'>{{product.price}}</view>
+            <view class='btn'>
+                <van-button type="danger" size="small">立即购买</van-button>
+            </view>
+        </view>
+    </view>
+</view>

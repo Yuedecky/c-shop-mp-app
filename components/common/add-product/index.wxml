@@ -1,0 +1,6 @@
+<view class='add-p-container'>
+    <view class='add-p-icon'>
+        <van-icon name='add-o'></van-icon>
+    </view>
+    <view>添加更多机型</view>
+</view>

@@ -1,11 +1,10 @@
 .p-detail-h-wrapper{
-  height:400rpx;
+  height:600rpx;
   background: #ffff;
 }
 
 .phone-detail-container{
   background: #ffff;
-  
 }
 
 
