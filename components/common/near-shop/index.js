@@ -5,7 +5,10 @@ Component({
     },
     methods: {
         tapDetail: function (e) {
-            this.triggerEvent("detail", { id: this.properties.id }, {})
+            this.triggerEvent("detail", { id: this.properties.shop.id }, {})
+        },
+        onTapMore() {
+            this.triggerEvent('more', {}, {})
         }
     }
 })

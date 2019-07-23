@@ -4,8 +4,11 @@
       <wq-swipper images="{{curPhone.images}}" autoplay="{{false}}" indicator-dots="{{true}}"></wq-swipper>
     </view>
     <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
+    <view class='slide-p-params'>
+      <wq-product-slide params="{{curPhone.params}}"></wq-product-slide>
+    </view>
     <view class='card-view'>
-      <wq-current-product product="{{curPhone}}"></wq-current-product>
+      <wq-current-product product="{{curPhone}}" bind:click="clickCurPhone"></wq-current-product>
     </view>
     <!-- 对比机型 -->
     <view class='card-view'>
@@ -18,20 +21,12 @@
       <wq-add-product></wq-add-product>
     </view>
     <view class='card-view'>
-      <van-cell value="更多门店" icon="shop-o" custom-class='cus-info' border>
-        <view slot="title" class='sh-slot'>
-          <view class='sh-near'>附近门店</view>
-          <view class="shop-distance">
-            <van-tag type="danger">路程{{shop.distance}}km</van-tag>
-          </view>
-        </view>
-      </van-cell>
       <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
     </view>
     <view class="user-remark-info">
       <wq-footer text="用户评价"></wq-footer>
     </view>
-    <view wx:if="{{ratings.remarks.length >0}}" class='remak-view'>
+    <view wx:if="{{ratings.remarks.length >0}}">
       <block wx:for="{{ratings.remarks}}" wx:key="id" wx:for-item="item">
         <wq-remark remark="{{item}}"></wq-remark>
       </block>
@@ -43,4 +38,5 @@
     </view>
   </scroll-view>
   <view class="send-to-order">去下单</view>
+  <van-popup show="{{ showBottom }}" custom-style='height:500rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose"></van-popup>
 </view>

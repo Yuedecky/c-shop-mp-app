@@ -4,6 +4,28 @@
   font-size:32rpx;
 }
 
+.near-sh-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.near-sh-header-left{
+  display: flex;
+  flex-direction: row;
+}
+
+.near-sh-title-o{
+  padding-top: 4rpx;
+}
+
+.near-sh-title-desc , .near-sh-title-o{
+  margin-right: 10rpx;
+}
+
 
 .sh-custom{
   justify-content: space-between;
@@ -12,11 +34,23 @@
 
 .sh-container{
   display: flex;
-  padding: 20rpx;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 30rpx;
 }
 
+.near-sh-content{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
 
+.near-sh-header-right{
+  color: #999;
+}
+
+.near-sh-title-tag > van-tag{
+  margin-bottom: 4rpx;
+}
 
 .icon-location{
   width: 5%;

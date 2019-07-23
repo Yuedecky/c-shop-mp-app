@@ -1,13 +1,10 @@
 .p-detail-h-wrapper{
   height:600rpx;
-  background: #ffff;
 }
 
 .phone-detail-container{
-  background: #ffff;
+  background: #ffffff;
 }
-
-
 
 .card-view{
   border:1px solid #ccc;
@@ -30,6 +27,10 @@
   font-size: 30rpx;
 }
 
+.load-btn-more::after{
+  border:none;
+}
+
 .send-to-order{
   background: red;
   text-align: center;
@@ -46,13 +47,20 @@
   left:0;
 }
 
+.slide-p-params{
+  background:#ffffff;
+  margin-bottom:20rpx;
+}
+
 .sh-near{
   font-weight:bold;
+  margin-right: 10rpx;
 }
 .sh-slot{
   display: flex;
   width:80%;
   flex-direction: row;
+  line-height: 50rpx;
 }
 
 .shop-near-desc{

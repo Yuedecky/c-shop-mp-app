@@ -1,0 +1,17 @@
+.p-slide-container{
+    display: flex;
+    flex-direction: row;
+    height:120rpx;
+}
+
+.p-slide-scroll{
+    width:100%;
+    white-space: nowrap;
+    height:120rpx;
+}
+
+.p-slide-item{
+    height:100%;
+    display: inline-block;
+    border-right: 0.5rpx solid #ccc;
+}

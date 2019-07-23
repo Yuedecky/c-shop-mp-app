@@ -1,0 +1,25 @@
+.p-s-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:160rpx;
+    height:120rpx;
+    padding-left:10rpx;
+    padding-right: 10rpx;
+    font-size: 26rpx;
+    line-height:40rpx;
+}
+
+.p-s-slide-name,.p-s-slide-desc{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.p-s-slide-name{
+    font-weight: 600;
+}
+
+.p-s-slide-desc{
+    color: #666666;
+}

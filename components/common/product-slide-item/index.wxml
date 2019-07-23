@@ -1,0 +1,7 @@
+<view class='p-s-container'>
+    <view class='p-s-slide-header' wx:if="{{keys.includes(key)}}">
+        <view class="icon icon-{{key}}"></view>
+    </view>
+    <view class='p-s-slide-name'>{{name}}</view>
+    <view class='p-s-slide-desc'>{{desc}}</view>
+</view>

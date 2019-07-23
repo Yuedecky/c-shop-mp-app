@@ -4,7 +4,55 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showBottom: false,
     curPhone: {
+      params: [
+        {
+          id: 'cpu',
+          name: 'CPU',
+          desc: '骁龙660八核',
+        },
+        {
+          id: 'store',
+          name: '存储容量',
+          desc: '128GB'
+        },
+        {
+          id: 'memory',
+          name: '极速畅玩',
+          desc: '8GB'
+        },
+        {
+          id: 'mh',
+          name: '超长待机',
+          desc: '4000mAh'
+        },
+        {
+          id: 'photo',
+          name: '三摄像头',
+          desc: '800万+2400万'
+        },
+        {
+          id: 'network',
+          name: '运营商网络',
+          desc: '4G全网通'
+        },
+        {
+          id: 'mode',
+          name: '网络模式',
+          desc: '双卡双待'
+        },
+        {
+          id: 'ratio',
+          name: '屏幕分辨率',
+          desc: '2340*1080',
+        },
+        {
+          id: 'screen',
+          name: '超大屏',
+          desc: '6.3英寸'
+        }
+      ],
       tags: ["超感莱卡四射", "10倍混合变焦",],
       tag: "到手价￥5288",
       rating: '好评率98%',
@@ -119,6 +167,23 @@ Page({
 
   openMoreShops: function (e) {
 
+  },
+
+
+  onClose() {
+    this.setData({
+      showBottom: false
+    })
+  },
+
+  /**
+   * 点击当前手机 弹出
+   * @param  e 
+   */
+  clickCurPhone(e) {
+    this.setData({
+      showBottom: true
+    })
   },
 
   openShopDetail: function (e) {

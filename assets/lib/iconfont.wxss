@@ -1,0 +1,53 @@
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1563896780977'); /* IE9 */
+    src: url('iconfont.eot?t=1563896780977#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+    url('iconfont.woff?t=1563896780977') format('woff'),
+    url('iconfont.ttf?t=1563896780977') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1563896780977#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-network:before {
+    content: "\e664";
+  }
+  
+  .icon-mh:before {
+    content: "\e62f";
+  }
+  
+  .icon-mode:before {
+    content: "\e61a";
+  }
+  
+  .icon-cpu:before {
+    content: "\e688";
+  }
+  
+  .icon-screen:before {
+    content: "\e608";
+  }
+  
+  .icon-memory:before {
+    content: "\e782";
+  }
+  
+  .icon-store:before {
+    content: "\e63b";
+  }
+  
+  .icon-ratio:before {
+    content: "\e62d";
+  }
+  
+  .icon-photo:before {
+    content: "\e614";
+  }
+  

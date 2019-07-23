@@ -3,8 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 60rpx;
-    line-height: 60rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     color:#999;
 }
 .add-p-icon{

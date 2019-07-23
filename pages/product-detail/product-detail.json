@@ -6,7 +6,9 @@
   "usingComponents": {
     "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
     "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
     "wq-footer": "/components/common/footer/index",
+    "wq-product-slide": "/components/common/product-slide/index",
     "wq-near-shop": "/components/common/near-shop/index",
     "wq-remark": "/components/common/remark/index",
     "wq-swipper": "/components/common/swipper/index",

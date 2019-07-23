@@ -17,15 +17,7 @@
     </van-tabs>
   </view>
   <view class='card-view'>
-    <van-cell value="更多门店" icon="shop-o" title-class='header-info' border bind:click="clickMoreShops">
-      <view slot="title" class='sh-slot'>
-        <view class='shop-near-desc'>附近门店</view>
-        <view class="shop-distance">
-          <van-tag type="danger">路程{{shop.distance}}km</van-tag>
-        </view>
-      </view>
-    </van-cell>
-    <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:more="openShopDetail"></wq-near-shop>
+    <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:detail="openShopDetail" bind:more="openShopMore"></wq-near-shop>
   </view>
   <view class='card-view'>
     <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border bind:click="clickBrands"></van-cell>

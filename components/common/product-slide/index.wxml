@@ -1,0 +1,7 @@
+<view class='p-slide-container'>
+    <scroll-view scroll-x="{{true}}" class='p-slide-scroll'>
+        <view wx:for="{{params}}" wx:key="id" class='p-slide-item'>
+            <wq-product-slide-item name="{{item.name}}" desc="{{item.desc}}" key="{{item.id}}"></wq-product-slide-item>
+        </view>
+    </scroll-view>
+</view>

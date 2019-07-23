@@ -171,8 +171,10 @@ Page({
 
   },
 
-  openMoreShops() {
-    console.log('open more shops...')
+  openShopMore() {
+    wx.navigateTo({
+      url: '/pages/shop-list/shop-list'
+    })
   },
   onNearShopOpen: function (e) {
     var that = this;

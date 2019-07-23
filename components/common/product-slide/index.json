@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "wq-product-slide-item": "/components/common/product-slide-item/index"
+    }
+}

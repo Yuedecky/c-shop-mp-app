@@ -1,22 +1,36 @@
 <view class="sh-container" style="background: {{background}};">
-  <view class='icon-location'>
-    <van-icon name='location-o' custom-class='location-class'></van-icon>
-  </view>
-  <view class="shop-desc" bind:tap='tapDetail'>
-    <view class='shop-name'>{{shop.name}}</view>
-    <view class="shop-location">{{shop.location}}</view>
-    <view>
-      有
-      <text class='shop-times'>{{shop.times}}</text>
-      人来过
+  <view class='near-sh-header'>
+    <view class='near-sh-header-left'>
+      <view class='near-sh-title-o'>
+        <van-icon name='shop-o'></van-icon>
+      </view>
+      <view class='near-sh-title-desc'>附近门店</view>
+      <view class='near-sh-title-tag'>
+        <van-tag type='danger' plain>距离{{shop.distance}}km</van-tag>
+      </view>
     </view>
+    <view class='near-sh-header-right' bind:tap="onTapMore">更多门店</view>
   </view>
-  <view class='photo-view'>
-    <view>
-      <image src="{{shop.photo}}" class="shop-url"></image>
+  <view class='near-sh-content'>
+    <view class='icon-location'>
+      <van-icon name='location-o' custom-class='location-class'></van-icon>
     </view>
-    <view>
-      <van-icon name='arrow' custom-class='icon-class' />
+    <view class="shop-desc" bind:tap='tapDetail'>
+      <view class='shop-name'>{{shop.name}}</view>
+      <view class="shop-location">{{shop.location}}</view>
+      <view>
+        有
+        <text class='shop-times'>{{shop.times}}</text>
+        人来过
+      </view>
+    </view>
+    <view class='photo-view'>
+      <view>
+        <image src="{{shop.photo}}" class="shop-url"></image>
+      </view>
+      <view>
+        <van-icon name='arrow' custom-class='icon-class' />
+      </view>
     </view>
   </view>
 </view>
