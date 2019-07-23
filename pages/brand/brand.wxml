@@ -1,9 +1,9 @@
 <view class="brand-container">
-  <block wx:for="{{brandPhones}}" wx:key="item" wx:for-index="idx">
-    <view catchtap="onPhoneTab" data-productId="{{item.productId}}">
-      <template is="sale-phone" data="{{...item}}" />
+  <view wx:for="{{brands}}" wx:key="item" wx:for-index="idx" class="brand-item-wrapper">
+    <view catch:tap="onBrandTap">
+      <wq-brand-card brand="{{item}}" />
     </view>
-  </block>
+  </view>
   <view>
     <wq-footer text="没有更多了"></wq-footer>
   </view>

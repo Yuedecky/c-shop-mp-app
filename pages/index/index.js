@@ -298,6 +298,16 @@ Page({
   },
 
 
+  /**
+   * 点击查看更多品牌
+   */
+  clickBrands() {
+    wx.navigateTo({
+      url: "/pages/brand/brand"
+    })
+  },
+
+
   onProductClick(e) {
     let id = e.detail.id
     wx.navigateTo({

@@ -1,4 +1,16 @@
 .brand-container{
-  height: 100%;
-  width: 100%;
+  padding-top:40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.brand-item-wrapper{
+  width:94%;
+  height:400rpx;
+  background: white;
+  border-radius: 8rpx;
+  box-shadow:2px 2px 3px #e3e3e3;
+  margin-bottom: 20rpx;
 }

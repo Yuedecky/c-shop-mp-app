@@ -1,0 +1,9 @@
+<view class='p-ele-container'>
+    <view class='p-ele-image-wrapper'>
+        <image src="{{product.image}}" mode="aspectFill" class='p-ele-image' />
+    </view>
+    <view class='p-ele-price-wrapper'>
+        <text class='price'>{{product.price}}</text>
+        <text class='o-price'>{{product.oPrice}}</text>
+    </view>
+</view>

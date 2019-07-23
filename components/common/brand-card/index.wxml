@@ -1,0 +1,24 @@
+<view class='b-card-container'>
+    <view class="b-card-title">
+        <view class='b-card-photo-wrapper'>
+            <image src="{{brand.photo}}" mode="aspectFill" class='b-card-photo-image' />
+        </view>
+        <view class='b-card-name-wrapper'>
+            <view class='name'>{{brand.name}}</view>
+            <view class='desc'>{{brand.desc}}</view>
+        </view>
+        <view class='b-card-num-wrapper'>
+            {{brand.total}}件商品
+            <van-icon name='arrow' size='10px'></van-icon>
+        </view>
+    </view>
+    <view class='b-card-content'>
+        <view class='b-card-block-container'>
+            <block wx:for="{{brand.products}}" wx:key="id">
+                <view class='b-card-p-item'>
+                    <wq-product-ele product="{{item}}"></wq-product-ele>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

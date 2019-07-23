@@ -28,7 +28,7 @@
     <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
   </view>
   <view class='card-view'>
-    <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border></van-cell>
+    <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border bind:click="clickBrands"></van-cell>
     <view class='brand-list'>
       <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
         <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />

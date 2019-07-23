@@ -4,7 +4,7 @@
   "navigationBarTitleText": "品牌",
   "navigationBarTextStyle": "black",
   "usingComponents": {
-    "wq-brand": "/components/index/brand/index",
+    "wq-brand-card": "/components/common/brand-card/index",
     "wq-footer": "/components/common/footer/index"
   }
 }

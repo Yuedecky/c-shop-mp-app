@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "wq-product-ele": "/components/common/product-element/index",
+        "van-icon": "/miniprogram_npm/vant-weapp/icon/index"
+    }
+}

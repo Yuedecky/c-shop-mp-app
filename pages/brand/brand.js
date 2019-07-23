@@ -5,34 +5,49 @@ Page({
    */
   data: {
     brandName: '',
-    brandPhones: [{
-      name: 'iphoneX',
-      tags: [
-        '64G', '4.7英寸', '1200W'
-      ],
-      gifts: [
-        '免费贴膜', '赠手机壳', '免费教程',
-      ],
-      officalPrice: '2345.23',
-      reservationPrice: '2000',
-      goodRatings: '87%',
-      image: 'https://img13.360buyimg.com/n7/jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg',
-      productId: 1222
+    brands: [{
+      name: '华为（HUAWEI）手机',
+      desc: "直降，满999减200",
+      total: 888,
+      photo: 'http://image.qfstatic.com/897/2019/201905/20190506/7C36E57B540B48D0A8C839B27AB219C5.png',
+      products: [{
+        image: 'https://img14.360buyimg.com/n0/jfs/t1/69264/33/4540/170515/5d2c67ffE0e4ed434/fbffbec778b4d6ff.jpg',
+        price: '2899',
+        oPrice: '2999'
+      },
+      {
+        image: 'https://img.alicdn.com/imgextra/i1/1114511827/O1CN01EuiOdq1PMo93BmaEU_!!1114511827.jpg_430x430q90.jpg',
+        price: '2899',
+        oPrice: '2999'
+      },
+      {
+        image: 'https://img.alicdn.com/imgextra/i1/1114511827/O1CN01EuiOdq1PMo93BmaEU_!!1114511827.jpg_430x430q90.jpg',
+        price: '2899',
+        oPrice: '2999'
+      }]
     },
     {
-      name: 'iphoneX',
-      tags: [
-        '64G', '4.7英寸', '1200W'
-      ],
-      gifts: [
-        '免费贴膜', '赠手机壳', '免费教程',
-      ],
-      officalPrice: '2345.23',
-      reservationPrice: '2000',
-      goodRatings: '87%',
-      image: 'https://img13.360buyimg.com/n7/jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg',
-      productId: 1224
-    }],
+      photo: 'http://image.qfstatic.com/897/2019/201905/20190506/7C36E57B540B48D0A8C839B27AB219C5.png',
+      name: '华为（HUAWEI）手机',
+      desc: "直降，满999减200",
+      total: 888,
+      products: [{
+        image: 'https://img14.360buyimg.com/n0/jfs/t1/69264/33/4540/170515/5d2c67ffE0e4ed434/fbffbec778b4d6ff.jpg',
+        price: '2899',
+        oPrice: '2999'
+      },
+      {
+        image: 'https://img.alicdn.com/imgextra/i1/1114511827/O1CN01EuiOdq1PMo93BmaEU_!!1114511827.jpg_430x430q90.jpg',
+        price: '2899',
+        oPrice: '2999'
+      },
+      {
+        image: 'https://img.alicdn.com/imgextra/i1/1114511827/O1CN01EuiOdq1PMo93BmaEU_!!1114511827.jpg_430x430q90.jpg',
+        price: '2899',
+        oPrice: '2999'
+      }]
+    }
+    ],
   },
 
   /**
@@ -40,68 +55,15 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    that.setData({
-      brandName: options.brandName
-    });
-    wx.setNavigationBarTitle({
-      title: that.data.brandName
-    });
- },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
 
-  onPhoneTab:function(e){
+  onBrandTap: function (e) {
     let phoneId = e.currentTarget.dataset.phoneId;
-    console.log(`phoneId:${phoneId}`)
     wx.navigateTo({
-      url: '/pages/phone-detail/phone-detail?phoneId='+phoneId,
+      url: '/pages/category/category?cid=' + phoneId,
     })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
 })

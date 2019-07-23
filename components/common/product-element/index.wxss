@@ -1,0 +1,37 @@
+.p-ele-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-ele-image-wrapper{
+    width:180rpx;
+    height: 200rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-ele-image{
+    width: 140rpx;
+    height: 200rpx;  
+}
+
+
+.p-ele-price-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 40rpx;
+}
+
+.p-ele-price-wrapper .price{
+    font-size: 28rpx;
+    margin-right: 10rpx;
+    color: red;
+}
+.p-ele-price-wrapper .o-price{
+    font-size: 20rpx;
+    color:#899;
+    text-decoration: line-through;
+}
