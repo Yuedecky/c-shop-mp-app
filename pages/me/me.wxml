@@ -1,33 +1,31 @@
 <!-- pages/me/me.wxml -->
 <view class='me-container'>
-  <view class='me-header'>
-  <wq-personal avatar="{{avatar}}" name="{{name}}"></wq-personal>
-  <view class='me-grp'>
-    <van-cell-group>
-      <van-cell title="钱包" is-link link-type="navigateTo" url="/pages/wallet/wallet" size="large">
-        <van-icon slot="icon" name="pending-payment" size="20px" custom-class='c-icon-class' />
-      </van-cell>
-      <van-cell title="订单" is-link link-type="navigateTo" url="pages/order/order" size="large">
-        <van-icon slot="icon" name="bill-o" size="20px" custom-class='c-icon-class' />
-      </van-cell>
-    </van-cell-group>
-  </view>
   <view>
-    <van-cell-group>
-      <van-cell title="联系客服" link-type="navigateTo" size="large">
-        <van-icon slot="icon" name="chat-o" size="20px" custom-class='c-icon-class' />
-        <van-icon slot='right-icon' name='phone-o' size="20px" />
-      </van-cell>
-      <van-cell title="商务合作" is-link link-type="navigateTo" url="/pages/cooperation/cooperation" size="large">
-        <van-icon slot="icon" name="sign" size="20px" custom-class='c-icon-class' />
-      </van-cell>
-      <van-cell title="关于我们" is-link link-type="navigateTo" url="/pages/about/about" size="large">
-        <van-icon slot="icon" name="friends-o" size="20px" custom-class='c-icon-class' />
-      </van-cell>
-    </van-cell-group>
+    <wq-personal avatar="{{avatar}}" name="{{name}}"></wq-personal>
+    <view class='me-grp'>
+      <van-cell-group>
+        <van-cell title="钱包" is-link link-type="navigateTo" url="/pages/wallet/wallet" size="large">
+          <van-icon slot="icon" name="pending-payment" size="20px" custom-class='c-icon-class' />
+        </van-cell>
+        <van-cell title="订单" is-link link-type="navigateTo" url="pages/order/order" size="large">
+          <van-icon slot="icon" name="bill-o" size="20px" custom-class='c-icon-class' />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    <view>
+      <van-cell-group>
+        <van-cell title="联系客服" link-type="navigateTo" size="large">
+          <van-icon slot="icon" name="chat-o" size="20px" custom-class='c-icon-class' />
+          <van-icon slot='right-icon' name='phone-o' size="20px" />
+        </van-cell>
+        <van-cell title="商务合作" is-link link-type="navigateTo" url="/pages/cooperation/cooperation" size="large">
+          <van-icon slot="icon" name="sign" size="20px" custom-class='c-icon-class' />
+        </van-cell>
+        <van-cell title="关于我们" is-link link-type="navigateTo" url="/pages/about/about" size="large">
+          <van-icon slot="icon" name="friends-o" size="20px" custom-class='c-icon-class' />
+        </van-cell>
+      </van-cell-group>
+    </view>
   </view>
-  </view>
-  <view class='footer-info'>
-    <text>北京小匠人信息科技有限公司</text>
-  </view>
+  <view class='footer-info'>北京小匠人信息科技有限公司</view>
 </view>
