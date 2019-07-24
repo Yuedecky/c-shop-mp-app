@@ -21,6 +21,7 @@
 
 .title-between{
     justify-content: space-between;
+    margin-bottom: 20rpx;
 }
 
 .bd-value{
@@ -29,7 +30,9 @@
 }
 
 .draw-raider{
+    border-top:1rpx solid #dfdfdf;
     text-align: center;
-    line-height: 50rpx;
+    line-height: 60rpx;
     font-size: 30rpx;
+    margin-top: 10rpx;
 }

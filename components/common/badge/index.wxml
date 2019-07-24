@@ -12,16 +12,7 @@
             <van-button type="default" bind:click='onApply' size="small">立即体现</van-button>
         </view>
     </view>
-    <view class='draw-raider'>
-        <van-collapse bind:change="onChange">
-            <van-collapse-item name="1">
-                <view slot='title'>
-                    提现攻略
-                    <van-icon name="question-o" />
-                </view>
-            </van-collapse-item>
-        </van-collapse>
-    </view>
+    <view class='draw-raider'>提现攻略</view>
     <view wx:if="{{visible}}">
         <van-steps direction="vertical" steps="{{ steps }}" />
     </view>
