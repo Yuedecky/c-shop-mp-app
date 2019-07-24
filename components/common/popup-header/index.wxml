@@ -1,0 +1,15 @@
+<view class='pop-header-container'>
+    <view class='pop-header-left'>
+        <image src="{{product.image}}" mode="aspectFit" class="pop-h-image" />
+    </view>
+    <view class='pop-header-right'>
+        <view class='pop-h-right-price'>
+            <text class='price'>{{product.price}}</text>
+            <text class='oPrice'>{{product.oPrice}}</text>
+        </view>
+        <view class='pop-h-right-desc'>{{product.desc}}</view>
+    </view>
+    <view class='close-popup'>
+        <van-icon name='cross' size='30px' custom-style='color:#ccc' bind:click='onClose'/>
+    </view>
+</view>

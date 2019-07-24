@@ -1,0 +1,44 @@
+.tag-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx 40rpx 20rpx 40rpx;
+}
+
+.tag-header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+}
+
+.tag-list{
+    width: 100%;
+    
+}
+
+.tag-list .tag-row ,.tag-list .tag-light{
+    padding: 10rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1rpx solid #cfcfcf;
+    display:  flex;
+    color: #999;
+    flex-direction: row;
+    margin-bottom: 18rpx;
+    border-radius: 8rpx;
+}
+
+.tag-list .tag-row{
+    justify-content: space-between;
+}
+
+
+.tag-list .tag-light{
+    display: inline-flex;
+    margin-right: 18rpx;
+}
+
+.tag-active{
+    color: #f74400 !important;
+    border:1rpx solid #f74400 !important;
+}
+

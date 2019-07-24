@@ -1,0 +1,54 @@
+.pop-header-container{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx 40rpx 20rpx 40rpx;
+    position: relative;
+}
+
+.pop-header-left{
+    margin-right: 40rpx;
+    height: 180rpx;
+    width: 160rpx;
+}
+
+.pop-header-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pop-h-right-price{
+    height: 60rpx;
+}
+
+.pop-h-right-price .price{
+    font-size: 50rpx;
+    color:red;
+    margin-right: 20rpx;
+}
+
+.pop-h-right-price .o-price{
+    color: #999;
+    text-decoration: line-through;
+    font-size: 30rpx;
+}
+
+
+
+.pop-h-image{
+    width:140rpx;
+    height:180rpx;
+}
+
+.pop-h-right-desc{
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color:#666;
+}
+
+.close-popup van-icon{
+    position: absolute;
+    right:40rpx;
+    top:20rpx;
+    
+}

@@ -7,6 +7,8 @@
     "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
     "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
     "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
     "wq-footer": "/components/common/footer/index",
     "wq-product-slide": "/components/common/product-slide/index",
     "wq-near-shop": "/components/common/near-shop/index",
@@ -14,6 +16,8 @@
     "wq-swipper": "/components/common/swipper/index",
     "wq-product-header": "/components/common/product-header/index",
     "wq-current-product": "/components/common/current-product/index",
-    "wq-add-product": "/components/common/add-product/index"
+    "wq-add-product": "/components/common/add-product/index",
+    "wq-pop-header": "/components/common/popup-header/index",
+    "wq-pop-tag": "/components/common/popup-tag/index"
   }
 }

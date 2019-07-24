@@ -58,11 +58,13 @@ Page({
       rating: '好评率98%',
       name: '华为P30',
       price: "￥2345",
+      oPrice: '￥2999',
       desc: "8GB 256GB 赤红色 全网通",
       images: [
         "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
         "https://img14.360buyimg.com/n0/jfs/t1/32585/8/433/58112/5c3c042cEa2f28dad/d820f61c262556de.jpg"
       ],
+      image: "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
       color: [
         '天空之镜',
         '亮黑色',
@@ -70,6 +72,46 @@ Page({
         '赤茶橘',
         '珠光贝母'
       ],
+      versions: [
+        {
+          id: 23,
+          name: '4GB+64GB',
+          affix: '1299元',
+        },
+        {
+          id: 34,
+          name: '6GB+64GB',
+          affix: '1399元'
+        },
+        {
+          id: 45,
+          name: '6GB+128GB',
+          affix: '1599元'
+        }
+      ],
+      color: [
+        {
+          id: 23,
+          name: '白色恋人（白色）'
+        },
+        {
+          id: 24,
+          name: '深色星球（蓝色）'
+        },
+        {
+          id: 34,
+          name: '暗夜王子（深空灰）'
+        }
+      ],
+      protect: [
+        {
+          id: 12,
+          name: '意外保障服务 99元'
+        }
+        , {
+          id: 13,
+          name: '碎屏保障服务 69元'
+        }],
       memory: [
         {
           lable: '8G+64G',
@@ -114,6 +156,7 @@ Page({
       latitude: 121.460231,
       longitude: 31.234129
     },
+    scrollHeight: 493,
     ratings: {
       total: 12,
       offset: 2,
@@ -166,9 +209,24 @@ Page({
 
 
   openMoreShops: function (e) {
-
+    wx.navigateTo({
+      url: '/pages/shop-list/shop-list',
+    });
   },
 
+  onClosePopup() {
+    this.setData({
+      showBottom: false
+    })
+  },
+
+
+  /**
+   * 更改数量
+   */
+  onNumChange() {
+
+  },
 
   onClose() {
     this.setData({
@@ -200,6 +258,21 @@ Page({
     })
 
   },
+
+  /**
+   * 添加更机型对比
+   */
+  addMoreProduct() {
+    wx.reLaunch({
+      url: '/pages/category/category',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

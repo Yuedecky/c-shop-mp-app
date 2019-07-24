@@ -3,5 +3,6 @@
     "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
     "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
     "wq-personal": "/components/common/personal/index"
-  }
+  },
+  "navigationBarTitleText": "我的"
 }

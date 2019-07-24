@@ -1,3 +1,4 @@
+@import "/assets/lib/iconfont.wxss";
 .p-s-container{
     display: flex;
     flex-direction: column;
@@ -8,6 +9,10 @@
     padding-right: 10rpx;
     font-size: 26rpx;
     line-height:40rpx;
+}
+
+.p-s-slide-header{
+    height: 40rpx;
 }
 
 .p-s-slide-name,.p-s-slide-desc{

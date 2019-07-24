@@ -5,5 +5,9 @@ Component({
     data: {
 
     },
-    methods: {}
+    methods: {
+        onTap:function(){
+            this.triggerEvent('click',{},{})
+        }
+    }
 })

@@ -82,3 +82,30 @@
   margin:0 auto;
   text-align: center;
 }
+
+.wq-pop-header-section{
+  border-bottom: 1rpx solid #efefef;
+  position: relative;
+}
+
+.pop-num{
+  display: flex;
+  padding: 20rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fixed-btn-block{
+  width:100%;
+  position:fixed;
+  left:0;
+  height:88rpx;
+  padding:0;
+  bottom: 0;
+}
+
+.buy-btn{
+  height:88rpx;
+  width:100%;
+  line-height: 88rpx;
+}
