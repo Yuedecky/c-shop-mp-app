@@ -1,1 +1,22 @@
-<view class='shop-de-container'></view>
+<view class='shop-de-container'>
+    <view class='shop-de-bg'>
+        <image src="{{shop.photo}}" mode='aspectFill' class='shop-de-image' />
+    </view>
+    <view class='sh-de-pop-container'>
+        <view class='shop-de-card'>
+            <wq-de-shop-card name="{{shop.name}}" date="{{shop.date}}" address="{{shop.address}}" phone="{{shop.phone}}"></wq-de-shop-card>
+        </view>
+    </view>
+    <view class='sh-de-title-view'>门店优惠</view>
+    <view class='card-view'>
+        <view wx:for="{{shop.offers}}" wx:key="id">
+            <wq-shop-offer id="{{item.id}}" title="{{item.title}}" fromDate="{{item.fromDate}}" endDate="{{item.endDate}}" tagImage="{{item.tagImage}}" btnName="{{item.btnName}}"></wq-shop-offer>
+        </view>
+    </view>
+    <view class='sh-de-title-view'>门店服务</view>
+    <view class='card-view'>
+        <view wx:for="{{shop.services}}" wx:key="id">
+            <wq-shop-offer tagImage="{{item.tagImage}}" id="{{item.id}}" title="{{item.title}}" desc="{{item.desc}}" btnName="{{item.btnName}}"></wq-shop-offer>
+        </view>
+    </view>
+</view>

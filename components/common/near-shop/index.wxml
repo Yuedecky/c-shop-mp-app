@@ -11,12 +11,12 @@
     </view>
     <view class='near-sh-header-right' bind:tap="onTapMore">更多门店</view>
   </view>
-  <view class='near-sh-content'>
+  <view class='near-sh-content' bind:tap='tapDetail'>
     <view class='near-sh-left'>
       <view class='icon-location'>
         <van-icon name='location-o' custom-class='location-class'></van-icon>
       </view>
-      <view class="shop-desc" bind:tap='tapDetail'>
+      <view class="shop-desc">
         <view class='shop-name'>{{shop.name}}</view>
         <view class="shop-location">{{shop.location}}</view>
         <view class='shop-times-desc'>

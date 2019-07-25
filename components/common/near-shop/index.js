@@ -5,10 +5,20 @@ Component({
     },
     methods: {
         tapDetail: function (e) {
-            this.triggerEvent("detail", { id: this.properties.shop.id }, {})
+            console.log("on detail...")
+            wx.navigateTo({
+                url: '/pages/shop-detail/shop-detail',
+                success: (result) => {
+
+                },
+                fail: () => { },
+                complete: () => { }
+            });
         },
         onTapMore() {
-            this.triggerEvent('more', {}, {})
+            wx.navigateTo({
+                url: "/pages/shop-list/shop-list"
+            })
         }
     }
 })

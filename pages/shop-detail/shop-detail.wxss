@@ -2,3 +2,38 @@
     display: flex;
     flex-direction: column;
 }
+.sh-de-pop-container{
+    margin-bottom: 200rpx;
+}
+.shop-de-bg{
+    width:100%;
+    height:340rpx; 
+}
+
+.shop-de-image{
+    width: 100%;
+    height: 100%;
+}
+
+.shop-de-card{
+    width:92%;
+    background: #ffffff;
+    border-radius: 8rpx;
+    box-shadow:2px 2px 2px #e3e3e3;
+    position: absolute;
+    top: 220rpx;
+    left:30rpx;
+}
+
+.card-view{
+    background: #ffffff;
+    margin-bottom: 20rpx;
+}
+.sh-de-title-view{
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+

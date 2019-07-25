@@ -1,0 +1,29 @@
+.sh-offer-container{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+    justify-content: space-between;
+}
+
+.shop-tag-left{
+    display: flex;
+    flex-direction: row;
+}
+.sh-offer-tag{
+    margin-right: 10rpx;
+}
+
+.sh-offer-tag .tag-image{
+    width:30rpx;
+    height:30rpx;
+}
+
+.sh-offer-body .title{
+    font-size: 28rpx;
+    color:#333;
+}
+
+.sh-offer-body .date{
+    font-size:24rpx;
+    color:#999;
+}

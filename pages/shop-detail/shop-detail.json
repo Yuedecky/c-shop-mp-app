@@ -1,3 +1,7 @@
 {
-    "navigationBarTitleText": "门店信息"
+    "navigationBarTitleText": "门店信息",
+    "usingComponents": {
+        "wq-de-shop-card": "/components/common/shop-de-card/index",
+        "wq-shop-offer": "/components/common/shop-offer/index"
+    }
 }

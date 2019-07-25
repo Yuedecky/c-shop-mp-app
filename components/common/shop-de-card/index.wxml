@@ -1,0 +1,9 @@
+<view class='sh-de-container'>
+    <view class='sh-de-header'>{{name}}</view>
+    <view class='sh-de-open-date'>{{date}}</view>
+    <view class='sh-de-address'>
+        <text>{{address}}</text>
+        <van-icon name='arrow'></van-icon>
+    </view>
+    <view class='sh-de-phone' wx:hidden="{{phone == ''}}">{{phone}}</view>
+</view>

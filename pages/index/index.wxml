@@ -17,7 +17,7 @@
     </van-tabs>
   </view>
   <view class='card-view'>
-    <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:detail="openShopDetail" bind:more="openShopMore"></wq-near-shop>
+    <wq-near-shop shop="{{shop}}"></wq-near-shop>
   </view>
   <view class='card-view'>
     <wq-title-bar title="0元购品牌" right='更多' icon="new-o" bind:more="clickBrands"></wq-title-bar>

@@ -1,0 +1,18 @@
+<view class='sh-offer-container'>
+    <view class='shop-tag-left'>
+        <view class='sh-offer-tag'>
+            <image src="{{tagImage}}" mode='aspectFill' class='tag-image' />
+        </view>
+        <view class='sh-offer-body'>
+            <view class='title'>{{title}}</view>
+            <view class='date'>{{desc}}</view>
+        </view>
+    </view>
+    <view>
+        <view class='sh-offer-btn'>
+            <van-button type="{{status === 1? 'default':'danger'}}" size='small' hairline plain disabled="{{status ===1}}">
+                {{btnName}}
+            </van-button>
+        </view>
+    </view>
+</view>
