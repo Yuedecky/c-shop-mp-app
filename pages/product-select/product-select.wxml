@@ -1,0 +1,4 @@
+<view class='p-select-container'>
+    <wq-slide-header-bar active="{{active}}" tabs="{{tabs}}"></wq-slide-header-bar>
+    <view></view>
+</view>

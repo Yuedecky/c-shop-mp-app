@@ -7,7 +7,7 @@ Page({
   data: {
     pendingCash: '234.45元',
     withDraw: '200元',
-    
+
     earnMessages: [{
       "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
       "desc": "20分钟前完成0元购机￥2039",
@@ -59,6 +59,9 @@ Page({
 
   onDraw: function () {
     console.log('onDraw')
+    wx.navigateTo({
+      url: "/pages/wallet/wallet"
+    })
   },
 
   onRaider: function () {

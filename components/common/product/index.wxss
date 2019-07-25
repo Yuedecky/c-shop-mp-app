@@ -1,18 +1,80 @@
 
-.p-container{
-    background: white;
+.p-card-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 20rpx;
 }
 
-.p-c-class{
-    background-color: #ffffff;
+.card-image-wrapper{
+    width:35%;
+    height:100%;
 }
-.price-info{
-    margin-top: 10rpx;
-    font-weight: normal;
+
+.card-image{
+    width: 200rpx;
+    height:240rpx;
+}
+
+.c-product-i-name{
+    height:50rpx;
     font-size: 32rpx;
-    line-height: 40rpx;
-  }
+    font-weight: 600;
+    line-height: 50rpx;
+}
 
-  .tag-class{
-      margin-right: 10rpx;
-  }
+.c-product-i-tags{
+    display: flex;
+    flex-direction: row;
+}
+
+.c-p-i-tag-item{
+    margin-right: 10rpx;
+    color:#7232dd;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    height:40rpx;
+    padding-left: 6rpx;
+    padding-right: 6rpx;
+    border-radius: 4rpx;
+    border:0.5rpx solid #7232dd;
+}
+
+.c-product-i-remark{
+    font-size: 26rpx;
+    color: #999;
+    line-height: 34rpx;
+}
+
+.c-p-i-r-total{
+    margin-right: 10rpx;
+}
+
+
+.card-product-info-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.c-product-i-price{
+    display: flex;
+    flex-direction: row;
+    color:#f09;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+
+.c-product-i-price .price{
+    font-size: 35rpx;
+    margin-right: 10rpx;
+}
+.c-product-i-price .oPrice{
+    text-decoration: line-through;
+    font-size: 26rpx;
+    color:#333;
+}
+.card-product-buy-wrapper{
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+}

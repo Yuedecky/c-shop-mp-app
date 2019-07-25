@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选择商品",
+    "usingComponents": {
+        "wq-slide-header-bar": "/components/common/silde-header-bar"
+    }
+}

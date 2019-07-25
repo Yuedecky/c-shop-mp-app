@@ -30,9 +30,9 @@
   <view class='card-view'>
     <wq-title-bar title="0元购好货" right='更多' icon='thumb-circle-o' bind:more="onMoreProducts" border></wq-title-bar>
     <view class="zero-sale">
-      <block wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx">
+      <view wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx" class='zero-block-view'>
         <wq-product product="{{item}}" bind:click="onProductClick"></wq-product>
-      </block>
+      </view>
     </view>
   </view>
   <wq-footer text="已经到底了" />

@@ -1,14 +1,24 @@
-<view class='p-container'>
-    <van-card custom-class='p-c-class' tag="{{product.tag}}" price-class='price-info' title-class='p-title' price="{{product.price}}" desc="好评率{{product.rating}}" title="{{product.name}}" thumb="{{ product.image }}">
-        <view slot="tags">
-            <block wx:for="{{product.tags}}" wx:key="**this" wx:for-item='tag'>
-                <van-tag plain type="primary" size='midium' custom-class='tag-class'>
-                    {{tag}}
-                </van-tag>
+<view class='p-card-container'>
+    <view class='card-image-wrapper'>
+        <image src="{{product.image}}" mode="aspectFill" class='card-image' />
+    </view>
+    <view class='card-product-info-wrapper'>
+        <view class='c-product-i-name'>{{product.name}}</view>
+        <view class='c-product-i-tags'>
+            <block wx:for="{{product.tags}}" wx:key="**this">
+                <view class='c-p-i-tag-item'>{{item}}</view>
             </block>
         </view>
-        <view slot="footer" class='btn-footer' bind:tap="onTap">
-            <van-button plain size="mini" type='danger'>立即0元购</van-button>
+        <view class='c-product-i-price'>
+            <text class='price'>{{product.price}}</text>
+            <text class='oPrice'>{{product.oPrice}}</text>
         </view>
-    </van-card>
+        <view class='c-product-i-remark'>
+            <text class='c-p-i-r-total'>{{product.remarkCount}}条评价</text>
+            <text>好评率{{product.rating}}</text>
+        </view>
+    </view>
+    <view class='card-product-buy-wrapper'>
+        <van-button type="danger" plain hairline size="small">立即0元购</van-button>
+    </view>
 </view>
