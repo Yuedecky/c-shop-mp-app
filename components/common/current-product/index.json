@@ -1,6 +1,8 @@
 {
     "component": true,
     "usingComponents": {
-        "van-cell":"/miniprogram_npm/vant-weapp/cell/index"
+        "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+        "van-icon":"/miniprogram_npm/vant-weapp/icon/index",
+        "wq-title-bar": "/components/common/title-bar/index"
     }
 }

@@ -59,7 +59,7 @@ Page({
       name: '华为P30',
       price: "￥2345",
       oPrice: '￥2999',
-      desc: "8GB 256GB 赤红色 全网通",
+      tagList: ["8GB", "256GB", "赤红色", "全网通"],
       images: [
         "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
         "https://img14.360buyimg.com/n0/jfs/t1/32585/8/433/58112/5c3c042cEa2f28dad/d820f61c262556de.jpg"

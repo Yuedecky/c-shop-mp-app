@@ -1,14 +1,15 @@
 Component({
     properties: {
-        product: Object
+        price: String,
+        tags: Array,
+        id: String
     },
     data: {
 
     },
     methods: {
-        tapPhone() {
-            console.log("click phone")
-            this.triggerEvent("click", { id: this.properties.product.id }, {})
+        onDettail() {
+            this.triggerEvent("click", { id: this.id }, {})
         }
     }
 })

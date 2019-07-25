@@ -3,10 +3,8 @@
   color: #666;
   font-size: 28rpx;
   text-align: center;
-  line-height: 40rpx;
-  height:40rpx;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+  line-height: 60rpx;
+  height:60rpx;
 }
 
 .brand-list{
@@ -43,19 +41,15 @@
 }
 
 
-
 .header-info{
   font-size:32rpx;
   font-weight: bold;
 }
 
-
-
 .zero-sale{
   display: flex;
   flex-direction: column;
 }
-
 
 .sh-slot{
   display: flex;

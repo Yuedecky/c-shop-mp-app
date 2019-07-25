@@ -15,7 +15,8 @@
     "wq-footer": "/components/common/footer/index",
     "wq-brand": "/components/index/brand/index",
     "wq-service": "/components/index/service/index",
-    "wq-product": "/components/common/product/index"
+    "wq-product": "/components/common/product/index",
+    "wq-title-bar": "/components/common/title-bar/index"
   },
   "navigationBarTitleText": "首页"
 }

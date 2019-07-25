@@ -4,10 +4,25 @@
     padding: 10rpx;
 }
 
-.tit-p-class{
-    font-weight: bold;
+.cur-p-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20rpx;
 }
 
-.cur-p-value{
-    color: #f0f;
+.title-bottom{
+    border-bottom: 1rpx solid #efefef;
+}
+
+.cur-p-tags{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+.cur-p-content .tag-item{
+    margin-right: 10rpx;
 }

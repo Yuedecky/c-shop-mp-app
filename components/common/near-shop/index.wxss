@@ -7,10 +7,10 @@
 .near-sh-header{
   display: flex;
   flex-direction: row;
+  padding:20rpx 10rpx 20rpx 10rpx;
   justify-content: space-between;
-  height:60rpx;
-  line-height: 60rpx;
-  border-bottom: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #efefef;
+  margin-bottom: 20rpx;
 }
 
 .near-sh-header-left{
@@ -20,6 +20,7 @@
 
 .near-sh-title-o{
   padding-top: 4rpx;
+  margin-right: 20rpx;
 }
 
 .near-sh-title-desc , .near-sh-title-o{
@@ -45,22 +46,24 @@
 .near-sh-content{
   display: flex;
   flex-direction: row;
-  margin-top: 20rpx;
+  padding-right: 10rpx;
+  justify-content: space-between;
 }
 
 .near-sh-header-right{
   color: #999;
 }
 
-.near-sh-title-tag > van-tag{
-  margin-bottom: 4rpx;
-}
-
 .icon-location{
-  position: relative;
-  margin-right: 10rpx;
+  width:40rpx;
+  height:100%;
+  margin-right: 20rpx;
 }
 
+.near-sh-left{
+  display: flex;
+  flex-direction: row;
+}
 
 .shop-times{
   color: red;
@@ -68,14 +71,14 @@
 
 .shop-desc{
   display: flex;
-  width:68%;
   flex-direction: column;
 }
 
-.shop-location{
+
+.shop-times-desc, .shop-location{
+  color:#999;
   font-size: 28rpx;
   line-height: 40rpx;
-  color:#999;
 }
 
 .shop-times{
@@ -97,11 +100,9 @@
 }
 
 .photo-view{
-  height:100%;
-  width:24%;
-  position: relative;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 
@@ -112,9 +113,9 @@
   margin-right: 20rpx;
 }
 
-.icon-class{
+.photo-icon-arrow{
   position: absolute;
-  top:50rpx;
-  right: 10rpx;
-  color: #999;
+  top:46rpx;
+  right:0;
 }
+

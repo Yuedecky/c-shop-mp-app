@@ -1,0 +1,11 @@
+<view class='t-bar-container'>
+    <view class='t-bar-left'>
+        <view class='t-bar-icon' wx:hidden="{{icon == null}}">
+            <van-icon name="{{icon}}"></van-icon>
+        </view>
+        <view class='t-bar-title'>{{title}}</view>
+    </view>
+    <view bind:tap="clickRight" style="{{rightStyle!='' ? rightStyle:'color:#999'}}">
+        {{right}}
+    </view>
+</view>

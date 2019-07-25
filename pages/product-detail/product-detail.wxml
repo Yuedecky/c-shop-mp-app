@@ -8,7 +8,7 @@
       <wq-product-slide params="{{curPhone.params}}"></wq-product-slide>
     </view>
     <view class='card-view'>
-      <wq-current-product product="{{curPhone}}" bind:click="clickCurPhone"></wq-current-product>
+      <wq-current-product price="{{curPhone.price}}" tags="{{curPhone.tagList}}" id="{{curPhone.id}}" bind:click="clickCurPhone"></wq-current-product>
     </view>
     <!-- 对比机型 -->
     <view class='card-view'>

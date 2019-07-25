@@ -2,7 +2,7 @@
 <view class="index-container page">
   <van-search value="{{value}}" disabled placeholder='请输入商品名称' catch:tap='onSearchOpen'></van-search>
   <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}"></wq-swipper>
-  <view class='adv-text'>{{advText}}</view>
+  <view class='adv-text card-view'>{{advText}}</view>
   <view class='card-view'>
     <wq-bang title='0元购排行' rankData="{{bang}}"></wq-bang>
   </view>
@@ -20,18 +20,20 @@
     <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:detail="openShopDetail" bind:more="openShopMore"></wq-near-shop>
   </view>
   <view class='card-view'>
-    <van-cell title="0元购品牌" value='更多' icon="new-o" title-class='header-info' border bind:click="clickBrands"></van-cell>
+    <wq-title-bar title="0元购品牌" right='更多' icon="new-o" bind:more="clickBrands"></wq-title-bar>
     <view class='brand-list'>
       <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
         <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
       </block>
     </view>
   </view>
-  <van-cell title="0元购好货" value='更多' icon='thumb-circle-o' bind:click="onMoreProducts" title-class='header-info' border></van-cell>
-  <view class="zero-sale">
-    <block wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx">
-      <wq-product product="{{item}}" bind:click="onProductClick"></wq-product>
-    </block>
+  <view class='card-view'>
+    <wq-title-bar title="0元购好货" right='更多' icon='thumb-circle-o' bind:more="onMoreProducts" border></wq-title-bar>
+    <view class="zero-sale">
+      <block wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx">
+        <wq-product product="{{item}}" bind:click="onProductClick"></wq-product>
+      </block>
+    </view>
   </view>
   <wq-footer text="已经到底了" />
 </view>
