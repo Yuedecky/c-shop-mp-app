@@ -1,8 +1,13 @@
 <view class='shop-l-container'>
     <wq-slide-header-bar active="{{active}}" tabs="{{tabs}}"></wq-slide-header-bar>
-    <view class='shop-l-item-wrapper'>
+    <view class='shop-l-item-wrapper' wx:if="{{!checkable}}">
         <view wx:for="{{shops}}" wx:key="id" class='shop-l-item'>
             <wq-shop-item shop="{{item}}"></wq-shop-item>
+        </view>
+    </view>
+    <view wx:else class='shop-l-wrapper'>
+        <view wx:for="{{shops}}" wx:key="id" class='shop-l-item'>
+            <wq-checkable-shop-item shop="{{item}}" bind:check="onCheck"></wq-checkable-shop-item>
         </view>
     </view>
 </view>

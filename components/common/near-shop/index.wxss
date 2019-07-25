@@ -9,7 +9,6 @@
   flex-direction: row;
   padding:20rpx 10rpx 20rpx 10rpx;
   justify-content: space-between;
-  border-bottom: 1rpx solid #efefef;
   margin-bottom: 20rpx;
 }
 
@@ -108,9 +107,15 @@
 
 
 .shop-url{
-  width: 140rpx;
+  width: 120rpx;
   height:120rpx;
-  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.photo-image-view{
+  position: absolute;
+  right: 30rpx;
+
 }
 
 .photo-icon-arrow{
@@ -118,4 +123,5 @@
   top:46rpx;
   right:0;
 }
+
 

@@ -3,28 +3,12 @@ Page({
         active: 0,
         tabs: [
             {
-                name: '附近(81)',
+                name: '附近(10KM)',
                 id: 12
             },
             {
-                name: '杨浦区(21)',
+                name: '附近(5KM)',
                 id: 13
-            },
-            {
-                name: '闵行区(12)',
-                id: 14
-            },
-            {
-                name: '徐汇区(10)',
-                id: 16
-            },
-            {
-                name: '长宁区(23)',
-                id: 24
-            },
-            {
-                name: '浦东新区(26)',
-                id: 26
             }
         ],
         shops: [{
@@ -50,10 +34,28 @@ Page({
                 "依旧欢心",
                 "维修"
             ]
-        }]
+        }],
+        checkable: false
     },
 
-    onLoad() {
-
+    onLoad: function (options) {
+        if (options.checkable) {
+            this.setData({
+                checkable: true
+            })
+        }
+    },
+    onShow(options) {
+    },
+    onCheck(e) {
+        const id = e.detail.id
+        wx.navigateBack({
+            delta: 1
+        });
+        var pages =  getCurrentPages();
+        var prePage = pages[pages.length-2]
+        prePage.setData({
+            checkShopId: id
+        })
     }
 })

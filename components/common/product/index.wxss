@@ -36,7 +36,7 @@
     height:40rpx;
     padding-left: 6rpx;
     padding-right: 6rpx;
-    border-radius: 4rpx;
+    border-radius: 6px;
     border:0.5rpx solid #7232dd;
 }
 

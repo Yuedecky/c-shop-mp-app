@@ -1,0 +1,6 @@
+<view class='sh-wrapper'>
+    <view class='sh-checkbox' wx:hidden="!visibleCheck">
+        <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="onChange" />
+    </view>
+    <wq-shop-item shop="{{shop}}"></wq-shop-item>
+</view>

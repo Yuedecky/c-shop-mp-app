@@ -12,7 +12,7 @@
 }
 
 .title-bottom{
-    border-bottom: 1rpx solid #efefef;
+    border-bottom: 1rpx solid #cccccc;
 }
 
 .cur-p-tags{

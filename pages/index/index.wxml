@@ -17,10 +17,12 @@
     </van-tabs>
   </view>
   <view class='card-view'>
-    <wq-near-shop shop="{{shop}}"></wq-near-shop>
+    <wq-near-shop shop="{{shop}}" bottomBorderStyle="1rpx solid #eee" bind:more="openShopMore"></wq-near-shop>
   </view>
   <view class='card-view'>
-    <wq-title-bar title="0元购品牌" right='更多' icon="new-o" bind:more="clickBrands"></wq-title-bar>
+    <view class='bottom-border'>
+      <wq-title-bar title="0元购品牌" right='更多' icon="new-o" bind:more="clickBrands"></wq-title-bar>
+    </view>
     <view class='brand-list'>
       <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
         <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
@@ -28,7 +30,9 @@
     </view>
   </view>
   <view class='card-view'>
-    <wq-title-bar title="0元购好货" right='更多' icon='thumb-circle-o' bind:more="onMoreProducts" border></wq-title-bar>
+    <view class='bottom-border'>
+      <wq-title-bar title="0元购好货" right='更多' icon='thumb-circle-o' bind:more="onMoreProducts" border></wq-title-bar>
+    </view>
     <view class="zero-sale">
       <view wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx" class='zero-block-view'>
         <wq-product product="{{item}}" bind:click="onProductClick"></wq-product>

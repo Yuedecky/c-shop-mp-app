@@ -18,6 +18,7 @@
     "wq-current-product": "/components/common/current-product/index",
     "wq-add-product": "/components/common/add-product/index",
     "wq-pop-header": "/components/common/popup-header/index",
-    "wq-pop-tag": "/components/common/popup-tag/index"
+    "wq-pop-tag": "/components/common/popup-tag/index",
+    "wq-title-bar": "/components/common/title-bar/index"
   }
 }

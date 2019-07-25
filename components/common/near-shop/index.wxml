@@ -1,5 +1,5 @@
 <view class="sh-container" style="background: {{background}};">
-  <view class='near-sh-header'>
+  <view class='near-sh-header' style="border-bottom:{{bottomBorderStyle}};">
     <view class='near-sh-header-left'>
       <view class='near-sh-title-o'>
         <van-icon name='shop-o'></van-icon>
@@ -27,11 +27,11 @@
       </view>
     </view>
     <view class='photo-view'>
-      <view>
+      <view class='photo-image-view'>
         <image src="{{shop.photo}}" class="shop-url"></image>
       </view>
       <view class='photo-icon-arrow'>
-        <van-icon name='arrow' custom-class='icon-class' />
+        <van-icon name='arrow' />
       </view>
     </view>
   </view>

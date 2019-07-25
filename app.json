@@ -7,11 +7,13 @@
         "pages/product-detail/product-detail",
         "pages/earn/earn",
         "pages/shop-map/shop-map",
+        "pages/shop-list/shop-list",
         "pages/me/me",
         "pages/wallet/wallet",
         "pages/wallet/detail/detail",
         "pages/product-list/product-list",
-        "pages/personal-settings/personal-settings"
+        "pages/personal-settings/personal-settings",
+        "pages/select-product/select-product"
     ],
     "window": {
         "backgroundTextStyle": "light",

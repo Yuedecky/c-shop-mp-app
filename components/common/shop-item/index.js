@@ -1,9 +1,8 @@
 Component({
     properties: {
-        shop:Object
+        shop: Object,
     },
     data: {
-
     },
     methods: {
 

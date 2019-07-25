@@ -6,7 +6,7 @@ Component({
 
     },
     methods: {
-        onTap: function () {
+        click: function () {
             this.triggerEvent("click", { id: this.properties.product.id }, {})
         }
     }

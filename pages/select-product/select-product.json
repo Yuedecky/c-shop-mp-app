@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "分类",
+    "navigationBarTitleText": "选择商品",
     "usingComponents": {
         "wq-category-item": "/components/common/category-item/index"
     }

@@ -12,16 +12,13 @@
     </view>
     <!-- 对比机型 -->
     <view class='card-view'>
-      <van-cell custom-class='cus-info' border>
-        <view slot="title" class='sh-slot'>
-          <view class='add-o-info'>对比机型</view>
-          <view class="add-o-desc">可继续选择1～2款机型对比下单</view>
-        </view>
-      </van-cell>
+      <view class='title-bottom'>
+        <wq-title-bar title='对比机型' rightStyle='color:red;' right="可继续选择1～2款机型对比下单"></wq-title-bar>
+      </view>
       <wq-add-product bind:click="addMoreProduct"></wq-add-product>
     </view>
     <view class='card-view'>
-      <wq-near-shop bind:detail="openShopDetail" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
+      <wq-near-shop  bottomBorderStyle="1rpx solid #ccc" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
     </view>
     <view class="user-remark-info">
       <wq-footer text="用户评价"></wq-footer>
@@ -37,7 +34,7 @@
       </button>
     </view>
   </scroll-view>
-  <view class="send-to-order">去下单</view>
+  <view class="send-to-order" bind:tap='toOrder'>去下单</view>
   <van-popup show="{{ showBottom }}" custom-style='height:800rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
     <view class='wq-pop-header-section'>
       <wq-pop-header product="{{curPhone}}" bind:close="onClosePopup"></wq-pop-header>
@@ -52,7 +49,7 @@
       </view>
     </scroll-view>
     <view class='fixed-btn-block'>
-      <van-button type="warning" custom-class='buy-btn' block>确认</van-button>
+      <van-button type="warning" custom-class='buy-btn' block bind:click='makeSure'>确认</van-button>
     </view>
   </van-popup>
 </view>

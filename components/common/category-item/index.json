@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-search": "/miniprogram_npm/vant-weapp/search/index",
+        "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+        "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+        "van-tree-select": "/miniprogram_npm/vant-weapp/tree-select/index",
+        "wq-left-tab": "/components/common/left-tab/index",
+        "wq-header-bar": "/components/common/header-bar/index",
+        "wq-slide-header-bar": "/components/common/slide-header-bar/index"
+    }
+}

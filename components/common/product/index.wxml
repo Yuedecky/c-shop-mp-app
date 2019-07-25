@@ -19,6 +19,6 @@
         </view>
     </view>
     <view class='card-product-buy-wrapper'>
-        <van-button type="danger" plain hairline size="small">立即0元购</van-button>
+        <van-button type="danger" plain hairline size="small" bind:click="click">立即0元购</van-button>
     </view>
 </view>

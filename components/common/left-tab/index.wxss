@@ -1,7 +1,6 @@
 .lf-container {
     display: flex;
     flex-direction: row;
-    background: #ef9fef;
   }
   
   .brand-text {

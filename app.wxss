@@ -1,11 +1,10 @@
 
-@import "./assets/lib/iconfont.wxss";
+@import "/assets/lib/iconfont.wxss";
 page{
     background-color: #F8F8F8;
     font-size: 30rpx;
     font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif !important;
 }
-
 
 /**
 去掉滚动条
@@ -16,10 +15,5 @@ page{
     color: transparent;
   }
 
-  .icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-  }
+ 
+  

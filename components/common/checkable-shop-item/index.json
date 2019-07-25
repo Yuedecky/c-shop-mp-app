@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "wq-shop-item": "/components/common/shop-item/index",
+        "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index"
+    }
+}

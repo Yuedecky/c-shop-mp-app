@@ -1,0 +1,11 @@
+<view class='order-e-container'>
+    <view class='order-experience'>体验方式</view>
+    <view>
+        <van-tabs active="{{ active }}" bind:change="onChange">
+            <van-tab title="上门体验"></van-tab>
+            <van-tab title="到店体验"></van-tab>
+        </van-tabs>
+
+        <wq-near-shop shop="{{shop}}"></wq-near-shop>
+    </view>
+</view>

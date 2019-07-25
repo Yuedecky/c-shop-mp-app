@@ -9,10 +9,10 @@
 .card-view{
   border:1px solid #ccc;
   border-radius: 8rpx;
+  background: #eeeeee;
 }
 
 .remak-view , .card-view{
-  background: #fefefe;
   width:94%;
   margin: 0 auto;
   margin-bottom: 20rpx;
@@ -108,4 +108,8 @@
   height:88rpx;
   width:100%;
   line-height: 88rpx;
+}
+
+.title-bottom{
+  border-bottom: 1rpx solid #cccccc;
 }

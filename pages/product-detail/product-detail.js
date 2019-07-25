@@ -177,6 +177,7 @@ Page({
         }
       ]
     },
+    checkShopId: 0,
     colorItem: {
       text: ['天空直径', '亮黑色', '激光色'],
       selectIndex: 1,
@@ -204,13 +205,21 @@ Page({
         desc: '移动电源'
       }
     ]
-
   },
 
+  /**
+   * 
+   */
+  toOrder() {
+    wx.navigateTo({
+      url: '/pages/order/order'
+    })
+  },
 
   openMoreShops: function (e) {
+    console.log('in product detail')
     wx.navigateTo({
-      url: '/pages/shop-list/shop-list',
+      url: '/pages/shop-list/shop-list?checkable=true'
     });
   },
 
@@ -244,10 +253,6 @@ Page({
     })
   },
 
-  openShopDetail: function (e) {
-    const id = e.detail.id;
-    console.log(id)
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -259,12 +264,20 @@ Page({
 
   },
 
+  makeSure() {
+
+
+    this.setData({
+      showBottom: false
+    })
+  },
+
   /**
    * 添加更机型对比
    */
   addMoreProduct() {
-    wx.reLaunch({
-      url: '/pages/category/category',
+    wx.navigateTo({
+      url: '/pages/select-product/select-product',
       success: (result) => {
 
       },

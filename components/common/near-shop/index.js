@@ -1,11 +1,11 @@
 Component({
     properties: {
         shop: Object,
-        background: String
+        background: String,
+        bottomBorderStyle: String
     },
     methods: {
         tapDetail: function (e) {
-            console.log("on detail...")
             wx.navigateTo({
                 url: '/pages/shop-detail/shop-detail',
                 success: (result) => {
@@ -16,9 +16,7 @@ Component({
             });
         },
         onTapMore() {
-            wx.navigateTo({
-                url: "/pages/shop-list/shop-list"
-            })
+            this.triggerEvent("more", {}, {})
         }
     }
 })

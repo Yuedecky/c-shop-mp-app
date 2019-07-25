@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "确认订单",
+    "usingComponents": {
+        "wq-near-shop": "/components/common/near-shop/index",
+        "van-tab": "/miniprogram_npm/vant-weapp/tab/index"
+    }
+}

@@ -3,8 +3,6 @@
     flex-direction: column;
 }
 
-
-
 .index-nav-left{
     white-space: nowrap;
     width : 26%;
@@ -15,5 +13,10 @@
     position: fixed;
     top:400rpx;
     left:0rpx;
+}
+
+.ca-content-wrapper{
+    display: flex;
+    flex-direction: row;
 }
 

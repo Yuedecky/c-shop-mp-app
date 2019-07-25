@@ -60,13 +60,11 @@ Page({
         current: 0
     },
 
-    
+
     onLoad: function () {
-        
+
     },
 
-   
-    onHeaderBarClick: function () {
 
-    }
+
 })

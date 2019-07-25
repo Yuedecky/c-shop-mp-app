@@ -65,6 +65,8 @@
 }
 
 
-
+.bottom-border{
+  border-bottom: 1rpx solid #eeeeee;
+}
 
 
