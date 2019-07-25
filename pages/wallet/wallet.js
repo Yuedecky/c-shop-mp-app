@@ -5,8 +5,8 @@ Page({
    */
   data: {
     iconImage: '/assets/images/icon-money.png',
-    walletMoneyCount: 342.23,
-    activationCount: 200,
+    total: "￥342.23",
+    toBeActivateTotal: "￥200",
     detailDisabled: false,
     withDrawDisabled: false,
     popup: '',

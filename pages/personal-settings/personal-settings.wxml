@@ -1,0 +1,21 @@
+<view class='p-settings-container'>
+    <view class='p-settings-header'>
+        <view class='p-settings-grp-title'>账户信息</view>
+        <van-cell-group>
+            <van-cell title="头像" size="large">
+                <view>
+                    <image src="{{avatar}}" mode="aspectFill" class='avatar-p' />
+                </view>
+            </van-cell>
+            <van-cell title="手机号 {{phone}}" value="更换手机号" is-link link-type="navigateTo" url="/pages/change-phone/change-phone"></van-cell>
+        </van-cell-group>
+    </view>
+    <view>
+        <view class='p-settings-grp-title'>安全设置</view>
+        <van-cell-group>
+            <van-cell title="登录密码" value="{{passwordEnabled? '已设置':'未设置'}}" is-link link-type="navigateTo" url="/pages/set-password/set-password"></van-cell>
+            <van-cell title="提现密码" value="{{drawPasswordEnabled?'已设置':'未设置'}}" is-link link-type="navigateTo" url="/pages/draw-password/draw-password"></van-cell>
+            <van-cell title="实名认证(保障资金安全)" value="{{qualicationEnabled?'已设置':'未设置'}}" is-link link-type="navigateTo" url="/pages/qualification/qualification"></van-cell>
+        </van-cell-group>
+    </view>
+</view>

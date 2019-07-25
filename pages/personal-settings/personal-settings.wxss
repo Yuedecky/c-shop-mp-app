@@ -1,0 +1,21 @@
+.p-settings-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.avatar-p{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
+
+.p-settings-grp-title{
+    color:#666;
+    padding:20rpx;
+}
+
+.p-settings-header{
+    margin-bottom: 40rpx;
+    
+}

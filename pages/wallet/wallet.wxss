@@ -1,57 +1,51 @@
 .wallet-icon-image{
   width: 240rpx;
   height: 240rpx;
-  border: 1p solid red;
 }
+
 .wallet-top{
-  width: 100%;
-  height: 360rpx;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.wallet-desc{
- font-size: 42rpx;
-}
-.wallet-container{
-  font-size: 56rpx;
-}
-.yuan{
-  font-size: 60rpx;
-  margin-right: 10rpx;
-  font-weight: bolder;
-}
-.wallet-count{
-  font-stretch: ultra-expanded;
-  font-size: 100rpx;
-  font-weight: 600;
-  text-align: center;
-  line-height: 120rpx;
-  height:120rpx;
-  word-spacing: 20rpx;
-}
-.wallet-to-activation{
-  font-size: 35rpx;
-  line-height: 35rpx;
-  height: 35rpx;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.view-activation-method{
-  color: red;
+.wallet-desc{
+ font-size: 42rpx;
 }
+
+.wallet-container{
+  position: relative;
+  font-size: 56rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wq-wallet-count-view{
+  margin-bottom: 20rpx;
+}
+
 
 .share-qrcode{
   font-size: 36rpx;
   text-align: center;
-  color: rgb(230, 230, 185);
+  color: rgb(240, 200, 185);
 }
+
 .wallet-btn-class{
   font-size: 46rpx;
   height: 80rpx;
   line-height: 80rpx;
   font-weight: 500;
-  background: green;
+  margin-bottom: 40rpx;
   width: 480rpx;
+}
+
+.view-withdraw{
+  position: fixed;
+  bottom:60rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }

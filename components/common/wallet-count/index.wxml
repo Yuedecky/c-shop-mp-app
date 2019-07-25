@@ -1,0 +1,8 @@
+<view class='w-count-container'>
+    <view class='w-yuan'>{{total}}</view>
+    <view class='wallet-to-activation'>
+      <view class='activation-count'>{{toBeActivateTotal}}待激活</view>
+      <view class='view-activation-method' catch:tap='onViewActivate'>查看激活方法</view>
+      <!-- <popup id='popup' cancelText='知道了' confirmText='分享二维码' title='激活方法' content='第一步：分享我的二维码\r\n 第二步：好友扫码进行注册\r\n 第三步：好友注册后余额即可提现' bind:cancelEvent='popupCancel' bind:confirmEvent='popupConfirm' /> -->
+    </view>
+  </view>

@@ -1,4 +1,4 @@
-<view class='sh-de-container'>
+<view class='sh-de-container' bind:tap="tapMap">
     <view class='sh-de-header'>{{name}}</view>
     <view class='sh-de-open-date'>{{date}}</view>
     <view class='sh-de-address'>

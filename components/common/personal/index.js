@@ -7,6 +7,10 @@ Component({
 
     },
     methods: {
-
+        onClieckSettings() {
+            wx.navigateTo({
+                url: "/pages/personal-settings/personal-settings"
+            })
+        }
     }
 })

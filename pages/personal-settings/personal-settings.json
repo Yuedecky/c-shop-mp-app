@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+        "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+        "w-wallet-count": "/miniprogram_npm/vant-weapp/wallet-count/index"
+    },
+    "navigationBarTitleText": "个人设置"
+}

@@ -5,7 +5,7 @@
         </view>
         <view class='me-name'>{{name}}</view>
     </view>
-    <view class='me-settings'>
+    <view class='me-settings' bind:tap="onClieckSettings">
         <van-icon name="setting-o" size="20px" />
     </view>
 </view>

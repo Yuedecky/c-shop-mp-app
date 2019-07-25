@@ -1,7 +1,7 @@
 <!-- pages/me/me.wxml -->
 <view class='me-container'>
   <view>
-    <wq-personal avatar="{{avatar}}" name="{{name}}"></wq-personal>
+    <wq-personal avatar="{{avatar}}" name="{{name}}" ></wq-personal>
     <view class='me-grp'>
       <van-cell-group>
         <van-cell title="钱包" is-link link-type="navigateTo" url="/pages/wallet/wallet" size="large">

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "wq-wallet-count": "/components/common/wallet-count/index"
+  },
   "navigationBarTitleText": "我的钱包"
 }
