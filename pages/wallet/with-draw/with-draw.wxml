@@ -1,0 +1,3 @@
+<view class='wt-container'>
+    <wq-with-draw serviceRate="{{serviceRate}}" accountDesc="{{accountDesc}}" accountName="{{accountName}}" accountTotal="{{accountTotal}}"></wq-with-draw>
+</view>

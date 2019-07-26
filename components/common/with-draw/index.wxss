@@ -1,0 +1,69 @@
+.wt-dr-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40rpx;
+}
+
+.wd-header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height:120rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.wd-header-title{
+    line-height: 100rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    margin-right: 20rpx;
+}
+
+.wd-account-total{
+    font-weight: bold;
+    font-size:34rpx;
+    line-height: 60rpx;
+}
+
+.account-input{
+
+    height:120rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.account-arrow{
+    position: absolute;
+    top:40rpx;
+    right: 0;
+}
+
+.acount-selection{
+    display: flex;
+    flex-direction: column;
+}
+
+.acount-selection .name{
+    line-height: 60rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.acount-selection .desc{
+    color: #999;
+    font-size: 26rpx;
+}
+.wd-body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40rpx;
+}
+
+.account-desc-view{
+    color: #666;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.account-total-info{
+    color: #f89;
+
+}

@@ -4,7 +4,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    accountTotal: 102.34,
+    accountName: '微信钱包',
+    accountDesc: '1~3个工作日到账',
+    serviceRate: '0.60%'
   },
 
   /**

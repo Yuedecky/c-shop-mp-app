@@ -1,3 +1,6 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "wq-slide-header-bar": "/components/common/slide-header-bar/index",
+        "wq-order-item": "/components/common/order-item/index"
+    }
 }

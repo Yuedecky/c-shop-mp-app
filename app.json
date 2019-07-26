@@ -14,7 +14,9 @@
         "pages/product-list/product-list",
         "pages/personal-settings/personal-settings",
         "pages/select-product/select-product",
-        "pages/brand-products/brand-products"
+        "pages/brand-products/brand-products",
+        "pages/wallet/with-draw/with-draw",
+        "pages/my-order/my-order"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,0 +1,17 @@
+<view class='ad-container'>
+    <wq-footer text="{{text}}" />
+    <view class='ad-body'>
+        <view class='name'>
+            <text class='key'>{{nameKey}}</text>
+            <text class='value'>{{name}}</text>
+        </view>
+        <view class='phone'>
+            <text class='key'>{{phoneKey}}</text>
+            <text class='value'>{{phone}}</text>
+        </view>
+        <view class="address">
+            <text class='key'>{{addressKey}}</text>
+            <text class='value'>{{address}}</text>
+        </view>
+    </view>
+</view>

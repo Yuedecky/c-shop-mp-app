@@ -1,0 +1,49 @@
+.order-i-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+
+.o-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40rpx;
+
+}
+.o-header-left{
+    display: flex;
+    flex-direction: row;
+}
+
+.o-header-left .orderno{
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+
+
+.o-header-left .mode{
+    color: #f49;
+    border: 1rpx solid #f49;
+    font-size: 26rpx;
+}
+
+.o-header-right{
+    color: #666;
+    font-size: 30rpx;
+}
+
+.o-body-content{
+    padding-bottom: 20rpx;
+    padding-top:20rpx;
+}
+
+.o-footer-address{
+    margin-bottom: 40rpx;
+}
+
+.contact-customer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

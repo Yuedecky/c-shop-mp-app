@@ -7,7 +7,7 @@
         <van-cell title="钱包" is-link link-type="navigateTo" url="/pages/wallet/wallet" size="large">
           <van-icon slot="icon" name="pending-payment" size="20px" custom-class='c-icon-class' />
         </van-cell>
-        <van-cell title="订单" is-link link-type="navigateTo" url="pages/order/order" size="large">
+        <van-cell title="订单" is-link link-type="navigateTo" url="/pages/my-order/my-order" size="large">
           <van-icon slot="icon" name="bill-o" size="20px" custom-class='c-icon-class' />
         </van-cell>
         <van-cell title="地址管理" is-link link-type="navigateTo" url="pages/address/address" size="large">

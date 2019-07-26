@@ -1,0 +1,23 @@
+.ad-container{
+    display: flex;
+    flex-direction: column;
+}
+.ad-body{
+    display: flex;
+    flex-direction: column;
+    line-height: 50rpx;
+    font-size: 30rpx;
+}
+
+.ad-body .name, .ad-body .address,.ad-body .phone{
+    display: flex;
+    flex-direction: row;
+}
+
+.ad-body .key{
+    font-weight: 600;
+    margin-right: 20rpx;
+}
+.ad-body .value{
+    color: #666;
+}

@@ -1,0 +1,8 @@
+.my-o-container{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+.my-order-bottom{
+    margin-bottom: 20rpx;
+}

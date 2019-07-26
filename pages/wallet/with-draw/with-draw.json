@@ -1,1 +1,5 @@
-{}
+{
+    "usingComponents": {
+        "wq-with-draw": "/components/common/with-draw/index"
+    }
+}

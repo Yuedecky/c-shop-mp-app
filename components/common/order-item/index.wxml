@@ -1,0 +1,25 @@
+<view class='order-i-container'>
+    <view class='o-header'>
+        <view class='o-header-left'>
+            <view class='orderno'>
+                订单编号：
+                <text>{{orderNo}}</text>
+            </view>
+            <view class='mode'>{{mode}}</view>
+        </view>
+        <view class='o-header-right'>{{status}}</view>
+    </view>
+    <view class='o-body-content'>
+        <view wx:for="{{products}}" wx:key="id">
+            <wq-product product="{{item}}" />
+        </view>
+    </view>
+    <view class='o-footer-address'>
+        <wq-address-view address="{{address}}" name="{{name}}" phone="{{phone}}" type="{{type}}"></wq-address-view>
+    </view>
+    <view class='contact-customer'>
+        <van-button type='primary' size="small">提货码</van-button>
+        <van-button type='primary' size="small">联系门店</van-button>
+        <van-button type='default' size="small">取消</van-button>
+    </view>
+</view>

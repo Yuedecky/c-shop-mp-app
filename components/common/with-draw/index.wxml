@@ -1,0 +1,23 @@
+<view class='wt-dr-container'>
+    <view class='wd-header'>
+        <view class='wd-header-title'>到账账户</view>
+        <view class='acount-selection'>
+            <view class='name'>{{accountName}}</view>
+            <view class='desc'>{{accountDesc}}</view>
+        </view>
+        <view class='account-arrow'>
+            <van-icon name='arrow' size="20px" />
+        </view>
+    </view>
+    <view class='wd-body'>
+        <view class='wd-account-total'>提现金额</view>
+        <view class='account-input'>
+            <input type="text" value="{{withDrawValue}}" disabled name="location" focus bindinput='getValue' />
+        </view>
+        <view class='account-desc-view'>
+            钱包余额
+            <text class="account-total-info">{{accountTotal}}</text>
+            ,提现服务费率{{serviceRate}}
+        </view>
+    </view>
+</view>

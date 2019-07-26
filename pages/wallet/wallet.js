@@ -30,7 +30,7 @@ Page({
     })
     let uid = e.currentTarget.dataset.uid;
     wx.navigateTo({
-      url: '/pages/wallet/with-draw/with-draw?uid=' + uid,
+      url: '/pages/wallet/with-draw/with-draw'
     })
   },
 

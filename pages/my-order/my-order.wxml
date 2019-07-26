@@ -1,0 +1,8 @@
+<view class='my-o-container'>
+    <wq-slide-header-bar active="{{active}}" tabs="{{tabs}}"></wq-slide-header-bar>
+    <view wx:for="{{orders}}" wx:key="id">
+        <view class='my-order-bottom'>
+            <wq-order-item name="{{item.name}}" orderNo="{{item.orderNo}}" status="{{item.status}}" address="{{item.address}}" phone="{{item.phone}}" type="{{item.type}}" products="{{item.products}}"></wq-order-item>
+        </view>
+    </view>
+</view>
