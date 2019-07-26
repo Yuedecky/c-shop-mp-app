@@ -12,6 +12,9 @@ App({
   wechat: wechat,
   baidu: baidu,
 
+
+  
+
   /**
    * 先调用wx.login，获取code
    */

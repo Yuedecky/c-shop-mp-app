@@ -201,7 +201,9 @@ Page({
    */
   openShopDetail(e) {
     const id = e.detail.id;
-    console.log(id)
+    wx.navigateTo({
+      url: '/pages/shop-map/shop-map'
+    })
   },
 
   clickMoreShops() {
@@ -292,13 +294,8 @@ Page({
       }
     })
   },
-  onTap: function () {
-    wx.redirectTo({
-      url: '/pages/posts/posts',
-    })
-  },
+
   onUnload: function () {
-    console.log("index is unload")
   },
 
 
@@ -306,9 +303,14 @@ Page({
    * 点击查看更多品牌
    */
   clickBrands() {
-    wx.navigateTo({
-      url: "/pages/brand/brand"
-    })
+    wx.reLaunch({
+      url: '/pages/category/category',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
   },
 
 

@@ -1,4 +1,4 @@
-<view class='shop-item-container'>
+<view class='shop-item-container' bind:tap="click">
     <view class="shop-item-header">
         <view class='name-label'>
             <view class='name'>{{shop.name}}</view>

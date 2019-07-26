@@ -7,5 +7,22 @@ Page({
     onLoad: function () {
 
     },
-    
+
+    onTabItemTap(item) {
+        console.log(item)
+        const code = wx.getStorageSync('code');
+        if (code) {
+
+        } else {
+            wx.navigateTo({
+                url: '/pages/login/login',
+                success: (result) => {
+
+                },
+                fail: () => { },
+                complete: () => { }
+            });
+        }
+    }
+
 })

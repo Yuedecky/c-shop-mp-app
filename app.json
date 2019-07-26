@@ -1,9 +1,9 @@
 {
     "pages": [
-        "pages/login/login",
         "pages/index/index",
         "pages/category/category",
         "pages/brand/brand",
+        "pages/login/login",
         "pages/product-detail/product-detail",
         "pages/earn/earn",
         "pages/shop-map/shop-map",

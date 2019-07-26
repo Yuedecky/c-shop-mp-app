@@ -7,7 +7,21 @@
 .sh-de-header{
     line-height:60rpx;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.collect-img-wrapper{
+    width:40rpx;
+    height:40rpx;
+}
+
+.collect-image{
+    width:40rpx;
+    height: 40rpx;
+}
+
 .sh-de-open-date{
     line-height: 60rpx;
     font-size:26rpx;

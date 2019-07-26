@@ -17,7 +17,7 @@
     </van-tabs>
   </view>
   <view class='card-view'>
-    <wq-near-shop shop="{{shop}}" bottomBorderStyle="1rpx solid #eee" bind:more="openShopMore"></wq-near-shop>
+    <wq-near-shop shop="{{shop}}" bottomBorderStyle="1rpx solid #eee" bind:more="openShopMore" bind:detail="openShopDetail"></wq-near-shop>
   </view>
   <view class='card-view'>
     <view class='bottom-border'>

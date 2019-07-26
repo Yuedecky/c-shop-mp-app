@@ -38,6 +38,12 @@ Page({
         checkable: false
     },
 
+    onShopDetail(e) {
+        const id = e.detail.id;
+        wx.navigateTo({
+            url: '/pages/shop-detail/shop-detail'
+        })
+    },
     onLoad: function (options) {
         if (options.checkable) {
             this.setData({
@@ -52,8 +58,8 @@ Page({
         wx.navigateBack({
             delta: 1
         });
-        var pages =  getCurrentPages();
-        var prePage = pages[pages.length-2]
+        var pages = getCurrentPages();
+        var prePage = pages[pages.length - 2]
         prePage.setData({
             checkShopId: id
         })

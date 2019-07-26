@@ -1,5 +1,13 @@
 <view class='sh-de-container' bind:tap="tapMap">
-    <view class='sh-de-header'>{{name}}</view>
+    <view class='sh-de-header'>
+        <view>{{name}}</view>
+        <view wx:if="{{collected}}" class='collect-img-wrapper'>
+            <image src="/assets/images/cared.png" class='collect-image' mode='aspectFit' />
+        </view>
+        <view wx:else class='collect-img-wrapper'>
+            <image src="/assets/images/un-care.png" class='collect-image' mode='aspectFit' />
+        </view>
+    </view>
     <view class='sh-de-open-date'>{{date}}</view>
     <view class='sh-de-address'>
         <text>{{address}}</text>

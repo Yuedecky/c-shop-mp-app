@@ -4,7 +4,8 @@ Component({
         address: String,
         name: String,
         date: String,
-        id: Number
+        id: Number,
+        collected: Boolean
     },
     data: {
 
