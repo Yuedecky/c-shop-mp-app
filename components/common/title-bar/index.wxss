@@ -12,9 +12,6 @@
 }
 
 .t-bar-left .t-bar-icon{
-    margin-top: 4rpx;
+    margin-top: 2rpx;
     margin-right: 10rpx;
-}
-.t-bar-left .t-bar-title{
-    font-weight: bold;
 }

@@ -18,7 +18,7 @@
       <wq-add-product bind:click="addMoreProduct"></wq-add-product>
     </view>
     <view class='card-view'>
-      <wq-near-shop  bottomBorderStyle="1rpx solid #ccc" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
+      <wq-near-shop bottomBorderStyle="1rpx solid #ccc" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
     </view>
     <view class="user-remark-info">
       <wq-footer text="用户评价"></wq-footer>
@@ -33,23 +33,25 @@
         加载更多
       </button>
     </view>
+    <van-popup show="{{ showBottom }}" custom-style='height:800rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
+      <view class='wq-pop-header-section'>
+        <wq-pop-header product="{{curPhone}}" bind:close="onClosePopup"></wq-pop-header>
+      </view>
+      <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
+        <wq-pop-tag tag="版本" tags="{{curPhone.versions}}"></wq-pop-tag>
+        <wq-pop-tag tag="颜色" tags="{{curPhone.color}}"></wq-pop-tag>
+        <wq-pop-tag tag="意外保护" tags="{{curPhone.protect}}"></wq-pop-tag>
+        <view class='pop-num'>
+          <view>购买数量：</view>
+          <van-stepper value="{{ 1 }}" bind:change="onNumChange" />
+        </view>
+      </scroll-view>
+      <view class='fixed-btn-block'>
+        <van-button type="warning" custom-class='buy-btn' block bind:click='makeSure'>
+          确认
+        </van-button>
+      </view>
+    </van-popup>
   </scroll-view>
   <view class="send-to-order" bind:tap='toOrder'>去下单</view>
-  <van-popup show="{{ showBottom }}" custom-style='height:800rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
-    <view class='wq-pop-header-section'>
-      <wq-pop-header product="{{curPhone}}" bind:close="onClosePopup"></wq-pop-header>
-    </view>
-    <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-      <wq-pop-tag tag="版本" tags="{{curPhone.versions}}"></wq-pop-tag>
-      <wq-pop-tag tag="颜色" tags="{{curPhone.color}}"></wq-pop-tag>
-      <wq-pop-tag tag="意外保护" tags="{{curPhone.protect}}"></wq-pop-tag>
-      <view class='pop-num'>
-        <view>购买数量：</view>
-        <van-stepper value="{{ 1 }}" bind:change="onNumChange" />
-      </view>
-    </scroll-view>
-    <view class='fixed-btn-block'>
-      <van-button type="warning" custom-class='buy-btn' block bind:click='makeSure'>确认</van-button>
-    </view>
-  </van-popup>
 </view>

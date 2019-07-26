@@ -18,7 +18,7 @@
             <text>好评率{{product.rating}}</text>
         </view>
     </view>
-    <view class='card-product-buy-wrapper'>
+    <view class='card-product-buy-wrapper' wx:if="{{show}}">
         <van-button type="danger" plain hairline size="small" bind:click="click">立即0元购</van-button>
     </view>
 </view>

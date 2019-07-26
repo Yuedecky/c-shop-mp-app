@@ -3,3 +3,30 @@
     flex-direction: column;
 }
 
+.order-block-view{
+    margin-bottom: 40rpx;
+    background: #fff;
+}
+
+.clock-title{
+    color:#999;
+}
+
+.product-border{
+    border-bottom: 1rpx solid #eeeeee;
+}
+
+.submit-to-order{
+  background: red;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  border: none;
+  color: #ffffff;
+  font-size: 30rpx;
+  bottom: 0;
+  left:0;
+}

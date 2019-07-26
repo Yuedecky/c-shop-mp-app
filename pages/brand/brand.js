@@ -6,7 +6,7 @@ Page({
   data: {
     brandName: '',
     brands: [{
-      name: '华为（HUAWEI）手机',
+      name: '小米',
       desc: "直降，满999减200",
       total: 888,
       photo: 'http://image.qfstatic.com/897/2019/201905/20190506/7C36E57B540B48D0A8C839B27AB219C5.png',
@@ -28,7 +28,7 @@ Page({
     },
     {
       photo: 'http://image.qfstatic.com/897/2019/201905/20190506/7C36E57B540B48D0A8C839B27AB219C5.png',
-      name: '华为（HUAWEI）手机',
+      name: '华为（HUAWEI）',
       desc: "直降，满999减200",
       total: 888,
       products: [{

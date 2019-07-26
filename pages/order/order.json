@@ -2,6 +2,14 @@
     "navigationBarTitleText": "确认订单",
     "usingComponents": {
         "wq-near-shop": "/components/common/near-shop/index",
-        "van-tab": "/miniprogram_npm/vant-weapp/tab/index"
+        "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+        "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+        "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+        "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+        "wq-to-home": "/components/common/to-home/index",
+        "wq-title-bar": "/components/common/title-bar/index",
+        "wq-product": "/components/common/product/index",
+        "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+        "van-datetime-picker": "/miniprogram_npm/vant-weapp/datetime-picker/index"
     }
 }

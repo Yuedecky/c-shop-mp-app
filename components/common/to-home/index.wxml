@@ -1,0 +1,13 @@
+<view class='t-h-container'>
+    <wq-title-bar title="上门地址" right="新增地址" bind:more="onAdd"></wq-title-bar>
+    <view wx:if="{{history}}">
+        <van-cell title="请选择您的地址" is-link size="large" bind:click="pickAddress">
+            <van-icon slot="icon" name="location-o" size="20px" custom-class='c-icon-class' />
+        </van-cell>
+    </view>
+    <view wx:else>
+        <van-cell-group>
+            <van-field value="{{ address }}" placeholder="详细地址(精确到门牌号)" border="{{ true }}" bind:change="onChange" />
+        </van-cell-group>
+    </view>
+</view>

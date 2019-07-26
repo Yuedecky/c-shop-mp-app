@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "某个品牌下的商品列表",
+    "usingComponents": {
+        "wq-product": "/components/common/product/index",
+        "wq-header-bar": "/components/common/header-bar/index"
+    }
+}

@@ -14,7 +14,7 @@
   <view class='near-sh-content' bind:tap='tapDetail'>
     <view class='near-sh-left'>
       <view class='icon-location'>
-        <van-icon name='location-o' custom-class='location-class'></van-icon>
+        <van-icon name='location-o' class='location-o-class'></van-icon>
       </view>
       <view class="shop-desc">
         <view class='shop-name'>{{shop.name}}</view>

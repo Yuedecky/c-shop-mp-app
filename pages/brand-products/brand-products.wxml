@@ -1,0 +1,6 @@
+<view class='b-p-container'>
+    <wq-header-bar image="{{image}}"></wq-header-bar>
+    <view wx:for="{{products}}" wx:key="id">
+        <wq-product product="{{item}}" show="{{true}}" />
+    </view>
+</view>

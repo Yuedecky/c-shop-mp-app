@@ -1,11 +1,29 @@
 <view class='order-e-container'>
-    <view class='order-experience'>体验方式</view>
-    <view>
-        <van-tabs active="{{ active }}" bind:change="onChange">
-            <van-tab title="上门体验"></van-tab>
-            <van-tab title="到店体验"></van-tab>
-        </van-tabs>
-
-        <wq-near-shop shop="{{shop}}"></wq-near-shop>
-    </view>
+    <scroll-view scroll-y="{{true}}" style="height:{{mainHeight}}px;">
+        <view class='order-block-view'>
+            <wq-title-bar title='体验方式' icon='label-o'></wq-title-bar>
+            <van-tabs active="{{ active }}" bind:change="onChange">
+                <van-tab title="上门体验">
+                    <wq-near-shop shop="{{shop}}"></wq-near-shop>
+                </van-tab>
+                <van-tab title="到店体验">
+                    <wq-to-home history="{{false}}"></wq-to-home>
+                </van-tab>
+            </van-tabs>
+        </view>
+        <view class='order-block-view'>
+            <wq-title-bar title='预约时间' icon="clock-o"></wq-title-bar>
+            <van-cell title="选择您合适的时间" title-class='clock-title' is-link size="small" bind:click="pickerTime"></van-cell>
+        </view>
+        <view class='order-block-view'>
+            <wq-title-bar title='商品详情' icon='goods-collect-o'></wq-title-bar>
+            <view wx:for="{{products}}" wx:key="id" class='product-border'>
+                <wq-product product="{{item}}" show="{{false}}" />
+            </view>
+        </view>
+        <van-popup show="{{ showBottom }}" style="height:500rpx;" position="bottom" overlay="{{true}}" bind:close='closePickerTime'>
+            <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput" />
+        </van-popup>
+    </scroll-view>
+    <view class="submit-to-order" bind:tap='toOrder'>提交订单</view>
 </view>

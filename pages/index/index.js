@@ -215,12 +215,6 @@ Page({
     let _this = this;
     _this.getUserLocation();
   },
-  advBindError: function (e) {
-    console.error(e)
-  },
-  advBindLoad: function (e) {
-    console.log(e)
-  },
 
   getUserLocation: function () {
     let _this = this;
@@ -371,15 +365,10 @@ Page({
     let brandId = e.currentTarget.dataset.brandid;
     let brandName = e.currentTarget.dataset.brandname;
     wx.navigateTo({
-      url: '/pages/brand/brand?brandId=' + brandId + '&brandName=' + brandName,
+      url: '/pages/brand-products/brand-products?brandId=' + brandId + '&brandName=' + brandName,
     })
   },
-  onHotPhoneTap: function (e) {
-    let hotPhoneId = e.currentTarget.dataset.phoneid;
-    wx.navigateTo({
-      url: '/pages/phone-detail/phone-detail?phoneId=' + hotPhoneId,
-    })
-  },
+
   onPhoneTap: function (e) {
     let phoneId = e.currentTarget.dataset.productid;
     console.log('productId:', phoneId)

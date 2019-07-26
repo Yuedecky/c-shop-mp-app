@@ -13,7 +13,8 @@
         "pages/wallet/detail/detail",
         "pages/product-list/product-list",
         "pages/personal-settings/personal-settings",
-        "pages/select-product/select-product"
+        "pages/select-product/select-product",
+        "pages/brand-products/brand-products"
     ],
     "window": {
         "backgroundTextStyle": "light",

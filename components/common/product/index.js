@@ -1,6 +1,7 @@
 Component({
     properties: {
-        product: Object
+        product: Object,
+        show: Boolean
     },
     data: {
 

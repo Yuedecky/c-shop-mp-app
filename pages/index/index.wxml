@@ -35,7 +35,7 @@
     </view>
     <view class="zero-sale">
       <view wx:for="{{zeroSales}}" wx:key="item" wx:for-index="idx" class='zero-block-view'>
-        <wq-product product="{{item}}" bind:click="onProductClick"></wq-product>
+        <wq-product product="{{item}}" bind:click="onProductClick" show="{{true}}"></wq-product>
       </view>
     </view>
   </view>
