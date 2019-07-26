@@ -14,7 +14,7 @@
             <text class='card-info-price'>{{product.price}}</text>
             <text class='card-info-price-o'>{{product.oldPrice}}</text>
         </view>
-        <view class="p-buy-btn">
+        <view class="p-buy-btn" wx:hidden="{{!show}}">
             <van-button type="danger" size="small">立即购买</van-button>
         </view>
     </view>

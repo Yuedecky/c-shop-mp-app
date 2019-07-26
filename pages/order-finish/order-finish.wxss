@@ -1,0 +1,41 @@
+.order-view,.order-may-like{
+    padding-top: 20rpx;
+    background: #ffffff;
+    margin-bottom: 40rpx;
+    padding-bottom: 20rpx;
+}
+
+.order-may-like{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-container{
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 20rpx;
+    margin-top:20rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-block-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #ffffff;
+    justify-content: space-between;
+}
+
+.may-u-like{
+    text-align: center;
+    color:#999;
+    margin-bottom: 20rpx;
+}
+
+.p-card-view{
+    margin-bottom: 30rpx;
+}

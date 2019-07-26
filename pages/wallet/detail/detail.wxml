@@ -1,0 +1,7 @@
+<view class='w-de-container'>
+    <view wx:for="{{wallets}}" wx:key="id" class='w-de-item-wrapper'>
+        <view class='wq-wallet-view'>
+            <wq-wallet-item wallet="{{item}}"></wq-wallet-item>
+        </view>
+    </view>
+</view>

@@ -66,6 +66,11 @@ Page({
     onLoad() {
 
     },
+    submitOrder(){
+        wx.navigateTo({
+            url: '/pages/order-finish/order-finish'
+        })
+    },
     onReady() {
         var res = wx.getSystemInfoSync();
         let h = res.windowHeight - res.windowWidth / 750 * 116 + 10;

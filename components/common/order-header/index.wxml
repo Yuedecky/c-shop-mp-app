@@ -1,0 +1,16 @@
+<view class='order-h-container'>
+    <view class='order-h-header'>
+        <view class='order-image-wrapper'>
+            <image src="/assets/images/success.png" mode="aspectFit" class='order-image-info' />
+        </view>
+        <view>支付成功</view>
+    </view>
+    <view class='order-h-body'>
+        <view class='order-body-left'>
+            <van-button type="danger" plain size='small'>查看订单</van-button>
+        </view>
+        <view class='order-body-right'>
+            <van-button type="danger" plain size='small'>继续逛逛</van-button>
+        </view>
+    </view>
+</view>

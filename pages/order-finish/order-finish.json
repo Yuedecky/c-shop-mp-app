@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "完成",
+    "usingComponents": {
+        "wq-order-header": "/components/common/order-header/index",
+        "wq-card-product": "/components/common/card-product/index"
+    }
+}

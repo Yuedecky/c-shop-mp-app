@@ -5,7 +5,13 @@ Component({
      */
     properties: {
         product: Object,
-
+        show: {
+            type: Boolean,
+            value: false,
+            observer: function (val) {
+                console.log(val)
+            }
+        }
     },
 
     /**

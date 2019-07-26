@@ -1,0 +1,11 @@
+Page({
+    data: {
+
+    },
+    onReady() {
+
+    },
+    onLoad() {
+
+    }
+})

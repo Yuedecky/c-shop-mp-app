@@ -25,5 +25,5 @@
             <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput" />
         </van-popup>
     </scroll-view>
-    <view class="submit-to-order" bind:tap='toOrder'>提交订单</view>
+    <view class="submit-to-order" bind:tap='submitOrder'>提交订单</view>
 </view>

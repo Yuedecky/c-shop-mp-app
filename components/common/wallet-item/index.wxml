@@ -1,0 +1,16 @@
+<view class='w-item-container'>
+    <view class='w-item-left'>
+        <view class='w-item-avatar-wrapper'>
+            <image src="{{wallet.avatar}}" mode="aspectFit" class='w-item-avatar' />
+        </view>
+        <view class='w-item-content-wrapper'>
+            <view class='w-item-name'>{{wallet.name}}</view>
+            <view class='w-item-desc'>
+                <view class='desc'>{{wallet.desc}}</view>
+                <view class='status' wx:if="{{wallet.status != null}}">{{wallet.status}}</view>
+            </view>
+            <view class='w-item-time'>{{wallet.time}}</view>
+        </view>
+    </view>
+    <view class='w-item-count {{wallet.type === "add" ? "add" :"decrease"}}'>{{wallet.total}}</view>
+</view>

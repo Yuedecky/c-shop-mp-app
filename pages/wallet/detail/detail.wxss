@@ -1,0 +1,7 @@
+.wq-wallet-view{
+    border-bottom: 1rpx solid #eee;
+}
+
+.w-de-container{
+    background: #ffffff;
+}

@@ -1,13 +1,10 @@
-<view class='p-list-container'>
-    <view class="p-list-header-wrapper">
-        <wq-header-bar image="{{headerBar.image}}" bind:click="onHeaderBarClick"></wq-header-bar>
-    </view>
-    <view class='p-list-title'>超级美颜</view>
-    <view class='p-l-header-bar-wrapper'>
-        <wq-card-product-header product="{{headerProduct}}"></wq-card-product-header>
+<view class='o-finish-container'>
+    <view class='order-view'>
+        <wq-order-header></wq-order-header>
     </view>
     <view class='products-container'>
         <view wx:if="{{products.length >0}}">
+            <view class='may-u-like'>你可能还喜欢</view>
             <view class='p-block-container'>
                 <block wx:for="{{products}}" wx:key="id" wx:for-item="item">
                     <view class="p-card-view">
@@ -15,9 +12,6 @@
                     </view>
                 </block>
             </view>
-        </view>
-        <view wx:else>
-            <text>这什么都没有</text>
         </view>
     </view>
 </view>
