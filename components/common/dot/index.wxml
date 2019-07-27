@@ -1,0 +1,15 @@
+<view class='dot-container'>
+    <view class='dot-image-wrapper'>
+        <van-icon name='ellipsis' color='#fff' class='dot-image' size='20px' />
+    </view>
+    <view class='chouti' wx:hidden="{{!show}}">
+        <view class='border-icon'>
+            <van-icon name='like-o' color="#fff"></van-icon>
+            喜欢
+        </view>
+        <view>
+            <van-icon name='share' color="#fff"></van-icon>
+            分享
+        </view>
+    </view>
+</view>

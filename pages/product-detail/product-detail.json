@@ -19,6 +19,7 @@
     "wq-add-product": "/components/common/add-product/index",
     "wq-pop-header": "/components/common/popup-header/index",
     "wq-pop-tag": "/components/common/popup-tag/index",
-    "wq-title-bar": "/components/common/title-bar/index"
+    "wq-title-bar": "/components/common/title-bar/index",
+    "wq-dot": "/components/common/dot/index"
   }
 }

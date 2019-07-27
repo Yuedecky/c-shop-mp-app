@@ -1,5 +1,6 @@
 .p-detail-h-wrapper{
   height:600rpx;
+  position: relative;
 }
 
 .phone-detail-container{
@@ -112,4 +113,10 @@
 
 .title-bottom{
   border-bottom: 1rpx solid #cccccc;
+}
+
+.dot-pos{
+  position: absolute;
+  top:20rpx;
+  right: 20rpx;
 }

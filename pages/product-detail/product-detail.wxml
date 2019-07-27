@@ -2,6 +2,9 @@
   <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px" class="p-sc-container">
     <view class='p-detail-h-wrapper'>
       <wq-swipper images="{{curPhone.images}}" autoplay="{{false}}" indicator-dots="{{true}}"></wq-swipper>
+      <view class='dot-pos'>
+        <wq-dot show="{{false}}"></wq-dot>
+      </view>
     </view>
     <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
     <view class='slide-p-params'>
