@@ -21,6 +21,10 @@
     height: 60rpx;
 }
 
+.oPrice{
+    text-decoration: line-through;
+}
+
 .pop-h-right-price .price{
     font-size: 50rpx;
     color:red;

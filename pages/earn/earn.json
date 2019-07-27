@@ -1,6 +1,4 @@
 {
-  "navigationBarBackgroundColor": "#006699",
-  "backgroundColor": "#666666",
   "usingComponents": {
     "wq-earn-message": "/components/common/earn-message/index",
     "wq-footer": "/components/common/footer/index",

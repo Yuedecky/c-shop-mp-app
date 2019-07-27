@@ -9,7 +9,7 @@
             <text class="bd-value">{{withDraw}}</text>
         </view>
         <view>
-            <van-button type="default" bind:click='onApply' size="small">立即体现</van-button>
+            <van-button type="default" bind:click='onApply' size="small" custom-class='draw-class'>立即体现</van-button>
         </view>
     </view>
     <view class='draw-raider'>提现攻略</view>

@@ -16,6 +16,10 @@
   flex-direction: row;
 }
 
+.index-tab-class{
+  font-size:26rpx;
+}
+
 .card-view{
   margin-bottom: 20rpx;
   background-color: #ffffff;

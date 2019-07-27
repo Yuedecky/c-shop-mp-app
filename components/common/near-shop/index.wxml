@@ -14,7 +14,7 @@
   <view class='near-sh-content' bind:tap='tapDetail'>
     <view class='near-sh-left'>
       <view class='icon-location'>
-        <van-icon name='location-o' class='location-o-class'></van-icon>
+        <van-icon name='location-o' class='location-o-class' color="color:#999;"></van-icon>
       </view>
       <view class="shop-desc">
         <view class='shop-name'>{{shop.name}}</view>
@@ -31,7 +31,7 @@
         <image src="{{shop.photo}}" class="shop-url"></image>
       </view>
       <view class='photo-icon-arrow'>
-        <van-icon name='arrow' />
+        <van-icon name='arrow' color="#999" />
       </view>
     </view>
   </view>

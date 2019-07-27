@@ -30,9 +30,15 @@
 }
 
 .draw-raider{
-    border-top:1rpx solid #dfdfdf;
     text-align: center;
     line-height: 60rpx;
     font-size: 30rpx;
+    color:#F49;
+    text-decoration: underline;
     margin-top: 10rpx;
+}
+
+.draw-class{
+    color:black;
+    border: 1rpx solid #333;
 }

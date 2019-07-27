@@ -1,6 +1,6 @@
 <view class='category-container'>
     <view wx:hidden="!needSearchBar">
-        <van-search value="{{value}}" placeholder="搜索您想要的品牌、机型"></van-search>
+        <van-search value="{{value}}" disabled placeholder="搜索您想要的品牌、机型" catch:tap="onClick"></van-search>
     </view>
     <wq-header-bar image="{{image}}" bind:click="onHeaderBarClick"></wq-header-bar>
     <wq-slide-header-bar tabs="{{tabs}}" activeHeaderCode="{{activeHeaderCode}}" activeLeftCode="{{activeLeftCode}}" />

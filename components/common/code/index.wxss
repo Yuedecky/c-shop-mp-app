@@ -49,7 +49,7 @@
   
   .share-desc{
     font-size: 36rpx;
-    color:blue;
+    color:#20c100;
     height: 60rpx;
     line-height: 60rpx;
   }

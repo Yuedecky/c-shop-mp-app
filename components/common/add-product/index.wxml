@@ -2,5 +2,5 @@
     <view class='add-p-icon'>
         <van-icon name='add-o'></van-icon>
     </view>
-    <view bind:tap="onTap">添加更多机型</view>
+    <view bind:tap="onTap" class='add-more-p'>添加更多机型</view>
 </view>

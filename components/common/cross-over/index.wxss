@@ -15,8 +15,8 @@
 
   .tap-name{
     width: 160rpx;
-    font-size:28rpx;
-    color: #006699;
+    font-size:30rpx;
+    font-weight: 600;
     line-height: 120rpx;
     height: 120rpx;
   }
@@ -37,7 +37,6 @@
   }
 
   .tap-desc{
-    color:burlywood;
     font-size: 30rpx;
     line-height: 120rpx;
     height: 120rpx;

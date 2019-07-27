@@ -25,12 +25,15 @@ Component({
         },
     },
     methods: {
-
-
         brandTap: function (e) {
             const code = e.detail.code;
             this.setData({
                 current: code
+            })
+        },
+        onClick() {
+            wx.navigateTo({
+                url: "/pages/search/search"
             })
         },
         tabClick: function (e) {

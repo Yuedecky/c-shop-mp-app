@@ -8,9 +8,9 @@
 }
 
 .card-view{
-  border:1px solid #ccc;
+  border:1px solid #efefef;
   border-radius: 8rpx;
-  background: #eeeeee;
+  background: #efefef;
 }
 
 .remak-view , .card-view{
@@ -40,7 +40,6 @@
   height: 100rpx;
   line-height: 100rpx;
   position: fixed;
-  border-radius: 0;
   border: none;
   color: #fff;
   font-size: 30rpx;
@@ -54,7 +53,6 @@
 }
 
 .sh-near{
-  font-weight:bold;
   margin-right: 10rpx;
 }
 .sh-slot{
@@ -70,13 +68,11 @@
 
 .add-o-info{
   font-size: 30rpx;
-  font-weight: bold;
   margin-right: 10rpx;
 }
 .add-o-desc{
   font-size:24rpx;
   line-height: 40rpx;
-  color: red;
 }
 
 .more-p-add{
@@ -91,9 +87,14 @@
 
 .pop-num{
   display: flex;
-  padding: 20rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.pop-num-stepper{
+  margin-top: -10rpx;
 }
 
 .fixed-btn-block{

@@ -12,16 +12,17 @@
 
 .tag-list{
     width: 100%;
-    
 }
 
 .tag-list .tag-row ,.tag-list .tag-light{
     padding: 10rpx;
-    height: 60rpx;
-    line-height: 60rpx;
-    border: 1rpx solid #cfcfcf;
+    height: 50rpx;
+    line-height: 50rpx;
+    background: #efefef;
     display:  flex;
-    color: #999;
+    color: #4D4D4D;
+    background: cfcfcf;
+    font-size: 26rpx;
     flex-direction: row;
     margin-bottom: 18rpx;
     border-radius: 8rpx;
@@ -38,7 +39,8 @@
 }
 
 .tag-active{
-    color: #f74400 !important;
-    border:1rpx solid #f74400 !important;
+    color: #F52942 !important;
+    background: #F8D1D6 !important;
+    border-radius: 2rpx;
 }
 

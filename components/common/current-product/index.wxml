@@ -9,7 +9,7 @@
             </block>
         </view>
         <view class='cur-p-content-right-arrrow'>
-            <van-icon name="arrow" size='10px'></van-icon>
+            <van-icon name="arrow" size='10px' color="#999"></van-icon>
         </view>
     </view>
 </view>

@@ -25,9 +25,7 @@ Page({
 
   withdraw: function (e) {
     let that = this
-    that.setData({
-      withDrawDisabled: true
-    })
+    
     let uid = e.currentTarget.dataset.uid;
     wx.navigateTo({
       url: '/pages/wallet/with-draw/with-draw'

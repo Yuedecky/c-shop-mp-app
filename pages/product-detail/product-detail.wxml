@@ -2,9 +2,9 @@
   <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px" class="p-sc-container">
     <view class='p-detail-h-wrapper'>
       <wq-swipper images="{{curPhone.images}}" autoplay="{{false}}" indicator-dots="{{true}}"></wq-swipper>
-      <view class='dot-pos'>
+      <!-- <view class='dot-pos'>
         <wq-dot show="{{false}}"></wq-dot>
-      </view>
+      </view> -->
     </view>
     <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
     <view class='slide-p-params'>
@@ -16,7 +16,7 @@
     <!-- 对比机型 -->
     <view class='card-view'>
       <view class='title-bottom'>
-        <wq-title-bar title='对比机型' rightStyle='color:red;' right="可继续选择1～2款机型对比下单"></wq-title-bar>
+        <wq-title-bar title='对比机型' rightStyle='color:#999;' right="可继续选择1～2款机型对比下单"></wq-title-bar>
       </view>
       <wq-add-product bind:click="addMoreProduct"></wq-add-product>
     </view>
@@ -36,7 +36,7 @@
         加载更多
       </button>
     </view>
-    <van-popup show="{{ showBottom }}" custom-style='height:800rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
+    <van-popup show="{{ showBottom }}" custom-style='height:900rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
       <view class='wq-pop-header-section'>
         <wq-pop-header product="{{curPhone}}" bind:close="onClosePopup"></wq-pop-header>
       </view>
@@ -45,14 +45,14 @@
         <wq-pop-tag tag="颜色" tags="{{curPhone.color}}"></wq-pop-tag>
         <wq-pop-tag tag="意外保护" tags="{{curPhone.protect}}"></wq-pop-tag>
         <view class='pop-num'>
-          <view>购买数量：</view>
-          <van-stepper value="{{ 1 }}" bind:change="onNumChange" />
+          <view>购买数量</view>
+          <view class='pop-num-stepper'>
+            <van-stepper value="{{ 1 }}" bind:change="onNumChange" />
+          </view>
         </view>
       </scroll-view>
       <view class='fixed-btn-block'>
-        <van-button type="warning" custom-class='buy-btn' block bind:click='makeSure'>
-          确认
-        </van-button>
+        <van-button type="danger" custom-class='buy-btn' block bind:click='makeSure'>确认</van-button>
       </view>
     </van-popup>
   </scroll-view>

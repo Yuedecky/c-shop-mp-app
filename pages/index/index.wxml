@@ -9,10 +9,10 @@
   <view class='card-view'>
     <van-tabs active="{{ active }}" bind:change="onChange" animated custome-class='tab-class'>
       <van-tab title="上门体验">
-        <van-steps steps="{{ doorSteps }}" active="{{ doorActive }}" direction="vertical" active-color="#f44" />
+        <van-steps steps="{{ doorSteps }}" active="{{ doorActive }}" custom-class='index-tab-class' direction="vertical" active-color="#f44" />
       </van-tab>
       <van-tab title="到店体验">
-        <van-steps steps="{{ shopSteps }}" active="{{ shopActive }}" direction="vertical" active-color="#f44" />
+        <van-steps steps="{{ shopSteps }}" active="{{ shopActive }}" custom-class='index-tab-class' direction="vertical" active-color="#f44" />
       </van-tab>
     </van-tabs>
   </view>
