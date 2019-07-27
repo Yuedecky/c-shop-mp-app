@@ -19,11 +19,18 @@ Component({
             }
         },
         orderNo: String,
-        status: String,
+        tag: String,
+        status: String
     },
     data: {
         mode: ''
 
     },
-    methods: {}
+    methods: {
+        rate() {
+            wx.navigateTo({
+                url: '/pages/remark/remark'
+            })
+        }
+    }
 })

@@ -1,0 +1,5 @@
+{
+    "usingComponents":{
+        "wq-address-item":"/components/common/address-item/index"
+    }
+}

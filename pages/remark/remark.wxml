@@ -1,0 +1,24 @@
+<view class='r-container'>
+    <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}rpx;">
+        <view class='r-header-wrapper'>
+            <view class='title'>评分</view>
+            <van-rate custom-class='rates' value="{{ value }}" size="{{ 25 }}" color="#f44" void-color="#eee" void-icon="star" bind:change="onChange" />
+            <view class='keys-block'>
+                <block wx:for="{{keys}}" wx:key="**this">
+                    <view class='key-desc'>{{item}}</view>
+                </block>
+            </view>
+        </view>
+        <view class='ex-remark'>
+            <view class='title'>感受</view>
+            <view class='ex-content'>
+                <textarea placeholder="写下你的购物感受" auto-focus />
+            </view>
+        </view>
+        <view class='ex-photo'>
+            <view class='title'>图片</view>
+            <image src='/assets/images/uplod.png' class='uploader' />
+        </view>
+    </scroll-view>
+    <view class='submit-view'>提交</view>
+</view>

@@ -7,7 +7,7 @@
             </view>
             <view class='mode'>{{mode}}</view>
         </view>
-        <view class='o-header-right'>{{status}}</view>
+        <view class='o-header-right'>{{tag}}</view>
     </view>
     <view class='o-body-content'>
         <view wx:for="{{products}}" wx:key="id">
@@ -17,9 +17,12 @@
     <view class='o-footer-address'>
         <wq-address-view address="{{address}}" name="{{name}}" phone="{{phone}}" type="{{type}}"></wq-address-view>
     </view>
-    <view class='contact-customer'>
+    <view class='contact-customer' wx:if="{{status ==1}}">
         <van-button type='primary' size="small">提货码</van-button>
         <van-button type='primary' size="small">联系门店</van-button>
         <van-button type='default' size="small">取消</van-button>
+    </view>
+    <view class='contact-customer' wx:if='{{status ==2}}'>
+        <van-button type='primary' size="small" bind:click="rate">评价</van-button>
     </view>
 </view>

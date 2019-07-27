@@ -1,0 +1,11 @@
+.add-list-container{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.add-item-view{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1rpx soild #ccc;
+}

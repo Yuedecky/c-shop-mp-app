@@ -11,7 +11,8 @@ Page({
         orders: [
             {
                 orderNo: '2018232923923232',
-                status: '待提货',
+                tag: '待提货',
+                status: 2,
                 name: '张三',
                 address: '随时所所所反而分反而分',
                 phone: '182****2344',

@@ -1,0 +1,44 @@
+.add-container{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+}
+
+
+.add-middle{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-header{
+    display: flex;
+    flex-direction: row;
+}
+.add-header .header-name{
+    color: #f49;
+    margin-right: 20rpx;
+}
+.add-header .header-phone{
+    margin-right: 20rpx;
+}
+
+.add-header .tag{
+    color:#f49;
+    font-size: 26rpx;
+    border: 1rpx solid #f49;
+}
+
+.add-content{
+    color:#666;
+    font-size:26rpx;
+}
+.add-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-middle{
+    margin-right: 20rpx;
+}

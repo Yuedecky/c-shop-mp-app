@@ -1,0 +1,13 @@
+<view class='add-container'>
+    <view class='add-middle'>
+        <view class='add-header'>
+            <view class='header-name'>{{address.name}}</view>
+            <view class='header-phone'>{{address.phone}}</view>
+            <view wx:if="{{address.default}}" class='tag'>默认</view>
+        </view>
+        <view class='add-content'>{{address.address}}</view>
+    </view>
+    <view class='add-right'>
+        <van-icon name="records" size='20px'></van-icon>
+    </view>
+</view>

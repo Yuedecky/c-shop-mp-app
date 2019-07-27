@@ -1,0 +1,7 @@
+<view class='add-list-container'>
+    <view wx:for="{{addresses}}" wx:key='id'>
+        <view class='add-item-view'>
+            <wq-address-item address="{{item}}"></wq-address-item>
+        </view>
+    </view>
+</view>
