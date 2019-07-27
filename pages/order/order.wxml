@@ -3,10 +3,10 @@
         <view class='order-block-view'>
             <wq-title-bar title='体验方式' icon='label-o'></wq-title-bar>
             <van-tabs active="{{ active }}" bind:change="onChange">
-                <van-tab title="上门体验">
+                <van-tab title="到店体验">
                     <wq-near-shop shop="{{shop}}"></wq-near-shop>
                 </van-tab>
-                <van-tab title="到店体验">
+                <van-tab title="上门体验">
                     <wq-to-home history="{{false}}"></wq-to-home>
                 </van-tab>
             </van-tabs>

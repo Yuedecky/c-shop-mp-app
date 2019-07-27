@@ -10,7 +10,7 @@
             <van-button type="danger" plain size='small' bind:click='viewOrder'>查看订单</van-button>
         </view>
         <view class='order-body-right'>
-            <van-button type="danger" plain size='small'>继续逛逛</van-button>
+            <van-button type="danger" plain size='small' bind:click="toIndex">继续逛逛</van-button>
         </view>
     </view>
 </view>

@@ -10,6 +10,7 @@
 
 .clock-title{
     color:#999;
+    font-size:26rpx;
 }
 
 .product-border{

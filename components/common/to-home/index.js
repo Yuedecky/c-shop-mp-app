@@ -1,6 +1,5 @@
 Component({
     properties: {
-        history: Boolean
     },
     data: {
         address: ""
@@ -12,6 +11,11 @@ Component({
         onChange(event) {
             // event.detail 为当前输入的值
             console.log(event.detail);
+        },
+        pickAddress() {
+            wx.navigateTo({
+                url: '/pages/address-list/address-list'
+            })
         }
     }
 })

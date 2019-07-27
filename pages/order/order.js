@@ -66,8 +66,8 @@ Page({
     onLoad() {
 
     },
-    submitOrder(){
-        wx.navigateTo({
+    submitOrder() {
+        wx.redirectTo({
             url: '/pages/order-finish/order-finish'
         })
     },

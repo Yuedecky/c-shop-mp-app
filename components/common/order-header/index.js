@@ -5,7 +5,7 @@ Component({
     methods: {
         viewOrder() {
             wx.navigateTo({
-                url: '/page/my-order/my-order',
+                url: '/pages/my-order/my-order',
                 success: (result) => {
 
                 },
@@ -14,7 +14,7 @@ Component({
             });
         },
         toIndex() {
-            wx.navigateTo({
+            wx.reLaunch({
                 url: '/pages/index/index'
             })
         }
