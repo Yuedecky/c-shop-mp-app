@@ -24,8 +24,8 @@
       <wq-title-bar title="0元购品牌" right='更多' icon="new-o" bind:more="clickBrands"></wq-title-bar>
     </view>
     <view class='brand-list'>
-      <block wx:for='{{brands}}' wx:key='item.id' wx:for-item="item">
-        <wq-brand logo="{{item.logo}}" bind:tap='onBrandTap' name="{{item.name}}" />
+      <block wx:for='{{brands}}' wx:key='id' wx:for-item="item">
+        <wq-brand brand="{{item}}" bind:tap='onBrandTap' />
       </block>
     </view>
   </view>

@@ -1,7 +1,6 @@
 Component({
     properties: {
-        logo: String,
-        name: String,
+        brand: Object,
         hot: Boolean
     },
     methods: {

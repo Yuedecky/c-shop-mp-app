@@ -3,15 +3,22 @@
         <van-search value="{{value}}" disabled placeholder="搜索您想要的品牌、机型" catch:tap="onClick"></van-search>
     </view>
     <wq-header-bar image="{{image}}" bind:click="onHeaderBarClick"></wq-header-bar>
-    <wq-slide-header-bar tabs="{{tabs}}" activeHeaderCode="{{activeHeaderCode}}" activeLeftCode="{{activeLeftCode}}" />
+    <wq-slide-header-bar tabs="{{tabs}}" bind:click="tabClick" />
     <view class='ca-content-wrapper'>
         <view class="index-nav-left">
             <scroll-view scroll-y style='height:{{navLeftHeight}}px;'>
                 <block wx:for="{{items}}" wx:key="id">
-                    <wq-left-tab text="{{item.text}}" checked='{{item.id==current}}' bind:click="brandTap" code='{{item.id}}' />
+                    <wq-left-tab item='{{item}}' active='{{active}}' bind:click="brandTap" />
                 </block>
             </scroll-view>
         </view>
-        <view class='index-nav-right'></view>
+        <view class='index-nav-right'>
+            <block wx:for="{{products}}" wx:key="id">
+                <view class='p-item-block'>
+                    <view class='p-item-tag'></view>
+                    <view class='p-item-name'>{{item.name}}</view>
+                </view>
+            </block>
+        </view>
     </view>
 </view>

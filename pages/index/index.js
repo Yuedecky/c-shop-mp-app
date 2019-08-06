@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+import { BrandModel } from '../../models/brand-model';
+const brandModel = new BrandModel();
 const app = getApp()
 Page({
   data: {
@@ -110,28 +112,7 @@ Page({
       desc: '可以填写您到店的时间'
     }],
     advText: '上门对比/全场0元购/正品保障',
-    brands: [
-      {
-        id: 1,
-        name: '苹果',
-        logo: 'http://image.qfstatic.com/897/2019/201905/20190506/AEF7CFE3C02F4A32898545383D686EED.png'
-      },
-      {
-        id: 2,
-        name: '华为',
-        logo: 'http://image.qfstatic.com/897/2019/201905/20190506/7C36E57B540B48D0A8C839B27AB219C5.png',
-      },
-      {
-        id: 3,
-        name: 'oppo',
-        logo: 'https://img30.360buyimg.com/popshop/jfs/t1/30221/1/5809/2875/5c88da6fE05b9691a/a687b198a375b4ff.png'
-      },
-      {
-        id: 4,
-        name: 'vivo',
-        logo: 'https://img30.360buyimg.com/popshop/jfs/t1/11104/32/5529/6793/5c3445beE7832b693/d961779d6364cf5d.jpg'
-      }
-    ],
+    brands: [],
     zeroSales: [{
       name: 'iphoneX',
       tags: [
@@ -325,6 +306,12 @@ Page({
     console.log("on hide")
   },
   onLoad: function () {
+    brandModel.getHoBrands().then(res => {
+      const data = res.data;
+      this.setData({
+        brands: data
+      })
+    })
     if (app.appData.userInfo) {
       this.setData({
         userInfo: app.appData.userInfo,

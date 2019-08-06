@@ -1,3 +1,5 @@
+import { BrandModel } from '../../../models/brand-model';
+const brandModel = new BrandModel();
 Component({
     properties: {
         needSearchBar: Boolean,
@@ -5,12 +7,12 @@ Component({
         tabs: Array,
         active: Number,
         items: Array,
+        products: Array,
         activeHeaderCode: Number,
-        activeLeftCode: Number,
     },
     data: {
         navLeftHeight: 0,
-        current: 0
+        current: 0,
     },
     lifetimes: {
         attached: function () {
@@ -26,10 +28,8 @@ Component({
     },
     methods: {
         brandTap: function (e) {
-            const code = e.detail.code;
-            this.setData({
-                current: code
-            })
+            const id = e.detail.id;
+            this.triggerEvent('brandTap', { id: id }, {})
         },
         onClick() {
             wx.navigateTo({
@@ -37,10 +37,8 @@ Component({
             })
         },
         tabClick: function (e) {
-            const id = this.data.tabs[e.detail.index].id
-            this.setData({
-                items: []
-            })
+            const id = e.detail.id
+            this.triggerEvent('tabClick', { id: id }, {})
         },
     }
 })

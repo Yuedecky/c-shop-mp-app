@@ -1,13 +1,29 @@
 Component({
     properties: {
-        text: String,
-        code: Number,
-        checked: Boolean,
+        item: Object,
+        active: {
+            type: Number,
+            observer: function (val, old) {
+                if (val === this.properties.item.id) {
+                    this.setData({
+                        activated: true
+                    })
+                }
+            }
+        }
     },
     data: {
+        activated: false
     },
     attached() {
 
+    },
+    ready() {
+        if (this.properties.active == this.properties.item.id) {
+            this.setData({
+                activated: true
+            })
+        }
     },
 
     data: {
@@ -16,7 +32,7 @@ Component({
 
     methods: {
         onTap: function (e) {
-            this.triggerEvent('click', { code: this.properties.code }, {})
+            this.triggerEvent('click', { id: this.properties.item.id }, {})
         }
     }
 })

@@ -1,6 +1,6 @@
 <view class='br-container' bind:tap="tap">
   <view class='logo-view'>
-    <image src="{{logo}}" class='brand-logo' mode='aspectFit'></image>
+    <image src="{{brand.brandLogo}}" class='brand-logo' mode='aspectFit'></image>
   </view>
-  <view class='name-view'>{{name}}</view>
+  <view class='name-view'>{{brand.name}}</view>
 </view>

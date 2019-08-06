@@ -1,6 +1,6 @@
 .lf-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: cloumn;
   }
   
   .brand-text {

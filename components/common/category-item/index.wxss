@@ -20,3 +20,22 @@
     flex-direction: row;
 }
 
+.index-nav-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-item-block{
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+    line-height: 60rpx;
+    font-size: 34rpx;
+}
+
+
+
+.p-item-name{
+    font-weight: 600;
+    border-bottom: 1rpx solid #efefef;
+}

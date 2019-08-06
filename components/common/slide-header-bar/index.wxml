@@ -1,6 +1,6 @@
 <view class='slide-h-container'>
-    <van-tabs active="{{ activeCode }}" bind:click='tabClick'>
-        <block wx:for="{{tabs}}" wx:key="item.id">
+    <van-tabs bind:click='tabClick'>
+        <block wx:for="{{tabs}}" wx:key="id">
             <van-tab title="{{item.name}}"></van-tab>
         </block>
     </van-tabs>
