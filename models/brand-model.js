@@ -25,9 +25,9 @@ class BrandModel extends Http {
         })
     }
 
-    getHoBrands(){
+    getHoBrands() {
         return this.request({
-            url:'brand/hot',
+            url: 'brand/hot?top=4',
             method: 'GET'
         })
     }

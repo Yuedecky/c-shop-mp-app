@@ -1,11 +1,11 @@
 <view class='p-header-container'>
     <view class='p-header-title'>
-        <view class='p-h-tag'>{{tag}}</view>
-        <view class="p-h-name">{{name}}</view>
+        <view class='p-h-tag'>{{goods.goodsName}}</view>
+        <view class="p-h-name">{{goods.goodsVersion}}</view>
     </view>
     <view class="p-desc">
-        <block wx:for="{{tags}}" wx:key="id">
-            <text class='tags-clz'>{{item}}</text>
-        </block>
+        <text class='tags-clz'>{{goods.goodsMemory}}</text>
+        <text class='tags-clz'>{{goods.goodsVersion}}</text>
+        <text class='tags-clz'>{{goods.goodsColor}}</text>
     </view>
 </view>

@@ -19,7 +19,8 @@ Component({
         images: {
             type: Array,
 
-        }
+        },
+        height: Number
     },
     data: {
     },

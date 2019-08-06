@@ -1,3 +1,6 @@
+import { GoodsModel } from "../../models/goods-model";
+
+const goodsModel = new GoodsModel()
 Page({
 
   /**
@@ -5,148 +8,7 @@ Page({
    */
   data: {
     showBottom: false,
-    curPhone: {
-      params: [
-        {
-          id: 'cpu',
-          name: 'CPU',
-          desc: '骁龙660八核',
-        },
-        {
-          id: 'store',
-          name: '存储容量',
-          desc: '128GB'
-        },
-        {
-          id: 'memory',
-          name: '极速畅玩',
-          desc: '8GB'
-        },
-        {
-          id: 'mh',
-          name: '超长待机',
-          desc: '4000mAh'
-        },
-        {
-          id: 'photo',
-          name: '三摄像头',
-          desc: '800万+2400万'
-        },
-        {
-          id: 'network',
-          name: '运营商网络',
-          desc: '4G全网通'
-        },
-        {
-          id: 'mode',
-          name: '网络模式',
-          desc: '双卡双待'
-        },
-        {
-          id: 'ratio',
-          name: '屏幕分辨率',
-          desc: '2340*1080',
-        },
-        {
-          id: 'screen',
-          name: '超大屏',
-          desc: '6.3英寸'
-        }
-      ],
-      tags: ["超感莱卡四射", "10倍混合变焦",],
-      tag: "到手价￥5288",
-      rating: '好评率98%',
-      name: '华为P30',
-      price: "￥2345",
-      oPrice: '￥2999',
-      tagList: ["8GB", "256GB", "赤红色", "全网通"],
-      images: [
-        "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
-        "https://img14.360buyimg.com/n0/jfs/t1/32585/8/433/58112/5c3c042cEa2f28dad/d820f61c262556de.jpg"
-      ],
-      image: "https://img13.360buyimg.com/n1/s450x450_jfs/t1/9085/2/12381/146200/5c371c5bE08328383/4f4ba51aed682207.jpg",
-      color: [
-        '天空之镜',
-        '亮黑色',
-        '激光色',
-        '赤茶橘',
-        '珠光贝母'
-      ],
-      versions: [
-        {
-          id: 23,
-          name: '4GB+64GB',
-          affix: '1299元',
-        },
-        {
-          id: 34,
-          name: '6GB+64GB',
-          affix: '1399元'
-        },
-        {
-          id: 45,
-          name: '6GB+128GB',
-          affix: '1599元'
-        }
-      ],
-      color: [
-        {
-          id: 23,
-          name: '白色恋人（白色）'
-        },
-        {
-          id: 24,
-          name: '深色星球（蓝色）'
-        },
-        {
-          id: 34,
-          name: '暗夜王子（深空灰）'
-        }
-      ],
-      protect: [
-        {
-          id: 12,
-          name: '意外保障服务 99元'
-        }
-        , {
-          id: 13,
-          name: '碎屏保障服务 69元'
-        }],
-      memory: [
-        {
-          lable: '8G+64G',
-          value: 'unique-id-1'
-        },
-        {
-          lable: '8G+128G',
-          value: 'unique-id-2'
-        },
-        {
-          lable: '8G+256G',
-          value: 'unique-id-3'
-        },
-      ],
-      version: [
-        {
-          label: '标准版',
-          value: 'version-1'
-        },
-        {
-          label: '尊享版',
-          value: 'version-2'
-        }
-      ],
-      gifts: [
-        {
-          name: '手机贴么',
-          url: 'https://img13.360buyimg.com/n4/jfs/t1/38348/11/5920/152481/5ccf0723E9dbb1408/96a77ce3deb2a646.jpg'
-        },
-        {
-          name: '手机壳',
-          url: 'https://img12.360buyimg.com/n4/jfs/t1/9896/17/11243/95358/5c2acb20Ee8698d77/a02092c5e5c1b09a.jpg'
-        }
-      ]
-    },
+    goods: {},
     shop: {
       location: '上海市浦东新区122号',
       name: '聚客数码浦东新区店',
@@ -261,6 +123,21 @@ Page({
     that.setData({
 
     })
+
+    goodsModel.postGoodsDetail(options.id).then(res => {
+      const data = res.data;
+      console.log(res.data)
+      const imagesObjArr = data.images;
+      const images = imagesObjArr.map(item => {
+        return item.imgUrl;
+      })
+      that.setData({
+        images: images,
+        goods: data.goods
+      })
+    })
+
+
 
   },
 

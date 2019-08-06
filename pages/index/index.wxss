@@ -59,6 +59,10 @@
   flex-direction: column;
 }
 
+.wq-brand-item{
+  margin-right: 10rpx;
+}
+
 .sh-slot{
   display: flex;
   width:80%;

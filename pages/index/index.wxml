@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="index-container page">
   <van-search value="{{value}}" disabled placeholder='请输入商品名称' catch:tap='onSearchOpen'></van-search>
-  <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}"></wq-swipper>
+  <wq-swipper images="{{adv.images}}" duration="{{adv.duration}}" indicatorDots="{{adv.indicatorDots}}" autoplay="{{adv.autoplay}}" height="{{300}}"></wq-swipper>
   <view class='adv-text card-view'>{{advText}}</view>
   <view class='card-view'>
     <wq-bang title='0元购排行' rankData="{{bang}}"></wq-bang>
@@ -25,7 +25,9 @@
     </view>
     <view class='brand-list'>
       <block wx:for='{{brands}}' wx:key='id' wx:for-item="item">
-        <wq-brand brand="{{item}}" bind:tap='onBrandTap' />
+        <view class='wq-brand-item'>
+          <wq-brand brand="{{item}}" bind:tap='onBrandTap' />
+        </view>
       </block>
     </view>
   </view>

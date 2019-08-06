@@ -1,8 +1,6 @@
 Component({
     properties: {
-        tag: String,
-        name: String,
-        tags: Array
+        goods: Object
     },
     data: {
 

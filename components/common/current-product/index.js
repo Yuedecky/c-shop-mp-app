@@ -1,15 +1,13 @@
 Component({
     properties: {
-        price: String,
-        tags: Array,
-        id: String
+        goods: Object,
     },
     data: {
 
     },
     methods: {
         onDettail() {
-            this.triggerEvent("click", { id: this.id }, {})
+            this.triggerEvent("click", { id: this.properties.goods.id }, {})
         }
     }
 })

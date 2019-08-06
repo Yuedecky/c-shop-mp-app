@@ -1,17 +1,17 @@
 <view class='p-card-container'>
     <view class='card-image-wrapper'>
-        <image src="{{product.image}}" mode="aspectFill" class='card-image' />
+        <image src="{{product.goodsCoverImg}}" mode="aspectFit" class='card-image' />
     </view>
     <view class='card-product-info-wrapper'>
-        <view class='c-product-i-name'>{{product.name}}</view>
+        <view class='c-product-i-name'>{{product.goodsName}}</view>
         <view class='c-product-i-tags'>
-            <block wx:for="{{product.tags}}" wx:key="**this">
-                <view class='c-p-i-tag-item'>{{item}}</view>
-            </block>
+            <view class='c-p-i-tag-item'>{{product.goodsVersion}}</view>
+            <view class='c-p-i-tag-item'>{{product.goodsColor}}</view>
+            <view class='c-p-i-tag-item'>{{product.goodsMemory}}</view>
         </view>
         <view class='c-product-i-price'>
-            <text class='price'>{{product.price}}</text>
-            <text class='oPrice'>{{product.oPrice}}</text>
+            <text class='price'>{{product.originPrice}}</text>
+            <text class='oPrice'>{{product.originPrice}}</text>
         </view>
         <view class='c-product-i-remark'>
             <text class='c-p-i-r-total'>{{product.remarkCount}}条评价</text>

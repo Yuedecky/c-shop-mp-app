@@ -1,17 +1,17 @@
 <view class="phone-detail-container">
   <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px" class="p-sc-container">
     <view class='p-detail-h-wrapper'>
-      <wq-swipper images="{{curPhone.images}}" autoplay="{{false}}" indicator-dots="{{true}}"></wq-swipper>
+      <wq-swipper images="{{images}}" autoplay="{{false}}" indicator-dots="{{true}}" height="{{800}}"></wq-swipper>
       <!-- <view class='dot-pos'>
         <wq-dot show="{{false}}"></wq-dot>
       </view> -->
     </view>
-    <wq-product-header tags="{{curPhone.tags}}" name="{{curPhone.name}}" tag="{{curPhone.tag}}"></wq-product-header>
-    <view class='slide-p-params'>
+    <wq-product-header goods="{{goods}}"></wq-product-header>
+    <!-- <view class='slide-p-params'>
       <wq-product-slide params="{{curPhone.params}}"></wq-product-slide>
-    </view>
+    </view> -->
     <view class='card-view'>
-      <wq-current-product price="{{curPhone.price}}" tags="{{curPhone.tagList}}" id="{{curPhone.id}}" bind:click="clickCurPhone"></wq-current-product>
+      <wq-current-product goods="{{goods}}" bind:click="clickCurPhone"></wq-current-product>
     </view>
     <!-- 对比机型 -->
     <view class='card-view'>

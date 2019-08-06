@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
 import { BrandModel } from '../../models/brand-model';
+import { GoodsModel } from '../../models/goods-model';
+const goodsModel = new GoodsModel();
 const brandModel = new BrandModel();
 const app = getApp()
 Page({
@@ -15,6 +17,8 @@ Page({
         'http://image.qfstatic.com/897/2019/201904/20190429/540F3242232C40C7A21C67E589375BF6.jpg']
     },
     userPosition: '',
+    pageNum: 1,
+    pageSize: 5,
     shop: {
       location: '上海市浦东新区122号',
       name: '聚客数码浦东新区店',
@@ -24,44 +28,6 @@ Page({
       latitude: 121.460231,
       longitude: 31.234129
     },
-    hotPhones: [
-      {
-        id: 1,
-        name: '三星',
-        tags: [
-          '8G', '5.5英寸'
-        ],
-        image: 'https://img10.360buyimg.com/n1/s450x450_jfs/t1/27996/22/8174/205185/5c74b083E4802f963/8fcb5a40d337d292.jpg',
-        "price": '￥3456.23'
-      },
-      {
-        id: 2,
-        name: "iphone X",
-        tags: [
-          '8G', '5.5英寸'
-        ],
-        image: 'https://img10.360buyimg.com/n1/s450x450_jfs/t1/27996/22/8174/205185/5c74b083E4802f963/8fcb5a40d337d292.jpg',
-        price: '￥2312.23'
-      },
-      {
-        id: 3,
-        name: '三星',
-        tags: [
-          '8G', '5.5英寸'
-        ],
-        image: 'https://img10.360buyimg.com/n1/s450x450_jfs/t1/27996/22/8174/205185/5c74b083E4802f963/8fcb5a40d337d292.jpg',
-        price: '￥2345.23'
-      },
-      {
-        id: 4,
-        name: '三星',
-        tags: [
-          '8G', '5.5英寸'
-        ],
-        image: 'https://img10.360buyimg.com/n1/s450x450_jfs/t1/27996/22/8174/205185/5c74b083E4802f963/8fcb5a40d337d292.jpg',
-        price: '￥2345.23'
-      }
-    ],
     bang: [
       {
         "avatar": 'https://img13.360buyimg.com/mobilecms/s500x500_jfs/t1/78487/12/4673/124398/5d2da79aEc3564848/d9f771bbefb48c3e.jpg',
@@ -113,38 +79,7 @@ Page({
     }],
     advText: '上门对比/全场0元购/正品保障',
     brands: [],
-    zeroSales: [{
-      name: 'iphoneX',
-      tags: [
-        '64G', '4.7英寸', '1200W'
-      ],
-      remarkCount: 234,
-      tag: '热卖',
-      gifts: [
-        '免费贴膜', '赠手机壳', '免费教程',
-      ],
-      price: '￥2345.23',
-      oPrice: '￥2555',
-      rating: '87%',
-      image: 'https://img13.360buyimg.com/n7/jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg',
-      id: 1222
-    },
-    {
-      name: 'iphoneX',
-      tags: [
-        '64G', '4.7英寸', '1200W'
-      ],
-      tag: '新品',
-      gifts: [
-        '免费贴膜', '赠手机壳', '免费教程',
-      ],
-      remarkCount: 234,
-      price: '￥2345.23',
-      oPrice: '￥2555',
-      rating: '87%',
-      image: 'https://img13.360buyimg.com/n7/jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg',
-      id: 1224
-    }],
+    zeroSales: [],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -297,6 +232,7 @@ Page({
 
   onProductClick(e) {
     let id = e.detail.id
+    console.log(id)
     wx.navigateTo({
       url: "/pages/product-detail/product-detail?id=" + id
     })
@@ -306,10 +242,19 @@ Page({
     console.log("on hide")
   },
   onLoad: function () {
-    brandModel.getHoBrands().then(res => {
-      const data = res.data;
+    const hotBrands = brandModel.getHoBrands();
+    const zeroSales = goodsModel.postGoodsList({}, this.data.pageNum, this.data.pageSize);
+    Promise.all([hotBrands, zeroSales]).then(res => {
+      const brandsData = res[0].data;
+      const zeroList = res[1].data
+      const zeroData = zeroList.list
+      const pageNum = zeroList.page.current;
+      const pageSize = zeroList.page.size
       this.setData({
-        brands: data
+        brands: brandsData,
+        zeroSales: zeroData,
+        pageNum: pageNum,
+        pageSize: pageSize
       })
     })
     if (app.appData.userInfo) {

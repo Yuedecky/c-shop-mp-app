@@ -24,11 +24,23 @@ class Http {
     }
   }
 
+  _filterData(data = {}) {
+    var entries = Object.entries(data)
+    let newData = {}
+    for (let [key, value] of entries) {
+      if (typeof (value) !== 'undefined') {
+        newData[key] = value
+      }
+    }
+    return newData
+  }
+
   _request(url, resolve, reject, data = {}, method = 'GET') {
+
     wx.request({
       url: Config.apiUrl + url,
       method: method,
-      data: data,
+      data: this._filterData(data),
       method: method,
       header: {
         'content-type': 'application/x-www-form-urlencoded',
