@@ -1,9 +1,9 @@
-<view class='sp-container'>
+<view class='spc-container'>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{images}}" wx:for-item="item" wx:key="**this">
+    <view wx:for="{{images}}" wx:for-item="item" wx:key="**this">
       <swiper-item>
-        <image src="{{item}}" style="height:{{height}}rpx;width:100%;" />
+        <image src="{{item}}" style="height:{{height}}rpx;width:100%;" mode="aspectFill" />
       </swiper-item>
-    </block>
+    </view>
   </swiper>
 </view>

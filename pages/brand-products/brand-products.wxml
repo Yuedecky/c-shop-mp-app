@@ -1,8 +1,11 @@
 <view class='b-p-container'>
     <wq-header-bar image="{{image}}"></wq-header-bar>
-    <view wx:for="{{products}}" wx:key="id" class='b-products-view'>
-        <view class='b-products-block'>
-            <wq-product product="{{item}}" show="{{true}}" />
+    <view wx:if="{{products.length >0}}">
+        <view wx:for="{{products}}" wx:key="id" class='b-products-view'>
+            <view class='b-products-block'>
+                <wq-product product="{{item}}" show="{{true}}" />
+            </view>
         </view>
     </view>
+    <view wx:else class='b-p-no-data'>暂无数据</view>
 </view>

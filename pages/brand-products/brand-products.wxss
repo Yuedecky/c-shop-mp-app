@@ -11,3 +11,8 @@
 .b-products-block{
     border-bottom: 1rpx solid #eee;
 }
+
+.b-p-no-data{
+    color: #999;
+    text-align: center;
+}

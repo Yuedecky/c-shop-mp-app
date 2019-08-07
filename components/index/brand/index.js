@@ -5,7 +5,7 @@ Component({
     },
     methods: {
         tap: function (e) {
-            console.log(e)
+            this.triggerEvent('tap', { id: this.properties.brand.id, name: this.properties.brand.name }, {})
         }
     }
 })

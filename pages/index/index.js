@@ -296,10 +296,10 @@ Page({
 
 
   onBrandTap: function (e) {
-    let brandId = e.currentTarget.dataset.brandid;
-    let brandName = e.currentTarget.dataset.brandname;
+    const bid = e.detail.id
+    const bName = e.detail.name
     wx.navigateTo({
-      url: '/pages/brand-products/brand-products?brandId=' + brandId + '&brandName=' + brandName,
+      url: '/pages/brand-products/brand-products?brandId=' + bid + "&brandName=" + bName,
     })
   },
 

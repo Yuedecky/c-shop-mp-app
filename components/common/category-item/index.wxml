@@ -15,7 +15,9 @@
         <view class='index-nav-right'>
             <block wx:for="{{products}}" wx:key="id">
                 <view class='p-item-block'>
-                    <view class='p-item-tag'></view>
+                    <view class='p-item-tag'>
+                        <image src="./images/hot1.png"  class='tag-image'/>
+                    </view>
                     <view class='p-item-name'>{{item.name}}</view>
                 </view>
             </block>

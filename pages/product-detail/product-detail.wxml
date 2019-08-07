@@ -1,10 +1,16 @@
 <view class="phone-detail-container">
   <scroll-view scroll-y="{{true}}" style="height: {{mainHeight}}px" class="p-sc-container">
     <view class='p-detail-h-wrapper'>
-      <wq-swipper images="{{images}}" autoplay="{{false}}" indicator-dots="{{true}}" height="{{800}}"></wq-swipper>
-      <!-- <view class='dot-pos'>
+      <swiper indicator-dots="{{true}}" autoplay="{{false}}" style="height:600rpx;">
+        <view wx:for="{{images}}" wx:for-item="item" wx:key="**this">
+          <swiper-item>
+            <image src="{{item}}" style="height:600rpx;width:100%;" mode="aspectFit" />
+          </swiper-item>
+        </view>
+      </swiper>
+      <view class='dot-pos'>
         <wq-dot show="{{false}}"></wq-dot>
-      </view> -->
+      </view>
     </view>
     <wq-product-header goods="{{goods}}"></wq-product-header>
     <!-- <view class='slide-p-params'>
@@ -38,12 +44,12 @@
     </view>
     <van-popup show="{{ showBottom }}" custom-style='height:900rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
       <view class='wq-pop-header-section'>
-        <wq-pop-header product="{{curPhone}}" bind:close="onClosePopup"></wq-pop-header>
+        <wq-pop-header product="{{goods}}" bind:close="onClosePopup"></wq-pop-header>
       </view>
       <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-        <wq-pop-tag tag="版本" tags="{{curPhone.versions}}"></wq-pop-tag>
-        <wq-pop-tag tag="颜色" tags="{{curPhone.color}}"></wq-pop-tag>
-        <wq-pop-tag tag="意外保护" tags="{{curPhone.protect}}"></wq-pop-tag>
+        <wq-pop-tag tag="版本" tags="{{goods.versions}}"></wq-pop-tag>
+        <wq-pop-tag tag="颜色" tags="{{goods.colors}}"></wq-pop-tag>
+        <wq-pop-tag tag="内存" tags="{{goods.memories}}"></wq-pop-tag>
         <view class='pop-num'>
           <view>购买数量</view>
           <view class='pop-num-stepper'>
