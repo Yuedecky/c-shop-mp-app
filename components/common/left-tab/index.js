@@ -1,16 +1,7 @@
 Component({
     properties: {
         item: Object,
-        active: {
-            type: Number,
-            observer: function (val, old) {
-                if (val === this.properties.item.id) {
-                    this.setData({
-                        activated: true
-                    })
-                }
-            }
-        }
+        checked: Boolean
     },
     data: {
         activated: false
@@ -19,11 +10,7 @@ Component({
 
     },
     ready() {
-        if (this.properties.active == this.properties.item.id) {
-            this.setData({
-                activated: true
-            })
-        }
+
     },
 
     data: {

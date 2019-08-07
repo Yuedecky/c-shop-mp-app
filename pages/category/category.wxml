@@ -1,3 +1,1 @@
-<wq-category-item image="{{headerBar.image}}" bind:tabClick="tabClick"
- bind:brandTap="brandTap" needSearchBar="{{true}}" products="{{products}}"
-  tabs="{{tabs}}" items="{{items}}" active="{{active}}"></wq-category-item>
+<wq-category-item image="{{headerBar.image}}" bind:tabClick="tabClick" bind:brandTap="brandTap" needSearchBar="{{true}}" products="{{products}}" tabs="{{tabs}}" items="{{items}}" active="{{active}}"></wq-category-item>

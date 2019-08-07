@@ -8,7 +8,7 @@
         <view class="index-nav-left">
             <scroll-view scroll-y style='height:{{navLeftHeight}}px;'>
                 <block wx:for="{{items}}" wx:key="id">
-                    <wq-left-tab item='{{item}}' active='{{active}}' bind:click="brandTap" />
+                    <wq-left-tab item='{{item}}' checked='{{item.id == active}}' bind:click="brandTap" />
                 </block>
             </scroll-view>
         </view>
