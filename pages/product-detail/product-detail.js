@@ -1,5 +1,6 @@
 import { GoodsModel } from "../../models/goods-model";
-
+import { CommentModel } from '../../models/comment-model';
+const commentModel = new CommentModel();
 const goodsModel = new GoodsModel()
 Page({
 
@@ -9,6 +10,15 @@ Page({
   data: {
     showBottom: false,
     goods: {},
+
+    selectedMemoeyName: "",
+    selectedColorName: "",
+    selectedVersionName: "",
+
+
+    pageNum: 1,
+    pageSize: 5,
+
     shop: {
       location: '上海市浦东新区122号',
       name: '聚客数码浦东新区店',
@@ -20,24 +30,7 @@ Page({
     },
     scrollHeight: 593,
     ratings: {
-      total: 12,
-      offset: 2,
-      remarks: [
-        {
-          name: '12***233',
-          score: 4.6,
-          date: '2019-01-01',
-          content: '第一次用苹果的ios系统，挺顺手，操作也很简单，拿在手上的手感不错，面容id用起来可能还不是太习惯，一些角度好像解不开，和安卓手机一样，会发热，APP什么的运行很流畅，听音乐的音质好像也好一些，可能是我心理作用哈哈，总得来说满意，可以用好几年了。快递师傅很负责，态度很好，还是挺相信微券优品的',
-          avatar: 'https://misc.360buyimg.com/user/myjd-2015/css/i/peisong.jpg'
-        },
-        {
-          name: '23***233',
-          score: 3.7,
-          date: '2019-02-01',
-          content: '第一次用苹果的ios系统，挺顺手，操作也很简单，拿在手上的手感不错，面容id用起来可能还不是太习惯，一些角度好像解不开，和安卓手机一样，会发热，APP什么的运行很流畅，听音乐的音质好像也好一些，可能是我心理作用哈哈，总得来说满意，可以用好几年了。快递师傅很负责，态度很好，还是挺相信微券优品的',
-          avatar: 'https://misc.360buyimg.com/user/myjd-2015/css/i/peisong.jpg'
-        }
-      ]
+
     },
     checkShopId: 0,
     model: {},
@@ -85,12 +78,18 @@ Page({
    */
   clickCurPhone(e) {
     const id = e.detail.id
-    console.log(id)
+    let that = this;
     goodsModel.listGoodsParams(id).then(res => {
       const data = res.data;
       const versionList = data.versionList;
       const memoryList = data.memoryList;
       const colorList = data.colorList;
+      that.setData({
+        versionList,
+        memoryList,
+        colorList
+      })
+
     })
     this.setData({
       showBottom: true
@@ -106,16 +105,20 @@ Page({
 
     })
 
-    goodsModel.postGoodsDetail(options.id).then(res => {
-      const data = res.data;
-      console.log(res.data)
-      const imagesObjArr = data.images;
+    const commentQuery = commentModel.listComments(options.id, this.data.pageNum, this.data.pageSize);
+
+    const goodsQuery = goodsModel.postGoodsDetail(options.id);
+    Promise.all([commentQuery, goodsQuery]).then(res => {
+      const commentsData = res[1].data;
+      const goodsData = res[1].data;
+      const imagesObjArr = goodsData.images;
       const images = imagesObjArr.map(item => {
         return item.imgUrl;
       })
       that.setData({
         images: images,
-        goods: data.goods
+        goods: goodsData.goods,
+        remarks: commentsData.list
       })
     })
 
@@ -123,11 +126,52 @@ Page({
 
   },
 
-  makeSure() {
-
-
+  clickVersion(e) {
+    const vid = e.detail.id;
+    const vName = e.detail.name;
     this.setData({
-      showBottom: false
+      selectedVersion: vid,
+      selectedVersionName: vName
+    })
+  },
+
+  clickColor(e) {
+    const cid = e.detail.id;
+    const cName = e.detail.name;
+    this.setData({
+      selectedColor: cid,
+      selectedColorName: cName
+    })
+  },
+
+  clickMemory(e) {
+    const mid = e.detail.id;
+    const mName = e.detail.name;
+    console.log(mName)
+    this.setData({
+      selectedMemory: mid,
+      selectedMemoryName: mName
+    })
+  },
+
+  makeSure() {
+    const goodsMemory = this.data.selectedMemoryName;
+    const goodsColor = this.data.selectedColorName;
+    const goodsVersion = this.data.selectedVersionName;
+    let goods = this.data.goods;
+    if (goodsMemory) {
+      goods.goodsMemory = goodsMemory;
+    }
+    if (goodsColor) {
+      goods.goodsColor = goodsColor;
+    }
+    if (goodsVersion) {
+      goods.goodsVersion = goodsVersion;
+    }
+    console.log(goods)
+    this.setData({
+      showBottom: false,
+      goods
     })
   },
 

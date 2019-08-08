@@ -29,8 +29,8 @@
     <view class="user-remark-info">
       <wq-footer text="用户评价"></wq-footer>
     </view>
-    <view wx:if="{{ratings.remarks.length >0}}">
-      <block wx:for="{{ratings.remarks}}" wx:key="id" wx:for-item="item">
+    <view wx:if="{{remarks.length >0}}">
+      <block wx:for="{{remarks}}" wx:key="id" wx:for-item="item">
         <wq-remark remark="{{item}}"></wq-remark>
       </block>
     </view>
@@ -44,9 +44,9 @@
         <wq-pop-header product="{{goods}}" bind:close="onClosePopup"></wq-pop-header>
       </view>
       <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-        <wq-pop-tag tag="版本" tags="{{versionList}}"></wq-pop-tag>
-        <wq-pop-tag tag="颜色" tags="{{colorList}}"></wq-pop-tag>
-        <wq-pop-tag tag="内存" tags="{{memoryList}}"></wq-pop-tag>
+        <wq-pop-tag tag="版本" tags="{{versionList}}" bind:click="clickVersion"></wq-pop-tag>
+        <wq-pop-tag tag="颜色" tags="{{colorList}}" bind:click="clickColor"></wq-pop-tag>
+        <wq-pop-tag tag="内存" tags="{{memoryList}}" bind:click="clickMemory"></wq-pop-tag>
         <view class='pop-num'>
           <view>购买数量</view>
           <view class='pop-num-stepper'>

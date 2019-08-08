@@ -31,7 +31,7 @@ class AuthModel extends Http {
      * @param {手机品牌} phoneBrand 
      * @param {手机型号} model 
      */
-    registerUserPhone(phone, code, phoneBrand, model) {
+    registerUserPhone(phone, code, phoneBrand, model, { referer }) {
         return this.request({
             url: 'passport/registerPhone',
             method: 'POST',
@@ -39,7 +39,8 @@ class AuthModel extends Http {
                 code,
                 phone,
                 phoneBrand,
-                model
+                model,
+                referer
             }
         })
     }

@@ -2,12 +2,13 @@
     <view class='tag-header'>{{tag}}</view>
     <view class='tag-list'>
         <block wx:for='{{tags}}' wx:key="id">
-            <view wx:if="{{affixMode}}" class='tag-row {{current===item.id? "tag-active":""}}' bind:tap="clickRow" data-id="{{item.id}}">
+            <view wx:if="{{affixMode}}" class='tag-row {{current===item.id? "tag-active":""}}' bind:tap="clickTag" data-name="{{item.name}}" data-id="{{item.id}}">
                 <view class='tag-name '>{{item.name}}</view>
                 <view class='tag-affix'>{{item.affix}}</view>
             </view>
-            <view wx:else class='tag-light {{current===item.id? "tag-active":""}}' bind:tap='clickTag' data-id="{{item.id}}">
-                <text>{{item}}</text>
+            <view wx:else class='tag-light {{current===item.id? "tag-active":""}}' bind:tap='clickTag'
+             data-name="{{item.name}}" data-id="{{item.id}}">
+                <text>{{item.name}}</text>
             </view>
         </block>
     </view>

@@ -6,13 +6,11 @@ Component({
             value: [],
             observer: function (old, newVal, changedPath) {
                 const ret = old.every((item) => {
-                    return item.affix != null
+                    return item.affix !== null && item.affix !== undefined
                 })
-                if (ret) {
-                    this.setData({
-                        affixMode: true
-                    })
-                }
+                this.setData({
+                    affixMode: ret
+                })
             }
         }
     },
@@ -21,19 +19,13 @@ Component({
         current: 0
     },
     methods: {
-        clickRow(e) {
-            const id = e.currentTarget.dataset.id;
-            this.setData({
-                current: id
-            })
-            this.triggerEvent('click', {}, {})
-        },
         clickTag(e) {
             const id = e.currentTarget.dataset.id;
+            const name = e.currentTarget.dataset.name;
             this.setData({
                 current: id
             })
-            this.triggerEvent('click', {}, {})
+            this.triggerEvent('click', { name, id, }, {})
         }
     }
 })
