@@ -10,12 +10,11 @@
             <view class='c-p-i-tag-item'>{{product.goodsMemory}}</view>
         </view>
         <view class='c-product-i-price'>
-            <text class='price'>{{product.originPrice}}</text>
-            <text class='oPrice'>{{product.originPrice}}</text>
+            <text class='price'><text class='rmb'>￥</text>{{product.originPrice}}</text>
         </view>
         <view class='c-product-i-remark'>
-            <text class='c-p-i-r-total'>{{product.remarkCount}}条评价</text>
-            <text>好评率{{product.rating}}</text>
+            <text class='c-p-i-r-total'>{{product.commentCount}}条评价</text>
+            <text>好评率{{product.favorableRate}}</text>
         </view>
     </view>
     <view class='card-product-buy-wrapper' wx:if="{{show}}">

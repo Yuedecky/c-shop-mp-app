@@ -16,6 +16,10 @@
     height:240rpx;
 }
 
+.rmb{
+    font-size: 20rpx;
+}
+
 .c-product-i-name{
     height:50rpx;
     font-size: 32rpx;

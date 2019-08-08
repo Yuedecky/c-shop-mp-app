@@ -82,6 +82,13 @@ Page({
     // that.setData({
     //   qrCode: options.qrCode
     // })
+
+    const token = wx.getStorageSync('token');
+    if (!token) {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
   },
 
   /**

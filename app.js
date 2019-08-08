@@ -24,17 +24,7 @@ App({
       success: function (res) {
         if (res.code) {
           wx.setStorageSync('code', res.code)
-          //todo: 请求登录
-          // wx.request({
-          //   url: 'http://localhost:8080/wx/login',
-          //   data:{
-          //     code: res.code,
-          //   },
-          //   method: 'POST',
-          //   success: function(res){
-          //     console.log('用户登录成功')
-          //   }
-          // })
+          
         } else {
           wx.showModal({
             title: '提示',

@@ -1,11 +1,4 @@
 <view class='p-header-container'>
-    <view class='p-header-title'>
-        <view class='p-h-tag'>{{goods.goodsName}}</view>
-        <view class="p-h-name">{{goods.goodsVersion}}</view>
-    </view>
-    <view class="p-desc">
-        <text class='tags-clz'>{{goods.goodsMemory}}</text>
-        <text class='tags-clz'>{{goods.goodsVersion}}</text>
-        <text class='tags-clz'>{{goods.goodsColor}}</text>
-    </view>
+    <view class='p-header-title'>{{goods.goodsName}}</view>
+    <view class="p-desc">{{goods.desc}}</view>
 </view>

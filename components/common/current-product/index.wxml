@@ -1,8 +1,8 @@
 <view class='cur-p-container'>
     <view class='title-bottom'>
-        <wq-title-bar title='当前机型' rightStyle='color:red;' right="{{goods.originPrice}}"></wq-title-bar>
+        <wq-title-bar title='当前机型' rightStyle='color:red;' right="￥{{goods.originPrice}}"></wq-title-bar>
     </view>
-    <view class='cur-p-content' bind:tap="onDettail">
+    <view class='cur-p-content' bind:tap="onDetail">
         <view class='cur-p-tags'>
             <text class='tag-item'>{{goods.goodsVersion}}</text>
             <text class='tag-item'>{{goods.goodsColor}}</text>

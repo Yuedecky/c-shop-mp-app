@@ -1,0 +1,22 @@
+<view class="login-container">
+    <view class='logo-header'>
+        <view class='bottom-20'>
+            <image class="logo-image" src="{{logoUrl}}"></image>
+        </view>
+        <view class="logo-name">{{logoName}}</view>
+    </view>
+    <view class='auth-info'>
+        <text class='auth-info-title'>{{authTitle}}</text>
+        <text>{{authDesc}}</text>
+    </view>
+    <view class='auth-view' wx:if="{{getUser}}">
+        <van-button type='danger' open-type="getUserInfo" bind:getuserinfo="getUserInfo" custom-class='auth-btn'>
+            微信授权
+        </van-button>
+    </view>
+    <view class="auth-view" wx:else>
+        <van-button type='danger' open-type="getPhoneNumber" bind:getphonenumber="getPhoneNumber" custom-class='auth-btn'>
+            微信授权
+        </van-button>
+    </view>
+</view>

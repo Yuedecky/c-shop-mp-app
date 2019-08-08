@@ -7,7 +7,7 @@
                 <view class='tag-affix'>{{item.affix}}</view>
             </view>
             <view wx:else class='tag-light {{current===item.id? "tag-active":""}}' bind:tap='clickTag' data-id="{{item.id}}">
-                <text>{{item.name}}</text>
+                <text>{{item}}</text>
             </view>
         </block>
     </view>

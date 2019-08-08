@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
+
 .logo-image{
   margin:70rpx 0rpx 0rpx 0rpx;
   width: 240rpx;
@@ -21,17 +21,29 @@
   text-align: center;
 }
 
-.login-btn{
-    margin-top: 200rpx;
-    width: 90%;
-    padding: 12rpx 12rpx 12rpx 12rpx;
-    font-size: 40rpx;
-    line-height: 80rpx;
-    background-color: #57A948;
-    color: white;
-    font-weight: 600;
+.logo-header{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200rpx;
 }
 
-.login-btn::after{
-  border: none;
+.auth-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-bottom:40rpx;
+}
+
+.auth-info-title{
+  font-weight: bold;
+}
+
+
+.auth-view{
+  width: 80%;
+}
+.auth-btn{
+  width:100%;
 }

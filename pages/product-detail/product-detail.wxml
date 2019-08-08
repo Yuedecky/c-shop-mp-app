@@ -13,9 +13,6 @@
       </view>
     </view>
     <wq-product-header goods="{{goods}}"></wq-product-header>
-    <!-- <view class='slide-p-params'>
-      <wq-product-slide params="{{curPhone.params}}"></wq-product-slide>
-    </view> -->
     <view class='card-view'>
       <wq-current-product goods="{{goods}}" bind:click="clickCurPhone"></wq-current-product>
     </view>
@@ -47,9 +44,9 @@
         <wq-pop-header product="{{goods}}" bind:close="onClosePopup"></wq-pop-header>
       </view>
       <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-        <wq-pop-tag tag="版本" tags="{{goods.versions}}"></wq-pop-tag>
-        <wq-pop-tag tag="颜色" tags="{{goods.colors}}"></wq-pop-tag>
-        <wq-pop-tag tag="内存" tags="{{goods.memories}}"></wq-pop-tag>
+        <wq-pop-tag tag="版本" tags="{{versionList}}"></wq-pop-tag>
+        <wq-pop-tag tag="颜色" tags="{{colorList}}"></wq-pop-tag>
+        <wq-pop-tag tag="内存" tags="{{memoryList}}"></wq-pop-tag>
         <view class='pop-num'>
           <view>购买数量</view>
           <view class='pop-num-stepper'>

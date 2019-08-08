@@ -21,8 +21,8 @@
     height: 60rpx;
 }
 
-.oPrice{
-    text-decoration: line-through;
+.pop-rmb{
+    font-size: 30rpx;
 }
 
 .pop-h-right-price .price{

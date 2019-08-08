@@ -19,6 +19,16 @@ class GoodsModel extends Http {
         })
     }
 
+    listGoodsParams(modelId) {
+        return this.request({
+            url: 'goods/model',
+            method: 'POST',
+            data: {
+                modelId
+            }
+        })
+    }
+
     postGoodsDetail(goodsId) {
         return this.request({
             url: 'goods/detail',

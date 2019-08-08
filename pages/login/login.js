@@ -39,6 +39,10 @@ Page({
     })
   },
 
+  getUserInfo(e) {
+    console.log(e)
+  },
+
   /**
    * 获取用户的手机号
    */

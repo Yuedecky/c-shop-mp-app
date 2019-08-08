@@ -4,19 +4,12 @@
     padding: 20rpx 20rpx 20rpx 20rpx;
 }
 
-.p-h-tag{
-    margin-right: 10rpx;
-}
-.p-h-name{
-    font-weight: bold;
-}
+
 .p-header-title{
     display: flex;
     flex-direction: row;
 }
-
-.tags-clz{
-    margin-right: 10rpx;
+.p-desc{
     font-size:26rpx;
     color:#999;
 }

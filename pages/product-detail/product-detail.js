@@ -40,33 +40,7 @@ Page({
       ]
     },
     checkShopId: 0,
-    colorItem: {
-      text: ['天空直径', '亮黑色', '激光色'],
-      selectIndex: 1,
-    },
-    memoryItem: {
-      text: ['8G+64G', '8G+128G', '8G+256G'],
-      selectIndex: 0
-    },
-    versionItem: {
-      text: ['标准版', '尊享版', '高贵版'],
-      selectIndex: 2
-    },
-    background: "#cccccc",
-    giftItem: [
-      {
-        image: 'https://img13.360buyimg.com/n1/jfs/t1/31125/35/13880/115774/5cbee16dE4dca3084/068b89d20a1ca753.jpg',
-        desc: '手机贴膜'
-      },
-      {
-        image: 'https://img11.360buyimg.com/n1/s150x150_jfs/t1/30858/3/9220/371825/5ca5761eE53bbc96e/19abd03fc80d8c2e.jpg',
-        desc: '手机壳'
-      },
-      {
-        image: 'https://img13.360buyimg.com/n5/jfs/t1/32002/13/14579/57576/5cbee16dEbb499f41/0ab28cb1ffba1ffb.jpg',
-        desc: '移动电源'
-      }
-    ]
+    model: {},
   },
 
   /**
@@ -110,6 +84,14 @@ Page({
    * @param  e 
    */
   clickCurPhone(e) {
+    const id = e.detail.id
+    console.log(id)
+    goodsModel.listGoodsParams(id).then(res => {
+      const data = res.data;
+      const versionList = data.versionList;
+      const memoryList = data.memoryList;
+      const colorList = data.colorList;
+    })
     this.setData({
       showBottom: true
     })
@@ -182,19 +164,7 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
 
 
 })

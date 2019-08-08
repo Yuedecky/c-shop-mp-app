@@ -1,0 +1,50 @@
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-image{
+    margin:70rpx 0rpx 0rpx 0rpx;
+    width: 240rpx;
+    height: 240rpx;
+    border-radius: 50%;
+    border:1px solid #cec;
+  }
+  
+  .logo-name{
+    height: 60rpx;
+    font-size: 40rpx;  
+    color:#333;
+    text-align: center;
+  }
+  
+  .logo-header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200rpx;
+  }
+  
+  .auth-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    margin-bottom:40rpx;
+  }
+  
+  .auth-info-title{
+    font-weight: bold;
+  }
+  
+  
+  .auth-view{
+    width: 80%;
+  }
+  .auth-btn{
+    width:100%;
+  }
+  

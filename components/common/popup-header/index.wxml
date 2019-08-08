@@ -4,8 +4,7 @@
     </view>
     <view class='pop-header-right'>
         <view class='pop-h-right-price'>
-            <text class='price'>{{product.originPrice}}</text>
-            <text class='oPrice'>{{product.originPrice}}</text>
+            <text class='price'><text class='pop-rmb'>￥</text>{{product.originPrice}}</text>
         </view>
         <view class='pop-h-right-desc'>{{product.desc}}</view>
     </view>
