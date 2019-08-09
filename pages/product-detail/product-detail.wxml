@@ -44,9 +44,9 @@
         <wq-pop-header product="{{goods}}" bind:close="onClosePopup"></wq-pop-header>
       </view>
       <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-        <wq-pop-tag tag="版本" tags="{{versionList}}" bind:click="clickVersion"></wq-pop-tag>
-        <wq-pop-tag tag="颜色" tags="{{colorList}}" bind:click="clickColor"></wq-pop-tag>
-        <wq-pop-tag tag="内存" tags="{{memoryList}}" bind:click="clickMemory"></wq-pop-tag>
+        <wq-pop-tag tag="版本" tags="{{versionList}}" current="{{selectedVersionName}}" bind:click="clickVersion"></wq-pop-tag>
+        <wq-pop-tag tag="颜色" tags="{{colorList}}" current="{{selectedColorName}}" bind:click="clickColor"></wq-pop-tag>
+        <wq-pop-tag tag="内存" tags="{{memoryList}}" current="{{selectedMemoryName}}" bind:click="clickMemory"></wq-pop-tag>
         <view class='pop-num'>
           <view>购买数量</view>
           <view class='pop-num-stepper'>

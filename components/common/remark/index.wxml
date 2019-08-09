@@ -2,18 +2,18 @@
   <view class='remark-title-wrapper'>
     <view class='av-name-star'>
       <view class='r-view-image'>
-        <image src='{{remark.avatar}}' class='avatar-image'></image>
+        <image src='{{remark.headImgUrl}}' class='avatar-image'></image>
       </view>
       <view class='avatar-name-rating'>
         <view class='avatar-name'>
-          <text>{{remark.name}}</text>
+          <text>{{remark.nickName}}</text>
         </view>
         <view class='av-star'>
-          <van-rate value="{{ remark.score }}" icon="like" size="12" void-icon="like-o" />
+          <van-rate value="{{ remark.stars }}" icon="like" size="12" void-icon="like-o" />
         </view>
       </view>
     </view>
     <view class='rating-date'>{{remark.date}}</view>
   </view>
-  <view class='remark-content'>{{remark.content}}</view>
+  <view class='remark-content'>{{remark.feel}}</view>
 </view>

@@ -44,3 +44,10 @@
     border-radius: 2rpx;
 }
 
+.disabled-active{
+    color: #cccccc !important;
+    background:#fefefe !important;
+    border-radius: 2rpx;
+}
+
+

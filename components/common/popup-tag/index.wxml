@@ -2,14 +2,25 @@
     <view class='tag-header'>{{tag}}</view>
     <view class='tag-list'>
         <block wx:for='{{tags}}' wx:key="id">
-            <view wx:if="{{affixMode}}" class='tag-row {{current===item.id? "tag-active":""}}' bind:tap="clickTag" data-name="{{item.name}}" data-id="{{item.id}}">
+            <view wx:if="{{affixMode}}" class='tag-row {{current===item.name? "tag-active":""}}' bind:tap="clickTag" data-name="{{item.name}}" data-id="{{item.id}}">
                 <view class='tag-name '>{{item.name}}</view>
                 <view class='tag-affix'>{{item.affix}}</view>
             </view>
-            <view wx:else class='tag-light {{current===item.id? "tag-active":""}}' bind:tap='clickTag'
-             data-name="{{item.name}}" data-id="{{item.id}}">
+            <view wx:else class='tag-light {{util.getClz(current,item)}}' bind:tap='clickTag' data-disabled="{{item.disabled}}" data-name="{{item.name}}">
                 <text>{{item.name}}</text>
             </view>
         </block>
     </view>
 </view>
+<wxs module="util">
+    var getClz = function (current, item) {
+        if (item.disabled) {
+            return "disabled-active";
+        } else if (item.name == current) {
+            return "tag-active";
+        } else {
+            return "";
+        }
+    }
+module.exports.getClz=getClz
+</wxs>

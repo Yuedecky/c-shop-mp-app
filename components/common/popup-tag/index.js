@@ -12,20 +12,24 @@ Component({
                     affixMode: ret
                 })
             }
-        }
+        },
+        current: String
     },
     data: {
         affixMode: false,
-        current: 0
+        active: false
     },
     methods: {
         clickTag(e) {
-            const id = e.currentTarget.dataset.id;
             const name = e.currentTarget.dataset.name;
-            this.setData({
-                current: id
-            })
-            this.triggerEvent('click', { name, id, }, {})
+            const disabled = e.currentTarget.dataset.disabled;
+            if (!disabled) {
+                this.setData({
+                    current: name
+                })
+                this.triggerEvent('click', { name, }, {})
+            }
+
         }
     }
 })

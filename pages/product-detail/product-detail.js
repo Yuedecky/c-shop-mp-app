@@ -19,6 +19,8 @@ Page({
     pageNum: 1,
     pageSize: 5,
 
+    dictList: [],
+
     shop: {
       location: '上海市浦东新区122号',
       name: '聚客数码浦东新区店',
@@ -81,15 +83,21 @@ Page({
     let that = this;
     goodsModel.listGoodsParams(id).then(res => {
       const data = res.data;
-      const versionList = data.versionList;
-      const memoryList = data.memoryList;
-      const colorList = data.colorList;
+      const versionList = data.versionList.map(it => {
+        return { name: it.name, disabled: false }
+      });
+      const memoryList = data.memoryList.map(it => {
+        return { name: it.name, disabled: false }
+      });
+      const colorList = data.colorList.map(it => {
+        return { name: it.name, disabled: false }
+      });
       that.setData({
         versionList,
         memoryList,
-        colorList
+        colorList,
+        dictList: data.list
       })
-
     })
     this.setData({
       showBottom: true
@@ -101,15 +109,10 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    that.setData({
-
-    })
-
     const commentQuery = commentModel.listComments(options.id, this.data.pageNum, this.data.pageSize);
-
     const goodsQuery = goodsModel.postGoodsDetail(options.id);
     Promise.all([commentQuery, goodsQuery]).then(res => {
-      const commentsData = res[1].data;
+      const commentsData = res[0].data;
       const goodsData = res[1].data;
       const imagesObjArr = goodsData.images;
       const images = imagesObjArr.map(item => {
@@ -118,38 +121,146 @@ Page({
       that.setData({
         images: images,
         goods: goodsData.goods,
-        remarks: commentsData.list
+        remarks: commentsData.list,
+        selectedColorName: goodsData.goods.goodsColor,
+        selectedMemoryName: goodsData.goods.goodsMemory,
+        selectedVersionName: goodsData.goods.goodsVersion
       })
     })
-
-
-
   },
 
   clickVersion(e) {
-    const vid = e.detail.id;
     const vName = e.detail.name;
+    const dict = this.data.dictList;
+    const colorList = this.data.colorList;
+    const selectedMemoryName = this.data.selectedMemoryName;
+    const selectedColorName = this.data.selectedColorName;
+    const memoryList = this.data.memoryList;
+    const arr = dict.filter(it => {
+      return it.goodsVersion == vName
+    })
+    if (arr != null && arr.length > 0) {
+      const colorList2 = arr.map(it => {
+        return it.goodsColor
+      })
+      const memoryList2 = arr.map(it => {
+        return it.goodsMemory
+      })
+      colorList.forEach(it => {
+        let colorIndx = colorList2.findIndex((val) => val == it.name)
+        it.disabled = !(colorIndx > -1);
+      })
+      memoryList.forEach(it => {
+        let memoryIdx = memoryList2.findIndex((val) => val == it.name)
+        it.disabled = !(memoryIdx > -1)
+      })
+      const pRet = arr.filter(it => {
+        return it.goodsMemory == selectedMemoryName && it.goodsColor == selectedColorName
+      })
+      if (pRet != null && pRet.length > 0) {
+        const goods = this.data.goods;
+        goods.originPrice = pRet[0].originPrice;
+        this.setData({
+          goods
+        })
+      }
+      this.setData({
+        colorList,
+        memoryList
+      })
+    }
     this.setData({
-      selectedVersion: vid,
       selectedVersionName: vName
     })
   },
 
   clickColor(e) {
-    const cid = e.detail.id;
     const cName = e.detail.name;
+    const dict = this.data.dictList;
+    const versionList = this.data.versionList;
+    const memoryList = this.data.memoryList;
+    const selectedVersionName = this.data.selectedVersionName;
+    const selectedMemoryName = this.data.selectedMemoryName;
+    const arr = dict.filter(it => {
+      return it.goodsColor == cName
+    })
+    if (arr != null && arr.length > 0) {
+      const versionList2 = arr.map(it => {
+        return it.goodsVersion
+      })
+      const memoryList2 = arr.map(it => {
+        return it.goodsMemory
+      })
+      versionList.forEach(it => {
+        let versionIdx = versionList2.findIndex((val) => val == it.name)
+        it.disabled = !(versionIdx > -1);
+      })
+      memoryList.forEach(it => {
+        let memoryIdx = memoryList2.findIndex((val) => val == it.name)
+        it.disabled = !(memoryIdx > -1)
+      })
+
+      const pRet = arr.filter(it => {
+        return it.goodsMemory == selectedMemoryName && it.goodsVersion == selectedVersionName
+      })
+      if (pRet != null && pRet.length > 0) {
+        const goods = this.data.goods;
+        goods.originPrice = pRet[0].originPrice;
+        this.setData({
+          goods
+        })
+      }
+      this.setData({
+        versionList,
+        memoryList
+      })
+    }
     this.setData({
-      selectedColor: cid,
       selectedColorName: cName
     })
   },
 
   clickMemory(e) {
-    const mid = e.detail.id;
     const mName = e.detail.name;
-    console.log(mName)
+    const dict = this.data.dictList;
+    const versionList = this.data.versionList;
+    const colorList = this.data.colorList;
+    const selectedVersionName = this.data.selectedVersionName;
+    const selectedColorName = this.data.selectedColorName;
+    const arr = dict.filter(it => {
+      return it.goodsMemory == mName
+    })
+    if (arr != null && arr.length > 0) {
+      const versionList2 = arr.map(it => {
+        return it.goodsVersion
+      })
+      const colorList2 = arr.map(it => {
+        return it.goodsColor
+      })
+      versionList.forEach(it => {
+        let versionIdx = versionList2.findIndex((val) => val == it.name)
+        it.disabled = !(versionIdx > -1);
+      })
+      colorList.forEach(it => {
+        let colorIndx = colorList2.findIndex((val) => val == it.name)
+        it.disabled = !(colorIndx > -1)
+      })
+      const pRet = arr.filter(it => {
+        return it.goodsColor == selectedColorName && it.goodsVersion == selectedVersionName
+      })
+      if (pRet != null && pRet.length > 0) {
+        const goods = this.data.goods;
+        goods.originPrice = pRet[0].originPrice;
+        this.setData({
+          goods
+        })
+      }
+      this.setData({
+        versionList,
+        colorList
+      })
+    }
     this.setData({
-      selectedMemory: mid,
       selectedMemoryName: mName
     })
   },
@@ -168,7 +279,6 @@ Page({
     if (goodsVersion) {
       goods.goodsVersion = goodsVersion;
     }
-    console.log(goods)
     this.setData({
       showBottom: false,
       goods
