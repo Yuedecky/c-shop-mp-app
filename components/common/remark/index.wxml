@@ -9,7 +9,7 @@
           <text>{{remark.nickName}}</text>
         </view>
         <view class='av-star'>
-          <van-rate value="{{ remark.stars }}" icon="like" size="12" void-icon="like-o" />
+          <van-rate value="{{ remark.stars }}" readonly icon="like" size="12" void-icon="like-o" />
         </view>
       </view>
     </view>

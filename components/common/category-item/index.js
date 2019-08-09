@@ -1,5 +1,7 @@
 import { BrandModel } from '../../../models/brand-model';
 import { CategoryModel } from '../../../models/category-model';
+import { GoodsModel } from '../../../models/goods-model';
+const goodsModel = new GoodsModel();
 const categoryModel = new CategoryModel();
 const brandModel = new BrandModel();
 Component({
@@ -16,7 +18,9 @@ Component({
         items: [],
         active: 0,
         pageNum: 1,
-        pageSize: 20
+        pageSize: 20,
+        scrollHeight: 560,
+        showBottom: false
     },
     lifetimes: {
         attached: function () {
@@ -44,6 +48,19 @@ Component({
     },
     methods: {
 
+        onClickProduct(e) {
+            const id = e.currentTarget.dataset.id
+            this.showBottom(id)
+        },
+        showBottom(pid) {
+            this.setData({
+                showBottom: true
+            })
+            goodsModel.listGoodsParams(pid).then(res => {
+                console.log(res.data)
+            })
+
+        },
         /**
          * 查询品牌下的商品列表
          * @param {品牌id} bid 

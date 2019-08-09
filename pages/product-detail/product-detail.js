@@ -18,8 +18,13 @@ Page({
 
     pageNum: 1,
     pageSize: 5,
+    total: 0,
 
     dictList: [],
+    loadingAni: false,
+    loading: true,
+
+    showDraw: false,
 
     shop: {
       location: '上海市浦东新区122号',
@@ -30,10 +35,7 @@ Page({
       latitude: 121.460231,
       longitude: 31.234129
     },
-    scrollHeight: 593,
-    ratings: {
 
-    },
     checkShopId: 0,
     model: {},
   },
@@ -48,25 +50,49 @@ Page({
   },
 
   openMoreShops: function (e) {
-    console.log('in product detail')
     wx.navigateTo({
       url: '/pages/shop-list/shop-list?checkable=true'
     });
   },
 
-  onClosePopup() {
+
+  clickDrawer() {
+    const draw = this.data.showDraw;
     this.setData({
-      showBottom: false
+      showDraw: !draw
     })
   },
 
-
-  /**
-   * 更改数量
-   */
-  onNumChange() {
-
+  setRemarkLoading() {
+    let that = this;
+    that.setData({
+      loadingAni: true
+    })
+    const pageNum = this.data.pageNum + 1;
+    const pageSize = this.data.pageSize;
+    const goodsId = this.data.goods.id;
+    let remarks = this.data.remarks;
+    let total = this.data.total;
+    commentModel.listComments(goodsId, pageNum, pageSize).then(res => {
+      const data = res.data;
+      const list = data.list;
+      const page = data.page;
+      total = total + page.size;
+      if (list != null && list.length > 0) {
+        remarks = remarks.concat(list);
+        that.setData({
+          total,
+          remarks,
+          pageNum: page.current,
+          loading: total < page.total
+        })
+      }
+    })
+    that.setData({
+      loadingAni: false
+    })
   },
+
 
   onClose() {
     this.setData({
@@ -104,12 +130,18 @@ Page({
     })
   },
 
+
+  onSelected(e) {
+    console.log(e)
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let that = this;
-    const commentQuery = commentModel.listComments(options.id, this.data.pageNum, this.data.pageSize);
+    let pageSize = this.data.pageSize;
+    const commentQuery = commentModel.listComments(options.id, this.data.pageNum, pageSize);
     const goodsQuery = goodsModel.postGoodsDetail(options.id);
     Promise.all([commentQuery, goodsQuery]).then(res => {
       const commentsData = res[0].data;
@@ -122,6 +154,7 @@ Page({
         images: images,
         goods: goodsData.goods,
         remarks: commentsData.list,
+        total: pageSize,
         selectedColorName: goodsData.goods.goodsColor,
         selectedMemoryName: goodsData.goods.goodsMemory,
         selectedVersionName: goodsData.goods.goodsVersion
@@ -129,161 +162,9 @@ Page({
     })
   },
 
-  clickVersion(e) {
-    const vName = e.detail.name;
-    const dict = this.data.dictList;
-    const colorList = this.data.colorList;
-    const selectedMemoryName = this.data.selectedMemoryName;
-    const selectedColorName = this.data.selectedColorName;
-    const memoryList = this.data.memoryList;
-    const arr = dict.filter(it => {
-      return it.goodsVersion == vName
-    })
-    if (arr != null && arr.length > 0) {
-      const colorList2 = arr.map(it => {
-        return it.goodsColor
-      })
-      const memoryList2 = arr.map(it => {
-        return it.goodsMemory
-      })
-      colorList.forEach(it => {
-        let colorIndx = colorList2.findIndex((val) => val == it.name)
-        it.disabled = !(colorIndx > -1);
-      })
-      memoryList.forEach(it => {
-        let memoryIdx = memoryList2.findIndex((val) => val == it.name)
-        it.disabled = !(memoryIdx > -1)
-      })
-      const pRet = arr.filter(it => {
-        return it.goodsMemory == selectedMemoryName && it.goodsColor == selectedColorName
-      })
-      if (pRet != null && pRet.length > 0) {
-        const goods = this.data.goods;
-        goods.originPrice = pRet[0].originPrice;
-        this.setData({
-          goods
-        })
-      }
-      this.setData({
-        colorList,
-        memoryList
-      })
-    }
-    this.setData({
-      selectedVersionName: vName
-    })
-  },
 
-  clickColor(e) {
-    const cName = e.detail.name;
-    const dict = this.data.dictList;
-    const versionList = this.data.versionList;
-    const memoryList = this.data.memoryList;
-    const selectedVersionName = this.data.selectedVersionName;
-    const selectedMemoryName = this.data.selectedMemoryName;
-    const arr = dict.filter(it => {
-      return it.goodsColor == cName
-    })
-    if (arr != null && arr.length > 0) {
-      const versionList2 = arr.map(it => {
-        return it.goodsVersion
-      })
-      const memoryList2 = arr.map(it => {
-        return it.goodsMemory
-      })
-      versionList.forEach(it => {
-        let versionIdx = versionList2.findIndex((val) => val == it.name)
-        it.disabled = !(versionIdx > -1);
-      })
-      memoryList.forEach(it => {
-        let memoryIdx = memoryList2.findIndex((val) => val == it.name)
-        it.disabled = !(memoryIdx > -1)
-      })
 
-      const pRet = arr.filter(it => {
-        return it.goodsMemory == selectedMemoryName && it.goodsVersion == selectedVersionName
-      })
-      if (pRet != null && pRet.length > 0) {
-        const goods = this.data.goods;
-        goods.originPrice = pRet[0].originPrice;
-        this.setData({
-          goods
-        })
-      }
-      this.setData({
-        versionList,
-        memoryList
-      })
-    }
-    this.setData({
-      selectedColorName: cName
-    })
-  },
 
-  clickMemory(e) {
-    const mName = e.detail.name;
-    const dict = this.data.dictList;
-    const versionList = this.data.versionList;
-    const colorList = this.data.colorList;
-    const selectedVersionName = this.data.selectedVersionName;
-    const selectedColorName = this.data.selectedColorName;
-    const arr = dict.filter(it => {
-      return it.goodsMemory == mName
-    })
-    if (arr != null && arr.length > 0) {
-      const versionList2 = arr.map(it => {
-        return it.goodsVersion
-      })
-      const colorList2 = arr.map(it => {
-        return it.goodsColor
-      })
-      versionList.forEach(it => {
-        let versionIdx = versionList2.findIndex((val) => val == it.name)
-        it.disabled = !(versionIdx > -1);
-      })
-      colorList.forEach(it => {
-        let colorIndx = colorList2.findIndex((val) => val == it.name)
-        it.disabled = !(colorIndx > -1)
-      })
-      const pRet = arr.filter(it => {
-        return it.goodsColor == selectedColorName && it.goodsVersion == selectedVersionName
-      })
-      if (pRet != null && pRet.length > 0) {
-        const goods = this.data.goods;
-        goods.originPrice = pRet[0].originPrice;
-        this.setData({
-          goods
-        })
-      }
-      this.setData({
-        versionList,
-        colorList
-      })
-    }
-    this.setData({
-      selectedMemoryName: mName
-    })
-  },
-
-  makeSure() {
-    const goodsMemory = this.data.selectedMemoryName;
-    const goodsColor = this.data.selectedColorName;
-    const goodsVersion = this.data.selectedVersionName;
-    let goods = this.data.goods;
-    if (goodsMemory) {
-      goods.goodsMemory = goodsMemory;
-    }
-    if (goodsColor) {
-      goods.goodsColor = goodsColor;
-    }
-    if (goodsVersion) {
-      goods.goodsVersion = goodsVersion;
-    }
-    this.setData({
-      showBottom: false,
-      goods
-    })
-  },
 
   /**
    * 添加更机型对比

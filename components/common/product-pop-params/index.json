@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-button": "/miniprogram_npm/vant-weapp/button/index",
+        "wq-pop-header": "/components/common/popup-header/index",
+        "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+        "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+        "wq-pop-tag": "/components/common/popup-tag/index"
+    }
+}

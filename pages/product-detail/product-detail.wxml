@@ -9,7 +9,7 @@
         </view>
       </swiper>
       <view class='dot-pos'>
-        <wq-dot show="{{false}}"></wq-dot>
+        <wq-dot showDraw="{{showDraw}}" bind:click="clickDrawer"></wq-dot>
       </view>
     </view>
     <wq-product-header goods="{{goods}}"></wq-product-header>
@@ -34,30 +34,17 @@
         <wq-remark remark="{{item}}"></wq-remark>
       </block>
     </view>
-    <view class='remark-load-more'>
-      <button loading="{{loading}}" class="load-btn-more" disabled="{{disabled}}" catch:tap="setRemarkLoading">
+    <view class='remark-load-more' wx:if="{{loading}}">
+      <button loading="{{loadingAni}}" class="load-btn-more" disabled="{{disabled}}" catch:tap="setRemarkLoading">
         加载更多
       </button>
     </view>
-    <van-popup show="{{ showBottom }}" custom-style='height:900rpx;' bind:close="onClose" position="bottom" overlay="{{ true }}" bind:close="onClose">
-      <view class='wq-pop-header-section'>
-        <wq-pop-header product="{{goods}}" bind:close="onClosePopup"></wq-pop-header>
-      </view>
-      <scroll-view scroll-y="{{true}}" style="height:{{scrollHeight}}rpx;">
-        <wq-pop-tag tag="版本" tags="{{versionList}}" current="{{selectedVersionName}}" bind:click="clickVersion"></wq-pop-tag>
-        <wq-pop-tag tag="颜色" tags="{{colorList}}" current="{{selectedColorName}}" bind:click="clickColor"></wq-pop-tag>
-        <wq-pop-tag tag="内存" tags="{{memoryList}}" current="{{selectedMemoryName}}" bind:click="clickMemory"></wq-pop-tag>
-        <view class='pop-num'>
-          <view>购买数量</view>
-          <view class='pop-num-stepper'>
-            <van-stepper value="{{ 1 }}" bind:change="onNumChange" />
-          </view>
-        </view>
-      </scroll-view>
-      <view class='fixed-btn-block'>
-        <van-button type="danger" custom-class='buy-btn' block bind:click='makeSure'>确认</van-button>
-      </view>
-    </van-popup>
+    <view wx:else class='no-more-data'>
+      <wq-footer text="没有更多了" />
+    </view>
+    <wq-product-pop-params
+     showBottom="{{showBottom}}"
+      dictList="{{dictList}}" bind:close='onClose' bind:selected = 'onSelected' goods="{{goods}}" versionList="{{versionList}}" memoryList="{{memoryList}}" colorList="{{colorList}}" selectedColorName="{{selectedColorName}}" selectedVersionName="{{selectedVersionName}}" selectedMemoryName="{{selectedMemoryName}}" />
   </scroll-view>
   <view class="send-to-order" bind:tap='toOrder'>去下单</view>
 </view>

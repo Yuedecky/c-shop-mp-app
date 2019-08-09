@@ -1,5 +1,5 @@
 <view class='category-container'>
-    <view wx:hidden="!needSearchBar">
+    <view wx:if="needSearchBar">
         <van-search value="{{value}}" disabled placeholder="搜索您想要的品牌、机型" catch:tap="onClick"></van-search>
     </view>
     <wq-header-bar image="{{image}}" bind:click="onHeaderBarClick"></wq-header-bar>
@@ -14,13 +14,15 @@
         </view>
         <view class='index-nav-right'>
             <block wx:for="{{products}}" wx:key="id">
-                <view class='p-item-block'>
+                <view class='p-item-block' bind:tap="onClickProduct" data-id="{{item.id}}">
                     <view class='p-item-tag'>
-                        <image src="./images/hot1.png"  class='tag-image'/>
+                        <image src="./images/hot1.png" class='tag-image' />
                     </view>
                     <view class='p-item-name'>{{item.name}}</view>
                 </view>
             </block>
         </view>
     </view>
+
+    
 </view>

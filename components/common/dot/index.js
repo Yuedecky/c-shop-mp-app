@@ -1,13 +1,12 @@
 Component({
     properties: {
-        show: {
+        showDraw: {
             type: Boolean,
-            obserer(val) {
-                console.log(val)
-            }
         }
     },
     methods: {
-
+        click(e) {
+            this.triggerEvent('click', {}, {})
+        }
     },
 })
