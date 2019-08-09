@@ -1,5 +1,5 @@
 <view class='category-container'>
-    <view wx:if="needSearchBar">
+    <view wx:if="{{needSearchBar}}">
         <van-search value="{{value}}" disabled placeholder="搜索您想要的品牌、机型" catch:tap="onClick"></van-search>
     </view>
     <wq-header-bar image="{{image}}" bind:click="onHeaderBarClick"></wq-header-bar>
@@ -23,6 +23,5 @@
             </block>
         </view>
     </view>
-
-    
+    <wq-product-pop-params bind:selected="onSelected" showBottom="{{showBottom}}" goods="{{goods}}" versionList="{{versionList}}" dictList="{{dictList}}" memoryList="{{memoryList}}" colorList="{{colorList}}" selectedColorName="{{selectedColorName}}" selectedMemoryName="{{selectedMemoryName}}" selectedVersionName="{{selectedVersionName}}"></wq-product-pop-params>
 </view>

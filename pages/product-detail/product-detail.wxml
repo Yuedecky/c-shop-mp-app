@@ -4,7 +4,7 @@
       <swiper indicator-dots="{{true}}" autoplay="{{false}}" style="height:600rpx;">
         <view wx:for="{{images}}" wx:for-item="item" wx:key="**this">
           <swiper-item>
-            <image src="{{item}}" style="height:600rpx;width:100%;" mode="aspectFit" />
+            <image src="{{item.imgUrl}}" style="height:600rpx;width:100%;" mode="aspectFit" />
           </swiper-item>
         </view>
       </swiper>
@@ -14,14 +14,19 @@
     </view>
     <wq-product-header goods="{{goods}}"></wq-product-header>
     <view class='card-view'>
-      <wq-current-product goods="{{goods}}" bind:click="clickCurPhone"></wq-current-product>
+      <wq-current-product goods="{{goods}}" delBtn="{{false}}" bind:click="clickCurPhone"></wq-current-product>
     </view>
     <!-- 对比机型 -->
     <view class='card-view'>
       <view class='title-bottom'>
         <wq-title-bar title='对比机型' rightStyle='color:#999;' right="可继续选择1～2款机型对比下单"></wq-title-bar>
       </view>
-      <wq-add-product bind:click="addMoreProduct"></wq-add-product>
+      <view wx:for="{{compares}}" wx:key="id">
+        <wq-current-product goods="{{item}}" delBtn="{{true}}" bind:del="delCurAdd"></wq-current-product>
+      </view>
+      <view wx:if="{{canAdd}}">
+        <wq-add-product bind:click="addMoreProduct"></wq-add-product>
+      </view>
     </view>
     <view class='card-view'>
       <wq-near-shop bottomBorderStyle="1rpx solid #ccc" shop="{{shop}}" bind:more="openMoreShops"></wq-near-shop>
@@ -42,9 +47,7 @@
     <view wx:else class='no-more-data'>
       <wq-footer text="没有更多了" />
     </view>
-    <wq-product-pop-params
-     showBottom="{{showBottom}}"
-      dictList="{{dictList}}" bind:close='onClose' bind:selected = 'onSelected' goods="{{goods}}" versionList="{{versionList}}" memoryList="{{memoryList}}" colorList="{{colorList}}" selectedColorName="{{selectedColorName}}" selectedVersionName="{{selectedVersionName}}" selectedMemoryName="{{selectedMemoryName}}" />
+    <wq-product-pop-params showBottom="{{showBottom}}" dictList="{{dictList}}" bind:close='onClose' bind:selected='onSelected' goods="{{goods}}" versionList="{{versionList}}" memoryList="{{memoryList}}" colorList="{{colorList}}" selectedColorName="{{selectedColorName}}" selectedVersionName="{{selectedVersionName}}" selectedMemoryName="{{selectedMemoryName}}" />
   </scroll-view>
   <view class="send-to-order" bind:tap='toOrder'>去下单</view>
 </view>

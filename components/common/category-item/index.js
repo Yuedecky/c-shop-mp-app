@@ -20,7 +20,10 @@ Component({
         pageNum: 1,
         pageSize: 20,
         scrollHeight: 560,
-        showBottom: false
+        showBottom: false,
+        versionList: [],
+        memoryList: [],
+        colorList: []
     },
     lifetimes: {
         attached: function () {
@@ -47,7 +50,6 @@ Component({
 
     },
     methods: {
-
         onClickProduct(e) {
             const id = e.currentTarget.dataset.id
             this.showBottom(id)
@@ -56,10 +58,33 @@ Component({
             this.setData({
                 showBottom: true
             })
+            let that = this;
             goodsModel.listGoodsParams(pid).then(res => {
-                console.log(res.data)
+                const data = res.data;
+                const dictList = data.list;
+                const versionList = data.versionList;
+                const colorList = data.colorList;
+                const memoryList = data.memoryList;
+                const selectedColorName = data.selected.goodsColor;
+                const selectedMemoryName = data.selected.goodsMemory;
+                const selectedVersionName = data.selected.goodsVersion;
+                that.setData({
+                    goods: data.selected,
+                    dictList,
+                    versionList,
+                    memoryList,
+                    colorList,
+                    selectedColorName,
+                    selectedMemoryName,
+                    selectedVersionName
+                })
             })
 
+        },
+
+        onSelected(e) {
+            const id = e.detail.id;
+            this.triggerEvent('selectedP', { id }, {})
         },
         /**
          * 查询品牌下的商品列表

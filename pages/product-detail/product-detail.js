@@ -26,6 +26,11 @@ Page({
 
     showDraw: false,
 
+    selectedProductIdFromCategory: 0,
+
+    compares: [],
+    canAdd: true,
+
     shop: {
       location: '上海市浦东新区122号',
       name: '聚客数码浦东新区店',
@@ -130,10 +135,36 @@ Page({
     })
   },
 
+  delCurAdd(e) {
+    const delId = e.detail.id;
+    console.log(delId)
+  },
+
 
   onSelected(e) {
-    console.log(e)
-
+    const id = e.detail.id;
+    const selectedColor = e.detail.selectedColor;
+    const selectedMemory = e.detail.selectedMemory;
+    const selectedVersion = e.detail.selectedVersion;
+    const goods = this.data.goods;
+    let that = this;
+    if (id != goods.id) {
+      goodsModel.postGoodsDetail(id).then(res => {
+        const data = res.data;
+        console.log(data)
+        that.setData({
+          goods: data.goods,
+          images: data.images
+        })
+      })
+    } else {
+      goods.goodsColor = selectedColor
+      goods.goodsMemory = selectedMemory
+      goods.goodsVersion = selectedVersion
+      that.setData({
+        goods
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -147,11 +178,8 @@ Page({
       const commentsData = res[0].data;
       const goodsData = res[1].data;
       const imagesObjArr = goodsData.images;
-      const images = imagesObjArr.map(item => {
-        return item.imgUrl;
-      })
       that.setData({
-        images: images,
+        images: imagesObjArr,
         goods: goodsData.goods,
         remarks: commentsData.list,
         total: pageSize,
@@ -195,7 +223,19 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function (option) {
+    const id = this.data.selectedProductIdFromCategory;
+    let that = this;
+    let compares = that.data.compares;
+    if (id > 0) {
+      goodsModel.postGoodsDetail(id).then(res => {
+        const data = res.data;
+         compares.push(data.goods)
+        that.setData({
+          compares
+        })
+      })
+    }
 
   },
 

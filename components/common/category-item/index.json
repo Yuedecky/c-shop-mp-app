@@ -7,6 +7,7 @@
         "van-tree-select": "/miniprogram_npm/vant-weapp/tree-select/index",
         "wq-left-tab": "/components/common/left-tab/index",
         "wq-header-bar": "/components/common/header-bar/index",
-        "wq-slide-header-bar": "/components/common/slide-header-bar/index"
+        "wq-slide-header-bar": "/components/common/slide-header-bar/index",
+        "wq-product-pop-params": "/components/common/product-pop-params/index"
     }
 }

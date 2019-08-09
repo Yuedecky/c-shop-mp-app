@@ -19,9 +19,6 @@
   margin-bottom: 20rpx;
 }
 
-.no-more-data{
-  margin-bottom: 30rpx;
-}
 
 .user-remark-info{
   margin-bottom: 20rpx;
@@ -83,10 +80,6 @@
   margin:0 auto;
   text-align: center;
 }
-
-
-
-
 
 
 .buy-btn{

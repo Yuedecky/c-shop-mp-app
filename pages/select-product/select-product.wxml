@@ -1,1 +1,1 @@
-<wq-category-item needSearchBar="{{false}}" image="{{headerBar.image}}" items="{{items}}" tabs="{{tabs}}" activeLeftCode="{{0}}"></wq-category-item>
+<wq-category-item bind:selectedP="onSelectedProduct" needSearchBar="{{false}}" image="{{headerBar.image}}" items="{{items}}" tabs="{{tabs}}" activeLeftCode="{{0}}"></wq-category-item>

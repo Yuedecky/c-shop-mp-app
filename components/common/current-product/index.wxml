@@ -8,7 +8,10 @@
             <text class='tag-item'>{{goods.goodsColor}}</text>
             <text class='tag-item'>{{goods.goodsMemory}}</text>
         </view>
-        <view class='cur-p-content-right-arrrow'>
+        <view class='cur-p-content-right-arrrow' wx:if="{{delBtn}}" bind:tap="del">
+            <van-icon name="closes" size='10px' color="#999"></van-icon>
+        </view>
+        <view wx:else>
             <van-icon name="arrow" size='10px' color="#999"></van-icon>
         </view>
     </view>

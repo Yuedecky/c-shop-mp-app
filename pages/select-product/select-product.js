@@ -6,56 +6,11 @@ Page({
             target: '/pages/raider/index'
         },
         tabs: [
-            {
-                name: '手机',
-                id: 12
-            },
-            {
-                name: '电脑',
-                id: 13
-            },
-            {
-                name: '平板',
-                id: 14
-            },
-            {
-                name: '配件',
-                id: 16
-            }
+
+
         ],
         items: [
-            {
-                text: '所有品牌',
-                id: 0
-            },
-            {
-                text: '苹果',
-                id: 1002
-            },
-            {
-                text: '华为',
-                id: 1023
-            },
-            {
-                text: "小米",
-                id: 1024
-            },
-            {
-                text: '荣耀',
-                id: 1234
-            },
-            {
-                text: '魅族',
-                id: 1245
-            },
-            {
-                text: 'OPPO',
-                id: 1256
-            },
-            {
-                text: 'VIVO',
-                id: 2345
-            }
+
         ],
         current: 0
     },
@@ -65,6 +20,17 @@ Page({
 
     },
 
-
+    onSelectedProduct(e) {
+        const id = e.detail.id;
+        console.log(id)
+        wx.navigateBack({
+            delta:1
+        })
+        var pages = getCurrentPages();
+        var prePage = pages[pages.length - 2]
+        prePage.setData({
+            selectedProductIdFromCategory: id
+        })
+    }
 
 })
