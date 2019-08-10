@@ -22,7 +22,7 @@
         <wq-title-bar title='对比机型' rightStyle='color:#999;' right="可继续选择1～2款机型对比下单"></wq-title-bar>
       </view>
       <view wx:for="{{compares}}" wx:key="id">
-        <wq-current-product goods="{{item}}" delBtn="{{true}}" bind:del="delCurAdd"></wq-current-product>
+        <wq-compare-product bind:del="{{onDel}}" name="{{item.goodsName}}" id="{{item.id}}" price="{{item.originPrice}}" image="{{item.goodsCoverImg}}" bind:del="delCurAdd"></wq-compare-product>
       </view>
       <view wx:if="{{canAdd}}">
         <wq-add-product bind:click="addMoreProduct"></wq-add-product>

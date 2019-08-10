@@ -1,0 +1,18 @@
+<view class='com-container'>
+    <view class='com-left'>
+        <view class='left-image-wrapper'>
+            <image src="{{image}}" mode="aspectFit" class='left-image' />
+        </view>
+        <view class='left-name-wrapper'>{{name}}</view>
+    </view>
+    <view class="com-right">
+        <view class="com-right-desc">总计</view>
+        <view class='com-right-price'>
+            <text class='rmb'>￥</text>
+            <text>{{price}}</text>
+        </view>
+        <view bind:tap="del" class='del-block'>
+            <van-icon name='delete' />
+        </view>
+    </view>
+</view>

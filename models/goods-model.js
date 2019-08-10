@@ -40,6 +40,8 @@ class GoodsModel extends Http {
     }
 
 
+    
+
 
 }
 export { GoodsModel }

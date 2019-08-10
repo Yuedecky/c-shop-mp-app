@@ -5,10 +5,22 @@ import {
 class CartModel extends Http {
 
 
-    listModels() {
+
+    addCampare(goodsId) {
         return this.request({
-            url: 'cart/all',
-            method: 'GET',
+            url: 'choose/cart/add',
+            method: 'POST',
+            data: {
+                goodsId,
+                count: 1
+            }
+        })
+    }
+
+    listCarts() {
+        return this.request({
+            url: 'choose/cart/all',
+            method: 'GET'
         })
     }
 }

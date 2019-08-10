@@ -1,3 +1,5 @@
+import { CartModel } from '../../models/cart-model';
+const cartModel = new CartModel();
 Page({
     data: {
         navLeftHeight: 0,
@@ -22,15 +24,19 @@ Page({
 
     onSelectedProduct(e) {
         const id = e.detail.id;
-        console.log(id)
         wx.navigateBack({
-            delta:1
+            delta: 1
         })
         var pages = getCurrentPages();
         var prePage = pages[pages.length - 2]
-        prePage.setData({
-            selectedProductIdFromCategory: id
+        let compares = prePage.data.compares;
+        cartModel.addCampare(id).then(res => {
+            compares.push(id);
+            prePage.setData({
+                compares
+            })
         })
+
     }
 
 })

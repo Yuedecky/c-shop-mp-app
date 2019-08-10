@@ -1,17 +1,3 @@
 <view class="login-container">
-  <view class='logo-header'>
-    <view class='bottom-20'>
-      <image class="logo-image" src="{{logoUrl}}"></image>
-    </view>
-    <view class="logo-name">{{logoName}}</view>
-  </view>
-  <view class='auth-info'>
-    <text class='auth-info-title'>微券优品申请获得你的以下权限</text>
-    <text>获得你的公开信息(昵称，头像等)</text>
-  </view>
-  <view class='auth-view'>
-    <van-button type='danger' open-type="getUserInfo" bind:getuserinfo="getUserInfo" custom-class='auth-btn'>
-      微信授权
-    </van-button>
-  </view>
+  <wq-auth authTitle="微券优品申请获得你的以下信息" authDesc="获得你的公开信息(昵称，头像等)" logoName="{{logoName}}" logoUrl="{{logoUrl}}" />
 </view>

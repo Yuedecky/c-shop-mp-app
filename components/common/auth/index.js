@@ -11,6 +11,8 @@ Component({
     methods: {
 
         getPhoneNumber(e) {
+
+            this.triggerEvent('getPhone', {}, {})
         },
         getUserInfo(e) {
 

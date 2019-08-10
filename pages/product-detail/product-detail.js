@@ -1,7 +1,9 @@
 import { GoodsModel } from "../../models/goods-model";
 import { CommentModel } from '../../models/comment-model';
+import { CartModel } from '../../models/cart-model';
 const commentModel = new CommentModel();
-const goodsModel = new GoodsModel()
+const goodsModel = new GoodsModel();
+const cartModel = new CartModel();
 Page({
 
   /**
@@ -174,14 +176,17 @@ Page({
     let pageSize = this.data.pageSize;
     const commentQuery = commentModel.listComments(options.id, this.data.pageNum, pageSize);
     const goodsQuery = goodsModel.postGoodsDetail(options.id);
-    Promise.all([commentQuery, goodsQuery]).then(res => {
+    const compareQuery = cartModel.listCarts();
+    Promise.all([commentQuery, goodsQuery, compareQuery]).then(res => {
       const commentsData = res[0].data;
       const goodsData = res[1].data;
+      const comapresData = res[2].data;
       const imagesObjArr = goodsData.images;
       that.setData({
         images: imagesObjArr,
         goods: goodsData.goods,
         remarks: commentsData.list,
+        compares: comapresData,
         total: pageSize,
         selectedColorName: goodsData.goods.goodsColor,
         selectedMemoryName: goodsData.goods.goodsMemory,
@@ -198,10 +203,10 @@ Page({
    * 添加更机型对比
    */
   addMoreProduct() {
+    
     wx.navigateTo({
       url: '/pages/select-product/select-product',
       success: (result) => {
-
       },
       fail: () => { },
       complete: () => { }
@@ -224,22 +229,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function (option) {
-    const id = this.data.selectedProductIdFromCategory;
     let that = this;
-    let compares = that.data.compares;
-    if (id > 0) {
-      goodsModel.postGoodsDetail(id).then(res => {
-        const data = res.data;
-         compares.push(data.goods)
-        that.setData({
-          compares
-        })
+    cartModel.listCarts().then(res => {
+      const data = res.data
+      that.setData({
+        compares: data
       })
-    }
-
+    })
   },
 
-
+  onDel(e) {
+    const id = e.detail.id;
+    const compares = this.data.compares;
+    const newCompares = compares.filter(it => {
+      return it.id != id
+    })
+    this.setData({
+      compares: newCompares
+    })
+  }
 
 
 })

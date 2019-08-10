@@ -3,6 +3,7 @@
     "navigationBarTitleText": "登录授权",
     "usingComponents": {
         "com-header": "/components/header/index",
-        "van-button": "/miniprogram_npm/vant-weapp/button/index"
+        "van-button": "/miniprogram_npm/vant-weapp/button/index",
+        "wq-auth": "/components/common/auth/index"
     }
 }
